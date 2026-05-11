@@ -9,6 +9,7 @@ export const translations = {
   en: {
     // Header
     header: {
+      logo: 'D.Baraa A. Khaleel',
       freeConsultation: 'Free Consultation',
       home: 'Home',
       about: 'About Us',
@@ -20,7 +21,7 @@ export const translations = {
     // Hero
     hero: {
       badge: 'Get a Free Consultation',
-      name: 'John B. Someone',
+      name: 'D.Baraa A. Khaleel',
       subtitles: [
         'Criminal Justice Attorney',
         'Trusted Legal Advisor',
@@ -99,7 +100,7 @@ export const translations = {
     // Attorney Quote
     attorneyQuote: {
       quote: "Justice is not a passive concept — it requires dedicated advocates who are willing to fight tirelessly for the rights of every individual, regardless of the circumstances.",
-      name: 'John B. Someone',
+      name: 'D.Baraa A. Khaleel',
       title: 'Senior Partner, Criminal Justice Attorney',
     },
     // Testimonials
@@ -193,7 +194,7 @@ export const translations = {
       },
       quote: {
         text: "The law is not merely a set of rules — it is the foundation upon which we build a fair and equitable society.",
-        author: 'John B. Someone, Founding Partner',
+        author: 'D.Baraa A. Khaleel, Founding Partner',
       },
       mission: {
         subtitle: 'Our Mission',
@@ -208,7 +209,7 @@ export const translations = {
         subtitle: 'Milestones',
         title: 'Our History',
         items: [
-          { year: '1998', title: 'Founded', description: 'The Law Firm was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.' },
+          { year: '1998', title: 'Founded', description: 'D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.' },
           { year: '2003', title: 'First Major Verdict', description: 'Secured a landmark $3.2M verdict in a medical malpractice case, establishing our reputation for aggressive and effective courtroom representation.' },
           { year: '2008', title: 'Expanded to 3 Offices', description: 'Grew our practice to serve clients across three major metropolitan areas, expanding our team and capabilities to meet growing demand.' },
           { year: '2013', title: '500th Case Won', description: 'Reached the milestone of 500 successful case outcomes, a testament to our unwavering dedication to achieving justice for our clients.' },
@@ -390,7 +391,7 @@ export const translations = {
           excerpt: 'Learn about your constitutional rights when facing criminal charges and how an experienced attorney can help protect them.',
           category: 'Criminal Law',
           date: 'January 15, 2026',
-          author: 'John B. Someone',
+          author: 'D.Baraa A. Khaleel',
           readTime: '5 min read',
           content: 'When facing criminal charges, understanding your constitutional rights is the first and most critical step in protecting yourself. The United States Constitution provides several fundamental protections that apply to every person accused of a crime, regardless of the nature or severity of the charges.\n\n## Your Right to Remain Silent\nThe Fifth Amendment protects you from being compelled to be a witness against yourself. This means you have the absolute right to refuse to answer questions from law enforcement. Exercise this right politely but firmly — simply state that you wish to speak with an attorney before answering any questions.\n\n## Your Right to Legal Representation\nThe Sixth Amendment guarantees your right to have an attorney present during any questioning. If you cannot afford an attorney, one will be appointed for you. Having legal representation is not an admission of guilt — it is a smart exercise of your constitutional rights.\n\n## Your Right to Due Process\nThe Fourteenth Amendment ensures that no state can deprive you of life, liberty, or property without due process of law. This means the government must follow fair procedures before taking away your freedom, including proper notice of charges and a fair hearing.\n\n## Protecting Your Rights\nIf you or a loved one is facing criminal charges, it is essential to consult with an experienced criminal defense attorney as soon as possible. The earlier you involve legal counsel, the better protected your rights will be throughout the criminal justice process.',
         },
@@ -535,7 +536,7 @@ export const translations = {
         practiceArea: 'Practice Area',
         contact: 'Contact',
       },
-      copyright: 'Copyright 2026 The Law Theme. All Rights Reserved.',
+      copyright: 'Copyright 2026 D.Baraa A. Khaleel. All Rights Reserved.',
       backToTop: 'Back to Top',
     },
     // Cookie Banner
@@ -591,6 +592,7 @@ export const translations = {
   ar: {
     // Header
     header: {
+      logo: 'د. براء عبدالكريم خليل',
       freeConsultation: 'استشارة مجانية',
       home: 'الرئيسية',
       about: 'من نحن',
@@ -602,7 +604,7 @@ export const translations = {
     // Hero
     hero: {
       badge: 'احصل على استشارة مجانية',
-      name: 'جون ب. سوموان',
+      name: 'د. براء عبدالكريم خليل',
       subtitles: [
         'محامي العدالة الجنائية',
         'مستشار قانوني موثوق',
@@ -681,7 +683,7 @@ export const translations = {
     // Attorney Quote
     attorneyQuote: {
       quote: 'العدالة ليست مفهوماً سلبياً — بل تتطلب مناصرين متفانين على استعداد للقتال بلا كلل من أجل حقوق كل فرد، بغض النظر عن الظروف.',
-      name: 'جون ب. سوموان',
+      name: 'د. براء عبدالكريم خليل',
       title: 'شريك أول، محامي العدالة الجنائية',
     },
     // Testimonials
@@ -775,7 +777,7 @@ export const translations = {
       },
       quote: {
         text: 'القانون ليس مجرد مجموعة من القواعد — إنه الأساس الذي نبني عليه مجتمعاً عادلاً ومنصفاً.',
-        author: 'جون ب. سوموان، الشريك المؤسس',
+        author: 'د. براء عبدالكريم خليل، الشريك المؤسس',
       },
       mission: {
         subtitle: 'مهمتنا',
@@ -948,7 +950,7 @@ export const translations = {
           excerpt: 'تعرف على حقوقك الدستورية عند مواجهة تهم جنائية وكيف يمكن للمحامي ذوي الخبرة المساعدة في حمايتها.',
           category: 'القانون الجنائي',
           date: '15 يناير 2026',
-          author: 'جون ب. سوموان',
+          author: 'د. براء عبدالكريم خليل',
           readTime: '5 دقائق قراءة',
           content: 'عند مواجهة تهم جنائية، فهم حقوقك الدستورية هو الخطوة الأولى والأكثر أهمية في حماية نفسك. يوفر دستور الولايات المتحدة عدة حمايات أساسية تنطبق على كل شخص متهم بجريمة.\n\n## حقك في الصمت\nيحميك التعديل الخامس من الإجبار على أن تكون شاهداً ضد نفسك. مارس هذا الحق بأدب ولكن بحزم — ببساطة اذكر أنك ترغب في التحدث مع محامٍ قبل الإجابة على أي أسئلة.\n\n## حقك في التمثيل القانوني\nيضمن التعديل السادس حقك في وجود محامٍ أثناء أي استجواب. إذا لم تستطع تحمل تكاليف محامٍ، سيتم تعيين واحد لك.\n\n## حماية حقوقك\nإذا كنت أو أحد أحبائك يواجه تهم جنائية، من الضروري استشارة محامي دفاع جنائي ذي خبرة في أقرب وقت ممكن.',
         },

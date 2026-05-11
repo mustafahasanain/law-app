@@ -98,8 +98,8 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
           {/* Logo */}
           <button onClick={() => handleNavigate('home')} className="flex items-center gap-1 cursor-pointer">
-            <span className="text-2xl font-light text-charcoal dark:text-white tracking-wider" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-              the <span className="text-gold font-bold">LAW</span>
+            <span className="text-xl md:text-2xl font-semibold text-charcoal dark:text-white tracking-wider" style={{ fontFamily: isRTL ? 'var(--font-arabic), sans-serif' : 'var(--font-playfair), serif' }}>
+              {t.header.logo}
             </span>
           </button>
 
@@ -167,8 +167,8 @@ export function Header() {
         >
           {/* Menu header */}
           <div className="flex items-center justify-between px-5 py-4 border-b border-border-gray dark:border-gray-700">
-            <span className="text-lg font-light text-charcoal dark:text-white tracking-wider" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-              the <span className="text-gold font-bold">LAW</span>
+            <span className="text-lg font-semibold text-charcoal dark:text-white tracking-wider" style={{ fontFamily: isRTL ? 'var(--font-arabic), sans-serif' : 'var(--font-playfair), serif' }}>
+              {t.header.logo}
             </span>
             <button
               onClick={closeMobileMenu}

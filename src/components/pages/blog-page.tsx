@@ -172,7 +172,7 @@ Our criminal defense team has successfully defended thousands of clients. We are
 2. **Protective Orders** — More comprehensive than restraining orders, including provisions for child custody and support.
 3. **Criminal Charges** — Assault, battery, and other criminal charges can be filed.
 
-At The Law, we believe every person deserves to live free from fear and abuse. Our dedicated team of family law attorneys has helped hundreds of clients navigate the legal system.`,
+At D.Baraa A. Khaleel, we believe every person deserves to live free from fear and abuse. Our dedicated team of family law attorneys has helped hundreds of clients navigate the legal system.`,
   },
   {
     title: 'Drinking and Driving',

@@ -254,7 +254,7 @@ export function AboutPage() {
             year: "1998",
             title: "Founded",
             description:
-              "The Law Firm was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
+              "D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
           },
           {
             year: "2003",
@@ -654,12 +654,12 @@ export function AboutPage() {
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
                     src="/images/lawyer-hero.jpeg"
-                    alt="John B. Someone"
+                    alt="D.Baraa A. Khaleel"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
                   />
                   <div className="absolute bottom-6 left-0 right-0 z-20 bg-charcoal/80 py-3 text-center">
-                    <p className="text-white font-semibold">John B. Someone</p>
+                    <p className="text-white font-semibold">D.Baraa A. Khaleel</p>
                     <p className="text-gold text-sm">
                       Criminal Justice Attorney
                     </p>

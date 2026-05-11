@@ -178,7 +178,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "After my arrest, I was terrified. The Law Firm guided me through every step and achieved the best possible outcome. I can't thank them enough.",
+      "After my arrest, I was terrified. D.Baraa A. Khaleel guided me through every step and achieved the best possible outcome. I can't thank them enough.",
     name: "David R.",
     caseType: "Criminal Defense",
     location: "بغداد, المنصور, شارع مطعم الساعة",
@@ -198,7 +198,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "When our corporation faced a complex merger dispute, The Law Firm's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
+      "When our corporation faced a complex merger dispute, D.Baraa A. Khaleel's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
     name: "Jennifer K.",
     caseType: "Corporate Law",
     location: "بغداد, المنصور, شارع مطعم الساعة",
@@ -218,7 +218,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "After being wrongfully terminated, I didn't know where to turn. The Law Firm took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
+      "After being wrongfully terminated, I didn't know where to turn. D.Baraa A. Khaleel took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
     name: "Amanda P.",
     caseType: "Employment Law",
     location: "بغداد, المنصور, شارع مطعم الساعة",
@@ -238,7 +238,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "I was injured in a commercial truck accident and the insurance company offered me almost nothing. The Law Firm secured a $1.2M settlement that covers all my medical needs.",
+      "I was injured in a commercial truck accident and the insurance company offered me almost nothing. D.Baraa A. Khaleel secured a $1.2M settlement that covers all my medical needs.",
     name: "Patricia W.",
     caseType: "Personal Injury",
     location: "بغداد, المنصور, شارع مطعم الساعة",
@@ -715,7 +715,7 @@ function PracticeAreaShareButtons({ title }: { title: string }) {
   };
 
   const handleShareTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Learn about ${title} at The Law Firm`)}&url=${encodeURIComponent(window.location.href)}`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Learn about ${title} at D.Baraa A. Khaleel`)}&url=${encodeURIComponent(window.location.href)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
