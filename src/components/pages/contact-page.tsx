@@ -404,7 +404,7 @@ export function ContactPage() {
                   {t.contactPage.form.title}
                 </h2>
                 <p className="text-medium-gray dark:text-gray-400 mb-8">
-                  {t.contactPage.askForm?.subtitle || t.contactPage.form.title}
+                  {t.contactPage.appointment.subtitle}
                 </p>
               </AnimatedSection>
 
