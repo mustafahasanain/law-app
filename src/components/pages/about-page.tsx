@@ -45,8 +45,8 @@ const TEAM_MEMBERS = [
     name: "Mark Brown",
     role: "Senior Attorney",
     img: "/images/team-1.png",
-    bio: "Mark Brown is a distinguished senior attorney with over 20 years of experience in criminal defense and civil litigation. After graduating magna cum laude from Columbia Law School, he began his career as a public defender before transitioning to private practice. Mark has successfully tried over 300 cases to verdict, earning a reputation as a formidable courtroom advocate who leaves no stone unturned in the pursuit of justice for his clients. His dedication to his clients and his craft has earned him recognition as one of New York's top 100 trial lawyers.",
-    bio2: "Beyond his litigation practice, Mark is deeply committed to legal education and mentorship. He serves as an adjunct professor at New York University School of Law, where he teaches advanced trial advocacy. Mark has also authored several influential articles on criminal justice reform and is a frequent speaker at national legal conferences. His pro bono work has helped dozens of underserved clients receive fair representation.",
+    bio: "Mark Brown is a distinguished senior attorney with over 20 years of experience in criminal defense and civil litigation. After graduating magna cum laude from Columbia Law School, he began his career as a public defender before transitioning to private practice. Mark has successfully tried over 300 cases to verdict, earning a reputation as a formidable courtroom advocate who leaves no stone unturned in the pursuit of justice for his clients. His dedication to his clients and his craft has earned him recognition as one of Baghdad's top trial lawyers.",
+    bio2: "Beyond his litigation practice, Mark is deeply committed to legal education and mentorship. He serves as an adjunct professor at Baghdad University College of Law, where he teaches advanced trial advocacy. Mark has also authored several influential articles on criminal justice reform and is a frequent speaker at national legal conferences. His pro bono work has helped dozens of underserved clients receive fair representation.",
     practiceAreas: [
       "Criminal Defense",
       "Civil Litigation",
@@ -58,13 +58,13 @@ const TEAM_MEMBERS = [
       "B.A., Political Science, Yale University",
     ],
     credentials: [
-      "New York State Bar",
+      "Iraqi Bar Association",
       "U.S. District Court, Southern District of NY",
       "National Association of Criminal Defense Lawyers",
       "American Bar Association - Litigation Section",
     ],
     email: "m.brown@thelawfirm.com",
-    phone: "+1 (800) 123-4501",
+    phone: "07802233000",
   },
   {
     name: "Jane Doe",
@@ -80,22 +80,22 @@ const TEAM_MEMBERS = [
     ],
     education: [
       "B.S., Legal Studies, Pace University",
-      "Paralegal Certificate, New York University",
+      "Paralegal Certificate, Baghdad University",
       "Certified Paralegal (NALA)",
     ],
     credentials: [
       "National Association of Legal Assistants",
-      "New York State Paralegal Association",
+      "Baghdad Paralegal Association",
       "Certified E-Discovery Specialist",
     ],
     email: "j.doe@thelawfirm.com",
-    phone: "+1 (800) 123-4502",
+    phone: "07802233000",
   },
   {
     name: "Alex Darayov",
     role: "Associate Attorney",
     img: "/images/team-3.png",
-    bio: "Alex Darayov is a rising star in the legal profession, bringing fresh perspective and innovative strategies to our firm's practice. After graduating from Fordham University School of Law, Alex clerked for the Honorable Judge Patricia Martinez in the New York Supreme Court, gaining invaluable insight into judicial decision-making processes. Since joining our firm, Alex has quickly established himself as a skilled negotiator and meticulous legal researcher, with a particular talent for identifying creative solutions to complex legal problems.",
+    bio: "Alex Darayov is a rising star in the legal profession, bringing fresh perspective and innovative strategies to our firm's practice. After graduating from Fordham University School of Law, Alex clerked for the Honorable Judge Patricia Martinez in the Baghdad Court, gaining invaluable insight into judicial decision-making processes. Since joining our firm, Alex has quickly established himself as a skilled negotiator and meticulous legal researcher, with a particular talent for identifying creative solutions to complex legal problems.",
     bio2: "Alex's practice focuses on business law and intellectual property, areas where his background in technology and finance gives him a unique advantage. He has successfully represented numerous startups and established businesses in contract negotiations, trademark disputes, and regulatory compliance matters. Alex is fluent in Russian and English, enabling our firm to better serve a diverse client base. He is actively involved in the American Bar Association's Young Lawyers Division and regularly volunteers at local legal aid clinics.",
     practiceAreas: [
       "Business Law",
@@ -108,13 +108,13 @@ const TEAM_MEMBERS = [
       "B.S., Finance & Computer Science, Baruch College",
     ],
     credentials: [
-      "New York State Bar",
+      "Iraqi Bar Association",
       "U.S. Patent and Trademark Office",
       "American Bar Association - Business Law Section",
-      "New York City Bar Association",
+      "Baghdad Bar Association",
     ],
     email: "a.darayov@thelawfirm.com",
-    phone: "+1 (800) 123-4503",
+    phone: "07802233000",
   },
 ];
 
@@ -541,13 +541,20 @@ export function AboutPage() {
         />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <AnimatedSection>
-            <SectionTitle title={aboutHistory.title} subtitle={aboutHistory.subtitle} />
+            <SectionTitle
+              title={aboutHistory.title}
+              subtitle={aboutHistory.subtitle}
+            />
           </AnimatedSection>
           <div className="relative mt-6 md:mt-8">
             {/* Vertical gold line */}
-            <div className={`absolute top-0 bottom-0 w-0.5 bg-gold/40 timeline-line-animated ${
-              isRTL ? "right-4 md:right-1/2 md:translate-x-px" : "left-4 md:left-1/2 md:-translate-x-px"
-            }`} />
+            <div
+              className={`absolute top-0 bottom-0 w-0.5 bg-gold/40 timeline-line-animated ${
+                isRTL
+                  ? "right-4 md:right-1/2 md:translate-x-px"
+                  : "left-4 md:left-1/2 md:-translate-x-px"
+              }`}
+            />
 
             {aboutHistory.items.map((event, index) => (
               <AnimatedSection key={event.year} delay={index * 150}>
@@ -577,17 +584,23 @@ export function AboutPage() {
                     >
                       {event.title}
                     </h3>
-                    <p className={`text-medium-gray dark:text-gray-300 text-sm leading-relaxed max-w-xl ${
-                      isRTL ? "" : index % 2 === 0 ? "md:ml-auto" : ""
-                    }`}>
+                    <p
+                      className={`text-medium-gray dark:text-gray-300 text-sm leading-relaxed max-w-xl ${
+                        isRTL ? "" : index % 2 === 0 ? "md:ml-auto" : ""
+                      }`}
+                    >
                       {event.description}
                     </p>
                   </div>
 
                   {/* Gold dot on timeline */}
-                  <div className={`absolute w-4 h-4 bg-gold rounded-full border-4 border-light-gray dark:border-charcoal-dark mt-1 z-10 ${
-                    isRTL ? "right-4 md:right-1/2 translate-x-1/2" : "left-4 md:left-1/2 -translate-x-1/2"
-                  }`} />
+                  <div
+                    className={`absolute w-4 h-4 bg-gold rounded-full border-4 border-light-gray dark:border-charcoal-dark mt-1 z-10 ${
+                      isRTL
+                        ? "right-4 md:right-1/2 translate-x-1/2"
+                        : "left-4 md:left-1/2 -translate-x-1/2"
+                    }`}
+                  />
 
                   {/* Spacer for the other side */}
                   <div className="hidden md:block md:w-[calc(50%-2rem)]" />
@@ -640,7 +653,7 @@ export function AboutPage() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
-                    src="/images/attorney-home.png"
+                    src="/images/lawyer-hero.jpeg"
                     alt="John B. Someone"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
@@ -847,13 +860,13 @@ export function AboutPage() {
                 {t.about.freeEvaluation.contactUs}
               </button>
               <a
-                href="tel:+18003334455"
+                href="tel:07802233000"
                 className="border-2 border-gold text-gold px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-white transition-all flex items-center gap-2"
               >
                 <Phone size={16} />
                 {t.about.freeEvaluation.callFree}:{" "}
                 <span dir="ltr" className="phone-ltr">
-                  +1 (800) 333 44 55
+                  07802233000
                 </span>
               </a>
             </div>

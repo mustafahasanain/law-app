@@ -1,28 +1,44 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { PageHero } from '../thelaw/page-hero';
-import { AnimatedSection } from '../thelaw/scroll-animation';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Phone, Mail, MapPin, Send, Clock, AlertCircle, Loader2, Shield, Award, Users, Heart, Navigation, Maximize2, Minimize2, ExternalLink } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { AppointmentForm } from '../thelaw/appointment-form';
-import { useLanguage } from '@/lib/i18n/language-context';
+import React, { useState } from "react";
+import { PageHero } from "../thelaw/page-hero";
+import { AnimatedSection } from "../thelaw/scroll-animation";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  Clock,
+  AlertCircle,
+  Loader2,
+  Shield,
+  Award,
+  Users,
+  Heart,
+  Navigation,
+  Maximize2,
+  Minimize2,
+  ExternalLink,
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { AppointmentForm } from "../thelaw/appointment-form";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 export function ContactPage() {
   const { t } = useLanguage();
-  const [department, setDepartment] = useState('');
+  const [department, setDepartment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isMapExpanded, setIsMapExpanded] = useState(false);
   const [selectedOffice, setSelectedOffice] = useState(0);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
   const { toast } = useToast();
 
@@ -31,7 +47,7 @@ export function ContactPage() {
       icon: Phone,
       label: t.contactPage.info.phone.title,
       value: t.contactPage.info.phone.number,
-      href: `tel:${t.contactPage.info.phone.number.replace(/\s/g, '')}`,
+      href: `tel:${t.contactPage.info.phone.number.replace(/\s/g, "")}`,
       subtitle: t.contactPage.hours.weekdayHours,
     },
     {
@@ -44,52 +60,48 @@ export function ContactPage() {
     {
       icon: MapPin,
       label: t.contactPage.info.address.title,
-      value: t.contactPage.info.address.full.replace('\n', ', '),
-      href: '#',
+      value: t.contactPage.info.address.full.replace("\n", ", "),
+      href: "#",
       subtitle: t.contactPage.addressCard.title,
     },
   ];
 
   const WORKING_HOURS = [
-    { day: t.contactPage.hours.weekdays, hours: t.contactPage.hours.weekdayHours },
-    { day: t.contactPage.hours.saturday, hours: t.contactPage.hours.saturdayHours },
+    {
+      day: t.contactPage.hours.weekdays,
+      hours: t.contactPage.hours.weekdayHours,
+    },
+    {
+      day: t.contactPage.hours.saturday,
+      hours: t.contactPage.hours.saturdayHours,
+    },
     { day: t.contactPage.hours.sunday, hours: t.contactPage.hours.sundayHours },
   ];
 
   const OFFICE_LOCATIONS = [
     {
-      name: 'New York (Head Office)',
-      address: 'Unit 48, 23 Ave. New York USA',
-      phone: '+1 (800) 333 44 55',
-      email: 'ny@thelawtheme.com',
-      hours: 'Mon-Fri: 9:00 - 16:30',
-      mapQuery: 'Empire+State+Building+New+York',
-      lat: '40.7484',
-      lng: '-73.9857',
-    },
-    {
-      name: 'Los Angeles',
-      address: 'Unit 27, 65 Ave. Los Angeles USA',
-      phone: '+1 (800) 333 44 66',
-      email: 'la@thelawtheme.com',
-      hours: 'Mon-Fri: 9:00 - 16:30',
-      mapQuery: 'Downtown+Los+Angeles+California',
-      lat: '34.0407',
-      lng: '-118.2468',
-    },
-    {
-      name: 'Chicago',
-      address: 'Suite 105, 400 Michigan Ave, Chicago IL',
-      phone: '+1 (800) 333 44 77',
-      email: 'chi@thelawtheme.com',
-      hours: 'Mon-Fri: 9:00 - 16:30',
-      mapQuery: 'Chicago+Loop+Illinois',
-      lat: '41.8781',
-      lng: '-87.6298',
+      name: "Baghdad",
+      address: "بغداد, المنصور, شارع مطعم الساعة",
+      phone: "07802233000",
+      email: "la@thelawtheme.com",
+      hours: "Mon-Fri: 9:00 - 16:30",
+      mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
+      lat: "34.0407",
+      lng: "-118.2468",
     },
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const MAP_URL =
+    "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en";
+  const MAP_EMBED_URL =
+    "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en&output=embed";
+  const MAP_DESTINATION = "33.31884002685547,44.33299255371094";
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -100,9 +112,9 @@ export function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
           department,
@@ -113,23 +125,29 @@ export function ContactPage() {
 
       if (data.success) {
         toast({
-          title: 'Message Sent!',
+          title: "Message Sent!",
           description: data.message,
         });
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        setDepartment('');
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setDepartment("");
       } else {
         toast({
-          title: 'Error',
-          description: data.error || 'Something went wrong.',
-          variant: 'destructive',
+          title: "Error",
+          description: data.error || "Something went wrong.",
+          variant: "destructive",
         });
       }
     } catch {
       toast({
-        title: 'Error',
-        description: 'Failed to send your message. Please try again later.',
-        variant: 'destructive',
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -138,7 +156,10 @@ export function ContactPage() {
 
   return (
     <div className="overflow-x-hidden max-w-full">
-      <PageHero title={t.contactPage.hero.title} breadcrumb={t.contactPage.hero.breadcrumb.current} />
+      <PageHero
+        title={t.contactPage.hero.title}
+        breadcrumb={t.contactPage.hero.breadcrumb.current}
+      />
 
       {/* Contact Info Cards */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
@@ -148,13 +169,24 @@ export function ContactPage() {
               <AnimatedSection key={card.label} delay={index * 100}>
                 <div className="practice-card bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 p-8 text-center group cursor-pointer hover:border-gold">
                   <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold transition-colors">
-                    <card.icon size={28} className="text-gold group-hover:text-white transition-colors" />
+                    <card.icon
+                      size={28}
+                      className="text-gold group-hover:text-white transition-colors"
+                    />
                   </div>
-                  <h3 className="text-charcoal dark:text-white font-bold text-lg mb-2">{card.label}</h3>
-                  <a href={card.href} dir={card.icon === Phone ? 'ltr' : undefined} className={`text-gold font-semibold hover:text-gold-dark transition-colors block mb-1 ${card.icon === Phone ? 'phone-ltr' : ''}`}>
+                  <h3 className="text-charcoal dark:text-white font-bold text-lg mb-2">
+                    {card.label}
+                  </h3>
+                  <a
+                    href={card.href}
+                    dir={card.icon === Phone ? "ltr" : undefined}
+                    className={`text-gold font-semibold hover:text-gold-dark transition-colors block mb-1 ${card.icon === Phone ? "phone-ltr" : ""}`}
+                  >
                     {card.value}
                   </a>
-                  <p className="text-medium-gray dark:text-gray-400 text-sm">{card.subtitle}</p>
+                  <p className="text-medium-gray dark:text-gray-400 text-sm">
+                    {card.subtitle}
+                  </p>
                 </div>
               </AnimatedSection>
             ))}
@@ -165,14 +197,11 @@ export function ContactPage() {
       {/* Map Section with Location Card Overlay */}
       <section className="relative">
         <div className="h-4 bg-gold" />
-        <div className={`relative bg-light-gray dark:bg-charcoal transition-all duration-500 ease-in-out ${isMapExpanded ? 'h-[40rem]' : 'h-96'}`}>
+        <div
+          className={`relative bg-light-gray dark:bg-charcoal transition-all duration-500 ease-in-out ${isMapExpanded ? "h-[40rem]" : "h-96"}`}
+        >
           <iframe
-            src={selectedOffice === 0
-              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617543994728!2d-73.98784368459418!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623456789"
-              : selectedOffice === 1
-              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7!2d-118.25!3d34.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b8e2e3e8e3%3A0x123456789!2sDowntown+Los+Angeles!5e0!3m2!1sen!2sus!4v1623456789"
-              : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d-87.63!3d41.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca54c2e8e3f%3A0x123456789!2sChicago+Loop!5e0!3m2!1sen!2sus!4v1623456789"
-            }
+            src={MAP_EMBED_URL}
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -191,33 +220,52 @@ export function ContactPage() {
                   <MapPin size={20} className="text-charcoal" />
                 </div>
                 <div>
-                  <h4 className="text-charcoal dark:text-white font-bold text-sm">{OFFICE_LOCATIONS[selectedOffice].name}</h4>
-                  <p className="text-gold text-xs uppercase tracking-wider">Office</p>
+                  <h4 className="text-charcoal dark:text-white font-bold text-sm">
+                    {OFFICE_LOCATIONS[selectedOffice].name}
+                  </h4>
+                  <p className="text-gold text-xs uppercase tracking-wider">
+                    Office
+                  </p>
                 </div>
               </div>
               <div className="space-y-3 text-sm">
                 <div className="flex items-start gap-2">
                   <MapPin size={14} className="text-gold mt-0.5 shrink-0" />
-                  <span className="text-medium-gray dark:text-gray-300">{OFFICE_LOCATIONS[selectedOffice].address}</span>
+                  <span className="text-medium-gray dark:text-gray-300">
+                    {OFFICE_LOCATIONS[selectedOffice].address}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={14} className="text-gold shrink-0" />
-                  <a href={`tel:${OFFICE_LOCATIONS[selectedOffice].phone.replace(/\s/g, '')}`} dir="ltr" className="phone-ltr text-charcoal dark:text-gray-300 hover:text-gold transition-colors">{OFFICE_LOCATIONS[selectedOffice].phone}</a>
+                  <a
+                    href={`tel:${OFFICE_LOCATIONS[selectedOffice].phone.replace(/\s/g, "")}`}
+                    dir="ltr"
+                    className="phone-ltr text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
+                  >
+                    {OFFICE_LOCATIONS[selectedOffice].phone}
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="text-gold shrink-0" />
-                  <a href={`mailto:${OFFICE_LOCATIONS[selectedOffice].email}`} className="text-charcoal dark:text-gray-300 hover:text-gold transition-colors">{OFFICE_LOCATIONS[selectedOffice].email}</a>
+                  <a
+                    href={`mailto:${OFFICE_LOCATIONS[selectedOffice].email}`}
+                    className="text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
+                  >
+                    {OFFICE_LOCATIONS[selectedOffice].email}
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock size={14} className="text-gold shrink-0" />
-                  <span className="text-medium-gray dark:text-gray-300">{OFFICE_LOCATIONS[selectedOffice].hours}</span>
+                  <span className="text-medium-gray dark:text-gray-300">
+                    {OFFICE_LOCATIONS[selectedOffice].hours}
+                  </span>
                 </div>
               </div>
 
               {/* Direction Buttons */}
               <div className="mt-4 pt-3 border-t border-border-gray dark:border-gray-700 space-y-2">
                 <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${OFFICE_LOCATIONS[selectedOffice].mapQuery}`}
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gold text-charcoal px-4 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-gold-dark transition-all"
@@ -226,7 +274,7 @@ export function ContactPage() {
                   Get Directions
                 </a>
                 <a
-                  href={`https://maps.google.com/?q=${OFFICE_LOCATIONS[selectedOffice].mapQuery}`}
+                  href={MAP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full border border-gold text-gold px-4 py-2 text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-charcoal transition-all"
@@ -242,9 +290,19 @@ export function ContactPage() {
           <button
             onClick={() => setIsMapExpanded(!isMapExpanded)}
             className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 bg-white dark:bg-charcoal-dark border border-border-gray dark:border-gray-700 shadow-lg flex items-center justify-center hover:border-gold transition-colors min-w-[44px] min-h-[44px]"
-            aria-label={isMapExpanded ? 'Collapse map' : 'Expand map'}
+            aria-label={isMapExpanded ? "Collapse map" : "Expand map"}
           >
-            {isMapExpanded ? <Minimize2 size={18} className="text-charcoal dark:text-gray-300" /> : <Maximize2 size={18} className="text-charcoal dark:text-gray-300" />}
+            {isMapExpanded ? (
+              <Minimize2
+                size={18}
+                className="text-charcoal dark:text-gray-300"
+              />
+            ) : (
+              <Maximize2
+                size={18}
+                className="text-charcoal dark:text-gray-300"
+              />
+            )}
           </button>
         </div>
 
@@ -254,28 +312,43 @@ export function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {OFFICE_LOCATIONS.map((office, index) => (
                 <button
-                  key={office.name}
+                  key={`${office.name}-${index}`}
                   onClick={() => setSelectedOffice(index)}
                   className={`text-left p-5 border-2 transition-all duration-300 ${
                     selectedOffice === index
-                      ? 'border-gold bg-gold/5 dark:bg-gold/10 shadow-md'
-                      : 'border-border-gray dark:border-gray-700 hover:border-gold/50 bg-white dark:bg-charcoal'
+                      ? "border-gold bg-gold/5 dark:bg-gold/10 shadow-md"
+                      : "border-border-gray dark:border-gray-700 hover:border-gold/50 bg-white dark:bg-charcoal"
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-10 h-10 flex items-center justify-center shrink-0 transition-colors ${
-                      selectedOffice === index ? 'bg-gold text-charcoal' : 'bg-gold/10 text-gold'
-                    }`}>
+                    <div
+                      className={`w-10 h-10 flex items-center justify-center shrink-0 transition-colors ${
+                        selectedOffice === index
+                          ? "bg-gold text-charcoal"
+                          : "bg-gold/10 text-gold"
+                      }`}
+                    >
                       <MapPin size={18} />
                     </div>
                     <div>
-                      <h4 className={`font-bold text-sm ${selectedOffice === index ? 'text-gold' : 'text-charcoal dark:text-white'}`}>{office.name}</h4>
+                      <h4
+                        className={`font-bold text-sm ${selectedOffice === index ? "text-gold" : "text-charcoal dark:text-white"}`}
+                      >
+                        {office.name}
+                      </h4>
                     </div>
                   </div>
-                  <p className="text-medium-gray dark:text-gray-400 text-xs mb-2">{office.address}</p>
+                  <p className="text-medium-gray dark:text-gray-400 text-xs mb-2">
+                    {office.address}
+                  </p>
                   <div className="flex items-center gap-1 text-xs">
                     <Phone size={10} className="text-gold shrink-0" />
-                    <span dir="ltr" className="phone-ltr text-medium-gray dark:text-gray-400">{office.phone}</span>
+                    <span
+                      dir="ltr"
+                      className="phone-ltr text-medium-gray dark:text-gray-400"
+                    >
+                      {office.phone}
+                    </span>
                   </div>
                   <div className="mt-3 flex items-center gap-1 text-xs text-gold font-semibold">
                     <Navigation size={10} />
@@ -293,12 +366,16 @@ export function ContactPage() {
             <div className="flex items-center gap-3 text-white">
               <MapPin size={20} className="text-gold" />
               <div>
-                <p className="font-semibold text-sm">{OFFICE_LOCATIONS[selectedOffice].name}</p>
-                <p className="text-gray-400 text-xs">{OFFICE_LOCATIONS[selectedOffice].address}</p>
+                <p className="font-semibold text-sm">
+                  {OFFICE_LOCATIONS[selectedOffice].name}
+                </p>
+                <p className="text-gray-400 text-xs">
+                  {OFFICE_LOCATIONS[selectedOffice].address}
+                </p>
               </div>
             </div>
             <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${OFFICE_LOCATIONS[selectedOffice].mapQuery}`}
+              href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gold text-charcoal px-6 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold-light transition-all flex items-center gap-2"
@@ -320,17 +397,25 @@ export function ContactPage() {
             {/* Form - takes 2 cols */}
             <div className="lg:col-span-2">
               <AnimatedSection animation="fade-left">
-                <h2 className="text-3xl font-bold text-charcoal dark:text-white mb-2" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                <h2
+                  className="text-3xl font-bold text-charcoal dark:text-white mb-2"
+                  style={{ fontFamily: "var(--font-playfair), serif" }}
+                >
                   {t.contactPage.form.title}
                 </h2>
-                <p className="text-medium-gray dark:text-gray-400 mb-8">{t.contactPage.askForm?.subtitle || t.contactPage.form.title}</p>
+                <p className="text-medium-gray dark:text-gray-400 mb-8">
+                  {t.contactPage.askForm?.subtitle || t.contactPage.form.title}
+                </p>
               </AnimatedSection>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <AnimatedSection delay={100}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.contactPage.form.nameLabel} <span className="text-red-500">*</span></label>
+                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                        {t.contactPage.form.nameLabel}{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
                       <Input
                         name="name"
                         placeholder={t.contactPage.form.namePlaceholder}
@@ -341,7 +426,10 @@ export function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.contactPage.form.emailLabel} <span className="text-red-500">*</span></label>
+                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                        {t.contactPage.form.emailLabel}{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
                       <Input
                         name="email"
                         placeholder={t.contactPage.form.emailPlaceholder}
@@ -357,7 +445,9 @@ export function ContactPage() {
                 <AnimatedSection delay={150}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.contactPage.form.phoneLabel}</label>
+                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                        {t.contactPage.form.phoneLabel}
+                      </label>
                       <Input
                         name="phone"
                         placeholder={t.contactPage.form.phonePlaceholder}
@@ -368,7 +458,9 @@ export function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.contactPage.form.subjectLabel}</label>
+                      <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                        {t.contactPage.form.subjectLabel}
+                      </label>
                       <Input
                         name="subject"
                         placeholder={t.contactPage.form.subjectPlaceholder}
@@ -381,22 +473,33 @@ export function ContactPage() {
                 </AnimatedSection>
                 <AnimatedSection delay={200}>
                   <div>
-                    <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.faqPage.askForm.departmentLabel}</label>
+                    <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                      {t.faqPage.askForm.departmentLabel}
+                    </label>
                     <select
                       value={department}
                       onChange={(e) => setDepartment(e.target.value)}
                       className="w-full p-2.5 border border-border-gray dark:border-gray-600 text-sm text-charcoal dark:text-white bg-white dark:bg-charcoal-dark focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 h-12 rounded-md"
                     >
-                      <option value="">{t.faqPage.askForm.departmentPlaceholder}</option>
-                      {(t.faqPage.askForm.departments as string[]).map((dept) => (
-                        <option key={dept} value={dept}>{dept}</option>
-                      ))}
+                      <option value="">
+                        {t.faqPage.askForm.departmentPlaceholder}
+                      </option>
+                      {(t.faqPage.askForm.departments as string[]).map(
+                        (dept) => (
+                          <option key={dept} value={dept}>
+                            {dept}
+                          </option>
+                        ),
+                      )}
                     </select>
                   </div>
                 </AnimatedSection>
                 <AnimatedSection delay={250}>
                   <div>
-                    <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.contactPage.form.messageLabel} <span className="text-red-500">*</span></label>
+                    <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">
+                      {t.contactPage.form.messageLabel}{" "}
+                      <span className="text-red-500">*</span>
+                    </label>
                     <Textarea
                       name="message"
                       placeholder={t.contactPage.form.messagePlaceholder}
@@ -441,7 +544,9 @@ export function ContactPage() {
                   <div className="space-y-4">
                     {WORKING_HOURS.map((wh) => (
                       <div key={wh.day} className="border-l-2 border-gold pl-4">
-                        <p className="text-gold font-medium text-sm">{wh.day}</p>
+                        <p className="text-gold font-medium text-sm">
+                          {wh.day}
+                        </p>
                         <p className="text-gray-300 text-sm">{wh.hours}</p>
                       </div>
                     ))}
@@ -456,7 +561,9 @@ export function ContactPage() {
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 mb-4">
                       <AlertCircle size={20} className="text-gold" />
-                      <h4 className="text-gold font-bold text-lg">{t.contactPage.emergency.title}</h4>
+                      <h4 className="text-gold font-bold text-lg">
+                        {t.contactPage.emergency.title}
+                      </h4>
                     </div>
                     <p className="text-gray-300 text-sm mb-4">
                       {t.contactPage.emergency.description}
@@ -466,9 +573,15 @@ export function ContactPage() {
                         <Phone size={22} className="text-charcoal" />
                       </div>
                       <div>
-                        <p className="text-xs text-gray-300 uppercase tracking-wider">24/7 Emergency Line</p>
-                        <a href="tel:+18003334466" dir="ltr" className="phone-ltr text-gold text-xl font-bold hover:text-gold-light transition-colors">
-                          +1 (800) 333 44 66
+                        <p className="text-xs text-gray-300 uppercase tracking-wider">
+                          24/7 Emergency Line
+                        </p>
+                        <a
+                          href="tel:07802233000"
+                          dir="ltr"
+                          className="phone-ltr text-gold text-xl font-bold hover:text-gold-light transition-colors"
+                        >
+                          07802233000
                         </a>
                       </div>
                     </div>
@@ -485,16 +598,27 @@ export function ContactPage() {
                   </h4>
                   <div className="space-y-4">
                     <div className="border-l-2 border-gold pl-4">
-                      <p className="text-charcoal dark:text-white font-medium text-sm">{t.contactPage.addressCard.main}</p>
-                      <p className="text-medium-gray dark:text-gray-400 text-sm">{t.contactPage.addressCard.mainAddress}</p>
+                      <p className="text-charcoal dark:text-white font-medium text-sm">
+                        {t.contactPage.addressCard.main}
+                      </p>
+                      <p className="text-medium-gray dark:text-gray-400 text-sm">
+                        {t.contactPage.addressCard.mainAddress}
+                      </p>
                     </div>
                     <div className="border-l-2 border-gold pl-4">
-                      <p className="text-charcoal dark:text-white font-medium text-sm">{t.contactPage.addressCard.branch}</p>
-                      <p className="text-medium-gray dark:text-gray-400 text-sm">{t.contactPage.addressCard.branchAddress}</p>
+                      <p className="text-charcoal dark:text-white font-medium text-sm">
+                        {t.contactPage.addressCard.branch}
+                      </p>
+                      <p className="text-medium-gray dark:text-gray-400 text-sm">
+                        {t.contactPage.addressCard.branchAddress}
+                      </p>
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-border-gray dark:border-gray-700">
-                    <a href={`mailto:${t.contactPage.info.email.address}`} className="text-gold text-sm font-medium flex items-center gap-2 hover:text-gold-dark transition-colors">
+                    <a
+                      href={`mailto:${t.contactPage.info.email.address}`}
+                      className="text-gold text-sm font-medium flex items-center gap-2 hover:text-gold-dark transition-colors"
+                    >
                       <Mail size={14} />
                       {t.contactPage.info.email.address}
                     </a>

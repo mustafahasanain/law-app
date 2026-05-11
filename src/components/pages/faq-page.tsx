@@ -353,11 +353,11 @@ export function FAQPage() {
                 {t.faqPage.stillHaveQuestions.contactUs}
               </button>
               <a
-                href="tel:+18003334455"
+                href="tel:07802233000"
                 className="border-2 border-gold text-gold px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-white transition-all flex items-center gap-2"
               >
                 <Phone size={16} />
-                {t.faqPage.stillHaveQuestions.callFree}: <span dir="ltr" className="phone-ltr">+1 (800) 333 44 55</span>
+                {t.faqPage.stillHaveQuestions.callFree}: <span dir="ltr" className="phone-ltr">07802233000</span>
               </a>
             </div>
           </AnimatedSection>

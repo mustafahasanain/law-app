@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "legal representation",
     "free consultation",
     "24/7 emergency lawyer",
-    "New York attorney",
+    "بغداد, المنصور, شارع مطعم الساعة",
     "litigation",
     "civil rights",
   ],

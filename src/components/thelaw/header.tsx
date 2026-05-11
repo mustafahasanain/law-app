@@ -75,9 +75,9 @@ export function Header() {
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
             </div>
             <span className="text-gray-400">|</span>
-            <a href="tel:+18881234567" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
+            <a href="tel:07802233000" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Phone size={12} />
-              <span dir="ltr" className="phone-ltr">+1 (888) 123 4567</span>
+              <span dir="ltr" className="phone-ltr">07802233000</span>
             </a>
             <a href="mailto:info@yoursite.com" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Mail size={12} />
@@ -187,8 +187,8 @@ export function Header() {
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
             </div>
-            <a href="tel:+18881234567" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
-              <Phone size={14} className="text-gold" /> <span dir="ltr" className="phone-ltr">+1 (888) 123 4567</span>
+            <a href="tel:07802233000" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
+              <Phone size={14} className="text-gold" /> <span dir="ltr" className="phone-ltr">07802233000</span>
             </a>
             <a href="mailto:info@yoursite.com" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
               <Mail size={14} className="text-gold" /> info@yoursite.com

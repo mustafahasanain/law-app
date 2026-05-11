@@ -309,8 +309,8 @@ export const translations = {
       },
       contact: {
         title: 'Contact Info',
-        address: 'Unit 48, 23 Ave. New York USA',
-        phone: '+1 (800) 123456',
+        address: 'بغداد, المنصور, شارع مطعم الساعة',
+        phone: '07802233000',
         email: 'info@xtralawyer.com',
       },
     },
@@ -438,9 +438,9 @@ export const translations = {
     contactPage: {
       hero: { title: 'Contact Us', breadcrumb: { home: 'Home', current: 'Contact Us' } },
       info: {
-        phone: { title: 'Phone', number: '+1 (888) 123 4567' },
+        phone: { title: 'Phone', number: '07802233000' },
         email: { title: 'Email', address: 'info@yoursite.com' },
-        address: { title: 'Address', full: 'Unit 48, 23 Ave.\nNew York, USA' },
+        address: { title: 'Address', full: 'بغداد, المنصور, شارع مطعم الساعة' },
       },
       form: {
         title: 'Send Us a Message',
@@ -474,9 +474,9 @@ export const translations = {
       addressCard: {
         title: 'Our Offices',
         main: 'Main Office',
-        mainAddress: 'Unit 48, 23 Ave. New York, USA',
+        mainAddress: 'بغداد, المنصور, شارع مطعم الساعة',
         branch: 'Branch Office',
-        branchAddress: '123 Legal Drive, Suite 200, Los Angeles, CA',
+        branchAddress: 'بغداد, المنصور, شارع مطعم الساعة',
       },
       appointment: {
         title: 'Book an Appointment',
@@ -522,9 +522,9 @@ export const translations = {
       contact: {
         title: 'Contact',
         addressLabel: 'Address:',
-        address: 'Unit 48, 23 Ave. New York USA',
+        address: 'بغداد, المنصور, شارع مطعم الساعة',
         telLabel: 'Tel:',
-        phone: '+1 (800) 123456',
+        phone: '07802233000',
         emailLabel: 'Email:',
         email: 'info@xtralawyer.com',
       },
@@ -867,8 +867,8 @@ export const translations = {
       },
       contact: {
         title: 'معلومات الاتصال',
-        address: 'الوحدة 48، 23 شارع. نيويورك الولايات المتحدة',
-        phone: '+1 (800) 123456',
+        address: 'بغداد, المنصور, شارع مطعم الساعة',
+        phone: '07802233000',
         email: 'info@xtralawyer.com',
       },
     },
@@ -996,9 +996,9 @@ export const translations = {
     contactPage: {
       hero: { title: 'اتصل بنا', breadcrumb: { home: 'الرئيسية', current: 'اتصل بنا' } },
       info: {
-        phone: { title: 'الهاتف', number: '+1 (888) 123 4567' },
+        phone: { title: 'الهاتف', number: '07802233000' },
         email: { title: 'البريد الإلكتروني', address: 'info@yoursite.com' },
-        address: { title: 'العنوان', full: 'الوحدة 48، 23 شارع\nنيويورك، الولايات المتحدة' },
+        address: { title: 'العنوان', full: 'بغداد, المنصور, شارع مطعم الساعة' },
       },
       form: {
         title: 'أرسل لنا رسالة',
@@ -1032,9 +1032,9 @@ export const translations = {
       addressCard: {
         title: 'مكاتبنا',
         main: 'المكتب الرئيسي',
-        mainAddress: 'الوحدة 48، 23 شارع. نيويورك، الولايات المتحدة',
+        mainAddress: 'بغداد, المنصور, شارع مطعم الساعة',
         branch: 'المكتب الفرعي',
-        branchAddress: '123 دريف القانونية، جناح 200، لوس أنجلوس، كاليفورنيا',
+        branchAddress: 'بغداد, المنصور, شارع مطعم الساعة',
       },
       appointment: {
         title: 'احجز موعداً',
@@ -1080,9 +1080,9 @@ export const translations = {
       contact: {
         title: 'اتصل',
         addressLabel: 'العنوان:',
-        address: 'الوحدة 48، 23 شارع. نيويورك الولايات المتحدة',
+        address: 'بغداد, المنصور, شارع مطعم الساعة',
         telLabel: 'هاتف:',
-        phone: '+1 (800) 123456',
+        phone: '07802233000',
         emailLabel: 'بريد إلكتروني:',
         email: 'info@xtralawyer.com',
       },

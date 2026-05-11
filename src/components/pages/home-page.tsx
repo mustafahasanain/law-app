@@ -171,7 +171,7 @@ const TESTIMONIALS = [
       "John handled my case with the utmost professionalism and care. He was always available to answer my questions and fought tirelessly for my rights.",
     name: "Sarah M.",
     caseType: "Family Law",
-    location: "New York, NY",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "SM",
     rating: 5,
     date: "2 months ago",
@@ -181,7 +181,7 @@ const TESTIMONIALS = [
       "After my arrest, I was terrified. The Law Firm guided me through every step and achieved the best possible outcome. I can't thank them enough.",
     name: "David R.",
     caseType: "Criminal Defense",
-    location: "Los Angeles, CA",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "DR",
     rating: 5,
     date: "3 weeks ago",
@@ -191,7 +191,7 @@ const TESTIMONIALS = [
       "Their business law expertise saved our company from a potentially devastating lawsuit. Highly recommended for any corporate legal needs.",
     name: "Michael T.",
     caseType: "Business Law",
-    location: "Chicago, IL",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "MT",
     rating: 5,
     date: "1 month ago",
@@ -201,7 +201,7 @@ const TESTIMONIALS = [
       "When our corporation faced a complex merger dispute, The Law Firm's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
     name: "Jennifer K.",
     caseType: "Corporate Law",
-    location: "Houston, TX",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "JK",
     rating: 5,
     date: "5 months ago",
@@ -211,7 +211,7 @@ const TESTIMONIALS = [
       "Going through a custody battle was the hardest thing I've ever faced. Their family law team showed genuine compassion while being fierce advocates in court. I got full custody of my children and I'll forever be grateful.",
     name: "Robert L.",
     caseType: "Family Law",
-    location: "Miami, FL",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "RL",
     rating: 5,
     date: "1 week ago",
@@ -221,7 +221,7 @@ const TESTIMONIALS = [
       "After being wrongfully terminated, I didn't know where to turn. The Law Firm took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
     name: "Amanda P.",
     caseType: "Employment Law",
-    location: "Seattle, WA",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "AP",
     rating: 5,
     date: "4 months ago",
@@ -231,7 +231,7 @@ const TESTIMONIALS = [
       "My immigration case was incredibly complex, but this firm navigated every hurdle with expertise. I now have my green card and couldn't be happier. Thank you for changing my life.",
     name: "Carlos V.",
     caseType: "Immigration Law",
-    location: "Miami, FL",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "CV",
     rating: 5,
     date: "6 months ago",
@@ -241,7 +241,7 @@ const TESTIMONIALS = [
       "I was injured in a commercial truck accident and the insurance company offered me almost nothing. The Law Firm secured a $1.2M settlement that covers all my medical needs.",
     name: "Patricia W.",
     caseType: "Personal Injury",
-    location: "Atlanta, GA",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "PW",
     rating: 5,
     date: "2 weeks ago",
@@ -251,7 +251,7 @@ const TESTIMONIALS = [
       "As a small business owner, having reliable legal counsel is essential. This firm has been our go-to for contract reviews, compliance issues, and dispute resolution for over 5 years.",
     name: "Thomas H.",
     caseType: "Business Law",
-    location: "Denver, CO",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "TH",
     rating: 5,
     date: "3 months ago",
@@ -261,7 +261,7 @@ const TESTIMONIALS = [
       "The real estate closing on our first home hit unexpected legal complications. The team resolved everything quickly and kept us informed throughout. Professional and thorough.",
     name: "Linda S.",
     caseType: "Real Estate",
-    location: "Boston, MA",
+    location: "بغداد, المنصور, شارع مطعم الساعة",
     initials: "LS",
     rating: 4,
     date: "8 months ago",
@@ -1120,10 +1120,12 @@ export function HomePage() {
                 />
                 <span className="font-medium">{t.hero.callFree}:</span>
                 <a
-                  href="tel:+18001234567"
+                  href="tel:07802233000"
                   className="text-gold font-semibold hover:text-gold-light transition-colors pulsing-dot ml-2 md:ml-4 min-h-[44px] flex items-center"
                 >
-                  <span dir="ltr" className="phone-ltr">+1 (800) 123 4567</span>
+                  <span dir="ltr" className="phone-ltr">
+                    07802233000
+                  </span>
                 </a>
               </div>
 
@@ -1155,7 +1157,7 @@ export function HomePage() {
                 {/* Small diamond at bottom-right corner */}
                 <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gold rotate-45 z-30" />
                 <img
-                  src="/images/attorney-home.png"
+                  src="/images/lawyer-hero.jpeg"
                   alt={t.hero.name}
                   className="relative z-10 max-h-[500px] object-cover shadow-2xl rounded-b-lg"
                 />
@@ -1183,10 +1185,13 @@ export function HomePage() {
             </div>
           </div>
           <a
-            href="tel:+18001234567"
+            href="tel:07802233000"
             className="text-gold text-lg md:text-2xl font-bold hover:text-gold-light transition-colors animate-wave-pulse"
           >
-            {t.emergency.callFree}: <span dir="ltr" className="phone-ltr">+1 (800) 123 4567</span>
+            {t.emergency.callFree}:{" "}
+            <span dir="ltr" className="phone-ltr">
+              07802233000
+            </span>
           </a>
         </div>
       </section>

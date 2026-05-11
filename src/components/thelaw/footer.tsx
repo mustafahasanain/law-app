@@ -25,8 +25,8 @@ export function Footer() {
           {/* Subtle gold gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent pointer-events-none" />
           <p className="text-gray-200 text-xs md:text-sm uppercase tracking-widest mb-2 relative z-10">{t.footer.hereToHelp}</p>
-          <a href="tel:+18001234567" dir="ltr" className="phone-ltr text-gold text-3xl md:text-4xl lg:text-6xl font-bold hover:text-gold-light transition-colors relative z-10" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-            +1 (800) 123 4567
+          <a href="tel:07802233000" dir="ltr" className="phone-ltr text-gold text-3xl md:text-4xl lg:text-6xl font-bold hover:text-gold-light transition-colors relative z-10" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+            07802233000
           </a>
           <p className="text-gray-400 text-xs md:text-sm mt-2 relative z-10">{t.footer.freeConsultation}</p>
         </div>
