@@ -263,33 +263,33 @@ export const translations = {
     },
     // How We Can Help
     howWeCanHelp: {
-      title: "How We Can Help",
-      subtitle: "Our Services",
+      title: "Related Questions",
+      subtitle: "Legal Answers",
       items: [
         {
-          title: "Personal Injury Claims",
+          title: "When should I request legal advice?",
           description:
-            "If you have been injured due to someone else's negligence, our personal injury attorneys will fight to get you the compensation you deserve.",
+            "Request legal advice before signing contracts, answering official notices, filing a lawsuit, giving statements, or making decisions that may affect your rights or business obligations.",
         },
         {
-          title: "Criminal Defense",
+          title: "Can the office represent me before court?",
           description:
-            "Facing criminal charges can be overwhelming. Our experienced criminal defense lawyers provide aggressive representation for all types of criminal charges.",
+            "Yes. The office handles litigation, lawsuits, criminal defense, company disputes, property matters, and representation before courts and official authorities.",
         },
         {
-          title: "Family Law Matters",
+          title: "Do companies need ongoing legal support?",
           description:
-            "Family legal issues require sensitivity and expertise. We handle divorce, child custody and support, alimony, adoption, and domestic violence cases.",
+            "Ongoing legal support helps companies review contracts, manage compliance, handle disputes early, prepare official documents, and reduce risks before problems reach court.",
         },
         {
-          title: "Business Disputes",
+          title: "What documents help in a property or contract dispute?",
           description:
-            "From contract disputes and partnership conflicts to intellectual property battles, our business law team provides comprehensive legal solutions.",
+            "Useful documents include contracts, title deeds, receipts, correspondence, notices, court papers, company records, photographs, and any proof showing each party's rights and obligations.",
         },
         {
-          title: "Immigration Cases",
+          title: "Can disputes be resolved without a lawsuit?",
           description:
-            "Navigating immigration law can be complex. Our immigration attorneys assist with visa applications, green cards, citizenship, deportation defense, and more.",
+            "Many disputes can be handled through negotiation, formal legal notices, settlement discussions, or mediation. If these options are not effective, litigation may be recommended.",
         },
       ],
     },
@@ -391,48 +391,6 @@ export const translations = {
             title: "25th Anniversary",
             description:
               "Celebrated 25 years of legal excellence, having served over 10,000 clients and recovered more than $100M in verdicts and settlements.",
-          },
-        ],
-      },
-      history: {
-        subtitle: "Ù…Ø­Ø·Ø§ØªÙ†Ø§",
-        title: "ØªØ§Ø±ÙŠØ®Ù†Ø§",
-        items: [
-          {
-            year: "1998",
-            title: "Ø§Ù„ØªØ£Ø³ÙŠØ³",
-            description:
-              "ØªØ£Ø³Ø³Øª Ø´Ø±ÙƒØ© Ø§Ù„Ù…Ø­Ø§Ù…Ø§Ø© Ø¹Ù„Ù‰ Ø£Ø³Ø§Ø³ Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„Ø¹Ø¯Ø§Ù„Ø© ÙˆØ§Ù„Ø¯ÙØ§Ø¹ Ø¹Ù† Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ØŒ Ø¨Ø¯Ø¡Ø§Ù‹ Ù…Ù† Ù…ÙƒØªØ¨ ØµØºÙŠØ± ÙˆÙØ±ÙŠÙ‚ Ù…Ù† Ø«Ù„Ø§Ø«Ø© Ù…Ø­Ø§Ù…ÙŠÙ† Ù…ØªÙØ§Ù†ÙŠÙ†.",
-          },
-          {
-            year: "2003",
-            title: "Ø£ÙˆÙ„ Ø­ÙƒÙ… ÙƒØ¨ÙŠØ±",
-            description:
-              "Ø­Ù‚Ù‚Ù†Ø§ Ø­ÙƒÙ…Ø§Ù‹ Ø¨Ø§Ø±Ø²Ø§Ù‹ Ø¨Ù‚ÙŠÙ…Ø© 3.2 Ù…Ù„ÙŠÙˆÙ† Ø¯ÙˆÙ„Ø§Ø± ÙÙŠ Ù‚Ø¶ÙŠØ© Ø®Ø·Ø£ Ø·Ø¨ÙŠØŒ Ù…Ù…Ø§ Ø±Ø³Ø® Ø³Ù…Ø¹ØªÙ†Ø§ ÙÙŠ Ø§Ù„ØªÙ…Ø«ÙŠÙ„ Ø§Ù„Ù‚Ø¶Ø§Ø¦ÙŠ Ø§Ù„Ø­Ø§Ø²Ù… ÙˆØ§Ù„ÙØ¹Ø§Ù„.",
-          },
-          {
-            year: "2008",
-            title: "Ø§Ù„ØªÙˆØ³Ø¹ Ø¥Ù„Ù‰ 3 Ù…ÙƒØ§ØªØ¨",
-            description:
-              "ØªÙˆØ³Ø¹Ù†Ø§ Ù„Ø®Ø¯Ù…Ø© Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ ÙÙŠ Ø«Ù„Ø§Ø« Ù…Ù†Ø§Ø·Ù‚ Ø­Ø¶Ø±ÙŠØ© Ø±Ø¦ÙŠØ³ÙŠØ©ØŒ Ù…Ø¹ ØªÙˆØ³ÙŠØ¹ Ø§Ù„ÙØ±ÙŠÙ‚ ÙˆØ§Ù„Ù‚Ø¯Ø±Ø§Øª Ù„Ù…ÙˆØ§ÙƒØ¨Ø© Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù…ØªØ²Ø§ÙŠØ¯.",
-          },
-          {
-            year: "2013",
-            title: "Ø§Ù„Ù‚Ø¶ÙŠØ© Ø§Ù„Ù€ 500 Ø§Ù„Ù†Ø§Ø¬Ø­Ø©",
-            description:
-              "ÙˆØµÙ„Ù†Ø§ Ø¥Ù„Ù‰ Ù…Ø­Ø·Ø© 500 Ù†ØªÙŠØ¬Ø© Ù‚Ø¶Ø§Ø¦ÙŠØ© Ù†Ø§Ø¬Ø­Ø©ØŒ ÙÙŠ Ø¯Ù„ÙŠÙ„ Ø¹Ù„Ù‰ Ø§Ù„ØªØ²Ø§Ù…Ù†Ø§ Ø§Ù„Ø«Ø§Ø¨Øª Ø¨ØªØ­Ù‚ÙŠÙ‚ Ø§Ù„Ø¹Ø¯Ø§Ù„Ø© Ù„Ø¹Ù…Ù„Ø§Ø¦Ù†Ø§.",
-          },
-          {
-            year: "2018",
-            title: "ØªØµÙ†ÙŠÙÙ†Ø§ ÙƒØ£Ø­Ø¯ Ø£ÙØ¶Ù„ Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-            description:
-              "ØªÙ… Ø§Ù„Ø§Ø¹ØªØ±Ø§Ù Ø¨Ù†Ø§ ÙƒÙˆØ§Ø­Ø¯Ø© Ù…Ù† Ø£ÙØ¶Ù„ 50 Ø´Ø±ÙƒØ© Ù…Ø­Ø§Ù…Ø§Ø© ÙÙŠ Ø§Ù„Ø¨Ù„Ø§Ø¯ØŒ ÙˆÙ‡Ùˆ ØªÙƒØ±ÙŠÙ… ÙŠØ¹ÙƒØ³ Ø§Ù„ØªØ²Ø§Ù…Ù†Ø§ Ø¨Ø§Ù„ØªÙ…ÙŠØ².",
-          },
-          {
-            year: "2023",
-            title: "Ø§Ù„Ø°ÙƒØ±Ù‰ Ø§Ù„Ù€ 25",
-            description:
-              "Ø§Ø­ØªÙÙ„Ù†Ø§ Ø¨Ù…Ø±ÙˆØ± 25 Ø¹Ø§Ù…Ø§Ù‹ Ù…Ù† Ø§Ù„ØªÙ…ÙŠØ² Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØŒ Ø¨Ø¹Ø¯ Ø®Ø¯Ù…Ø© Ø£ÙƒØ«Ø± Ù…Ù† 10,000 Ø¹Ù…ÙŠÙ„ ÙˆØ§Ø³ØªØ±Ø¯Ø§Ø¯ Ù…Ø§ ÙŠØ²ÙŠØ¯ Ø¹Ù† 100 Ù…Ù„ÙŠÙˆÙ† Ø¯ÙˆÙ„Ø§Ø± ÙÙŠ Ø§Ù„Ø£Ø­ÙƒØ§Ù… ÙˆØ§Ù„ØªØ³ÙˆÙŠØ§Øª.",
           },
         ],
       },
@@ -608,11 +566,12 @@ export const translations = {
         submit: "Submit Question",
         departments: [
           "General",
-          "Criminal Law",
-          "Family Law",
-          "Business Law",
-          "Immigration",
-          "Personal Injury",
+          "Legal Consultation",
+          "Litigation",
+          "Company Registration",
+          "Contracts",
+          "Criminal Cases",
+          "Property Disputes",
         ],
       },
       general: {
@@ -620,28 +579,28 @@ export const translations = {
         title: "General Questions",
         items: [
           {
-            q: "What areas of law does your firm specialize in?",
-            a: "Our firm specializes in a wide range of legal areas including criminal defense, personal injury, family law, business law, immigration, and civil litigation. Each practice area is handled by experienced attorneys who focus specifically on that field.",
+            q: "What legal services does Dr. Baraa A. Khaleel provide?",
+            a: "The office provides legal consultation, litigation, lawsuits, business law services, criminal defense, dispute resolution, copyright matters, company registration, contract review, property disputes, and representation before courts and official authorities.",
           },
           {
-            q: "How much does an initial consultation cost?",
-            a: "We offer free initial consultations for all potential clients. During this consultation, we will review your case, discuss your legal options, and provide an honest assessment of your situation at no cost to you.",
+            q: "How can I book an appointment?",
+            a: "You can book an appointment through the appointment form on the home page or contact the office by phone. Please include your name, contact information, preferred date and time, and a short description of the legal matter.",
           },
           {
             q: "What should I bring to my first meeting?",
-            a: "Bring any relevant documents such as police reports, medical records, contracts, correspondence, court notices, and identification. The more information you can provide, the better we can evaluate your case.",
+            a: "Bring your identification and any documents related to the matter, such as court papers, contracts, company documents, correspondence, property records, official notices, police reports, or prior legal decisions.",
           },
           {
-            q: "How long will my case take to resolve?",
-            a: "The timeline varies greatly depending on the complexity of the case, the court schedule, and the willingness of parties to negotiate. Simple cases may resolve in weeks, while complex litigation can take months or years.",
+            q: "Can the office review my documents before starting a case?",
+            a: "Yes. Document review is an important first step. The lawyer can examine contracts, notices, court papers, company files, and evidence to explain your legal position and recommend the next procedure.",
           },
           {
-            q: "Do you offer payment plans?",
-            a: "Yes, we offer flexible payment plans and work with clients to ensure cost is not a barrier to quality legal representation. We also handle many cases on a contingency fee basis.",
+            q: "Do you represent companies and organizations?",
+            a: "Yes. The office assists companies and organizations with registration, legal compliance, contracts, disputes, court representation, investment licensing matters, and ongoing legal advisory work.",
           },
           {
-            q: "Can I change attorneys mid-case?",
-            a: "Yes, you have the right to change attorneys at any point. However, we recommend discussing any concerns with your current attorney first, as transitions can sometimes cause delays in your case.",
+            q: "Where is the office located and when is it open?",
+            a: "The main office is in Baghdad, Al-Mansour. Regular working hours are Monday to Friday from 9:00 to 16:30 and Saturday from 9:00 to 15:30. Emergency calls are available on Sunday.",
           },
         ],
       },
@@ -650,20 +609,28 @@ export const translations = {
         title: "Legal Questions",
         items: [
           {
-            q: "What are my rights if I am arrested?",
-            a: "If you are arrested, you have the right to remain silent, the right to an attorney, and the right to a phone call. Do not answer questions without an attorney present. Contact our office immediately for emergency legal assistance.",
+            q: "What should I do if I receive a court notice or lawsuit?",
+            a: "Do not ignore the notice. Contact a lawyer quickly, keep the original papers, write down the date you received them, and avoid signing or submitting any response before the documents are reviewed.",
           },
           {
-            q: "How is child custody determined?",
-            a: "Child custody is determined based on the best interests of the child. Courts consider factors such as the child's relationship with each parent, each parent's ability to provide care, the child's preferences (if old enough), and any history of abuse or neglect.",
+            q: "Can the office represent me in criminal complaints or investigations?",
+            a: "Yes. The office handles criminal defense and criminal law matters, including legal advice before statements, review of investigation papers, preparation of defense strategy, and representation before competent authorities and courts.",
           },
           {
-            q: "What compensation can I receive for a personal injury?",
-            a: "Compensation may include medical expenses, lost wages, pain and suffering, emotional distress, loss of enjoyment of life, and in some cases, punitive damages. The exact amount depends on the specifics of your case.",
+            q: "How can a property dispute be handled?",
+            a: "Property disputes usually begin with reviewing title deeds, contracts, notices, maps, payment records, and possession documents. The lawyer can then advise whether negotiation, official complaints, or court action is the proper path.",
           },
           {
-            q: "How do I start a business legally?",
-            a: "Starting a business involves choosing a legal structure, registering with the state, obtaining necessary licenses and permits, drafting operating agreements, and ensuring tax compliance. Our business law attorneys can guide you through every step.",
+            q: "Can you draft or review commercial contracts?",
+            a: "Yes. The office reviews and drafts commercial contracts, partnership agreements, service agreements, settlement documents, and related legal correspondence to reduce risk and clarify obligations before signing.",
+          },
+          {
+            q: "Do you help with company or NGO registration?",
+            a: "Yes. The office assists with local and foreign company registration, organization registration, required paperwork, legal procedures, and follow-up with the relevant official authorities.",
+          },
+          {
+            q: "What is the first step in a dispute between partners or businesses?",
+            a: "The first step is to review the agreement, correspondence, financial records, and evidence of each party's obligations. After that, the lawyer can recommend negotiation, formal notice, mediation, or litigation.",
           },
         ],
       },
@@ -1195,33 +1162,33 @@ export const translations = {
     },
     // How We Can Help
     howWeCanHelp: {
-      title: "كيف يمكننا المساعدة",
-      subtitle: "خدماتنا",
+      title: "أسئلة ذات صلة",
+      subtitle: "إجابات قانونية",
       items: [
         {
-          title: "دعاوى الإصابة الشخصية",
+          title: "متى أحتاج إلى استشارة قانونية؟",
           description:
-            "إذا أصبت بسبب إهمال شخص آخر، سيقاتل محامو الإصابة الشخصية لدينا للحصول على التعويض الذي تستحقه.",
+            "تحتاج إلى استشارة قانونية قبل توقيع العقود، أو الرد على التبليغات الرسمية، أو إقامة دعوى، أو الإدلاء بأقوال، أو اتخاذ قرار قد يؤثر في حقوقك أو التزاماتك التجارية.",
         },
         {
-          title: "الدفاع الجنائي",
+          title: "هل يمكن للمكتب تمثيلي أمام المحكمة؟",
           description:
-            "مواجهة تهم جنائية يمكن أن تكون مرهقة. يقدم محامو الدفاع الجنائي ذوو الخبرة لدينا تمثيلاً عدوانياً لجميع أنواع التهم الجنائية.",
+            "نعم. يتولى المكتب الدعاوى القضائية، والقضايا الجنائية، ونزاعات الشركات، والقضايا العقارية، وتمثيل الموكلين أمام المحاكم والجهات الرسمية المختصة.",
         },
         {
-          title: "مسائل قانون الأسرة",
+          title: "هل تحتاج الشركات إلى دعم قانوني مستمر؟",
           description:
-            "تتطلب المسائل القانونية الأسرية حساسية وخبرة. نتعامل مع الطلاق وحضانة الأطفال والنفقة والتبني وقضايا العنف المنزلي.",
+            "الدعم القانوني المستمر يساعد الشركات على مراجعة العقود، وإدارة الامتثال، ومعالجة النزاعات مبكراً، وتجهيز المستندات الرسمية، وتقليل المخاطر قبل وصولها إلى المحكمة.",
         },
         {
-          title: "النزاعات التجارية",
+          title: "ما المستندات المهمة في نزاع عقاري أو تعاقدي؟",
           description:
-            "من نزاعات العقود والصراعات الشراكة إلى معارك الملكية الفكرية، يقدم فريق قانون الأعمال لدينا حلولاً قانونية شاملة.",
+            "تشمل المستندات المهمة العقود، وسندات الملكية، والوصولات، والمراسلات، والتبليغات، وأوراق المحكمة، وملفات الشركات، والصور، وأي دليل يوضح حقوق والتزامات الأطراف.",
         },
         {
-          title: "قضايا الهجرة",
+          title: "هل يمكن حل النزاع دون دعوى قضائية؟",
           description:
-            "التنقل في قانون الهجرة يمكن أن يكون معقداً. يساعد محامو الهجرة لدينا في طلبات التأشيرات والبطاقات الخضراء والجنسية والدفاع عن الترحيل والمزيد.",
+            "يمكن حل كثير من النزاعات من خلال التفاوض، أو الإنذارات القانونية، أو التسوية، أو الوساطة. وإذا لم تكن هذه الخيارات مناسبة، فقد يكون التقاضي هو الإجراء الأفضل.",
         },
       ],
     },
@@ -1454,11 +1421,12 @@ export const translations = {
         submit: "أرسل السؤال",
         departments: [
           "عام",
-          "القانون الجنائي",
-          "قانون الأسرة",
-          "قانون الأعمال",
-          "الهجرة",
-          "إصابة شخصية",
+          "استشارة قانونية",
+          "الدعاوى القضائية",
+          "تسجيل الشركات",
+          "العقود",
+          "القضايا الجنائية",
+          "النزاعات العقارية",
         ],
       },
       general: {
@@ -1466,28 +1434,28 @@ export const translations = {
         title: "أسئلة عامة",
         items: [
           {
-            q: "ما هي مجالات القانون التي تتخصص فيها شركتكم؟",
-            a: "تتخصص شركتنا في مجموعة واسعة من المجالات القانونية بما في ذلك الدفاع الجنائي والإصابة الشخصية وقانون الأسرة وقانون الأعمال والهجرة والدعاوى المدنية.",
+            q: "ما هي الخدمات القانونية التي يقدمها مكتب الدكتور براء عبد الحكيم خليل؟",
+            a: "يقدم المكتب الاستشارات القانونية، والدعاوى القضائية، وتمثيل الشركات والأفراد أمام المحاكم، وقضايا القانون التجاري، والدفاع الجنائي، وتسوية النزاعات، وحقوق الملكية الفكرية، وتسجيل الشركات، ومراجعة العقود، والنزاعات العقارية.",
           },
           {
-            q: "كم تكلف الاستشارة الأولية؟",
-            a: "نقدم استشارات أولية مجانية لجميع العملاء المحتملين. خلال هذه الاستشارة، سنراجع قضيتك ونناقش خياراتك القانونية ونقدم تقييماً صادقاً لموقفك بدون أي تكلفة.",
+            q: "كيف يمكنني حجز موعد مع المحامي؟",
+            a: "يمكنك حجز موعد من خلال نموذج المواعيد في الصفحة الرئيسية أو التواصل مع المكتب هاتفياً. يرجى ذكر الاسم ومعلومات الاتصال والوقت المناسب وشرح مختصر للموضوع القانوني.",
           },
           {
             q: "ماذا يجب أن أحضر لاجتماعي الأول؟",
-            a: "أحضر أي مستندات ذات صلة مثل تقارير الشراسة والسجلات الطبية والعقود والمراسلات وإشارات المحكمة والهوية.",
+            a: "يفضل إحضار الهوية وأي مستندات مرتبطة بالموضوع، مثل أوراق المحكمة، العقود، مستندات الشركة، المراسلات، قيود العقار، التبليغات الرسمية، محاضر الشرطة، أو القرارات السابقة.",
           },
           {
-            q: "كم من الوقت ستستغرق قضيتي للحل؟",
-            a: "تختلف الجدول الزمني بشكل كبير اعتماداً على تعقيد القضية وجدول المحكمة ورغبة الأطراف في التفاوض.",
+            q: "هل يمكن مراجعة المستندات قبل البدء بالقضية؟",
+            a: "نعم. مراجعة المستندات خطوة أساسية قبل اتخاذ أي إجراء. يمكن للمحامي فحص العقود، والتبليغات، وأوراق الدعوى، وملفات الشركات، والأدلة لتوضيح الموقف القانوني واقتراح الإجراء المناسب.",
           },
           {
-            q: "هل تقدمون خطط دفع؟",
-            a: "نعم، نقدم خطط دفع مرنة ونعمل مع العملاء لضمان أن التكلفة ليست عائقاً أمام التمثيل القانوني عالي الجودة.",
+            q: "هل يمثل المكتب الشركات والمنظمات؟",
+            a: "نعم. يساعد المكتب الشركات والمنظمات في التسجيل، والامتثال القانوني، والعقود، والنزاعات، والتمثيل أمام المحاكم، وإجراءات إجازات الاستثمار، والاستشارات القانونية المستمرة.",
           },
           {
-            q: "هل يمكنني تغيير المحامي في منتصف القضية؟",
-            a: "نعم، لديك الحق في تغيير المحامين في أي وقت. ومع ذلك، نوصي بمناقشة أي مخاوف مع محاميك الحالي أولاً.",
+            q: "أين يقع المكتب وما هي أوقات العمل؟",
+            a: "يقع المكتب الرئيسي في بغداد، المنصور. أوقات العمل من الاثنين إلى الجمعة من 9:00 إلى 16:30، ويوم السبت من 9:00 إلى 15:30. أما يوم الأحد فهو مخصص للاتصالات الطارئة.",
           },
         ],
       },
@@ -1496,20 +1464,28 @@ export const translations = {
         title: "أسئلة قانونية",
         items: [
           {
-            q: "ما هي حقوقي إذا تم القبض علي؟",
-            a: "إذا تم القبض عليك، لديك الحق في الصمت والحق في محامٍ والحق في إجراء مكالمة هاتفية. لا تجب على الأسئلة بدون محامٍ. اتصل بمكتبنا فوراً للحصول على مساعدة قانونية طارئة.",
+            q: "ماذا أفعل إذا وصلتني دعوى أو تبليغ من المحكمة؟",
+            a: "لا تهمل التبليغ. تواصل مع محامٍ بسرعة، واحتفظ بالأوراق الأصلية، وسجل تاريخ الاستلام، ولا توقع أو تقدم أي جواب قبل مراجعة المستندات قانونياً.",
           },
           {
-            q: "كيف يتم تحديد حضانة الطفل؟",
-            a: "يتم تحديد حضانة الطفل بناءً على مصلحة الطفل الفضلى. تنظر المحاكم في عوامل مثل علاقة الطفل مع كل والد وقدرة كل والد على توفير الرعاية.",
+            q: "هل يتولى المكتب القضايا الجنائية والتحقيقات؟",
+            a: "نعم. يتعامل المكتب مع قضايا الدفاع الجنائي والقانون الجنائي، بما في ذلك المشورة قبل الإدلاء بالأقوال، ومراجعة أوراق التحقيق، وإعداد خطة الدفاع، والتمثيل أمام الجهات المختصة والمحاكم.",
           },
           {
-            q: "ما التعويض الذي يمكنني الحصول عليه لإصابة شخصية؟",
-            a: "قد يشمل التعويض النفقات الطاسية والأجور المفقودة والألم والمعاناة والضيق العاطفي. يعتمد المبلغ الدقيق على تفاصيل قضيتك.",
+            q: "كيف يتم التعامل مع النزاعات العقارية؟",
+            a: "تبدأ النزاعات العقارية عادة بمراجعة سندات الملكية، والعقود، والتبليغات، والخرائط، وسجلات الدفع، ووثائق الحيازة. بعد ذلك يحدد المحامي هل الأنسب التفاوض أو الشكوى الرسمية أو إقامة الدعوى.",
           },
           {
-            q: "كيف أبدأ عمل تجاري بشكل قانوني؟",
-            a: "يتضمن بدء عمل تجاري اختيار هيكل قانوني والتسجيل في الولاية والحصول على التراخيص اللازمة وصياغة اتفاقات التشغيل وضمان الامتثال الضريبي.",
+            q: "هل يمكن صياغة أو مراجعة العقود التجارية؟",
+            a: "نعم. يقوم المكتب بمراجعة وصياغة العقود التجارية، واتفاقيات الشراكة، وعقود الخدمات، ومحاضر التسوية، والمراسلات القانونية المرتبطة بها لتقليل المخاطر وتوضيح الالتزامات قبل التوقيع.",
+          },
+          {
+            q: "هل يساعد المكتب في تسجيل الشركات أو المنظمات؟",
+            a: "نعم. يساعد المكتب في تسجيل الشركات المحلية والأجنبية، وتسجيل المنظمات، وتجهيز المتطلبات القانونية، ومتابعة الإجراءات لدى الجهات الرسمية المختصة.",
+          },
+          {
+            q: "ما هي الخطوة الأولى في نزاع بين شركاء أو شركات؟",
+            a: "الخطوة الأولى هي مراجعة الاتفاق، والمراسلات، والسجلات المالية، والأدلة التي تثبت التزامات كل طرف. بعد ذلك يمكن للمحامي اقتراح التفاوض، أو الإنذار الرسمي، أو الوساطة، أو التقاضي.",
           },
         ],
       },
