@@ -165,7 +165,13 @@ const CASE_IMAGES = [
   "/images/blog-4.png",
 ];
 
-const TESTIMONIALS = [
+const CLIENT_LOGOS = [
+  { src: "/images/sbc.png", alt: "SBC" },
+  { src: "/images/e2next.png", alt: "E2next" },
+];
+
+/*
+const LEGACY_TESTIMONIALS = [
   {
     quote:
       "John handled my case with the utmost professionalism and care. He was always available to answer my questions and fought tirelessly for my rights.",
@@ -267,38 +273,170 @@ const TESTIMONIALS = [
     date: "8 months ago",
   },
 ];
+*/
 
-const TRUST_BADGE_ICONS = [Shield, Award, Clock, MessageSquare];
+const TESTIMONIALS = [
+  {
+    rating: 5,
+    en: {
+      quote:
+        "The office reviewed our company registration documents carefully and explained every required step before submission. The process was organized and clear.",
+      name: "Ahmed H.",
+      caseType: "Company Registration",
+      location: "Baghdad, Al-Mansour",
+      initials: "AH",
+      date: "2 months ago",
+    },
+    ar: {
+      quote:
+        "راجع المكتب مستندات تسجيل شركتنا بدقة وشرح لنا كل خطوة مطلوبة قبل التقديم. كانت الإجراءات منظمة وواضحة.",
+      name: "أحمد ح.",
+      caseType: "تسجيل الشركات",
+      location: "بغداد، المنصور",
+      initials: "أح",
+      date: "قبل شهرين",
+    },
+  },
+  {
+    rating: 5,
+    en: {
+      quote:
+        "I needed representation in a property dispute. The lawyer prepared the file, followed the hearings, and kept me informed after each court date.",
+      name: "Zainab A.",
+      caseType: "Property Dispute",
+      location: "Baghdad, Karrada",
+      initials: "ZA",
+      date: "3 weeks ago",
+    },
+    ar: {
+      quote:
+        "كنت بحاجة إلى تمثيل في نزاع ملكية. قام المحامي بإعداد الملف ومتابعة الجلسات وإبلاغي بكل جديد بعد كل موعد في المحكمة.",
+      name: "زينب ع.",
+      caseType: "نزاعات الملكية",
+      location: "بغداد، الكرادة",
+      initials: "زع",
+      date: "قبل 3 أسابيع",
+    },
+  },
+  {
+    rating: 5,
+    en: {
+      quote:
+        "Their team helped us draft and review a commercial contract before signing. The advice was practical and helped us avoid unclear obligations.",
+      name: "Karim M.",
+      caseType: "Commercial Contracts",
+      location: "Baghdad, Al-Jadriya",
+      initials: "KM",
+      date: "1 month ago",
+    },
+    ar: {
+      quote:
+        "ساعدنا الفريق في صياغة ومراجعة عقد تجاري قبل التوقيع. كانت الاستشارة عملية وساعدتنا على تجنب التزامات غير واضحة.",
+      name: "كريم م.",
+      caseType: "العقود التجارية",
+      location: "بغداد، الجادرية",
+      initials: "كم",
+      date: "قبل شهر",
+    },
+  },
+  {
+    rating: 5,
+    en: {
+      quote:
+        "The consultation was direct and honest. I received a clear explanation of my options in a criminal complaint and what documents I needed to prepare.",
+      name: "Mustafa S.",
+      caseType: "Criminal Complaint",
+      location: "Baghdad, Al-Harithiya",
+      initials: "MS",
+      date: "5 months ago",
+    },
+    ar: {
+      quote:
+        "كانت الاستشارة مباشرة وواضحة. حصلت على شرح دقيق لخياراتي في دعوى جنائية والمستندات التي يجب أن أجهزها.",
+      name: "مصطفى س.",
+      caseType: "دعوى جنائية",
+      location: "بغداد، الحارثية",
+      initials: "مس",
+      date: "قبل 5 أشهر",
+    },
+  },
+  {
+    rating: 5,
+    en: {
+      quote:
+        "We contacted the office for an investment licensing matter. They clarified the requirements and coordinated the legal paperwork professionally.",
+      name: "Sara K.",
+      caseType: "Investment Licensing",
+      location: "Baghdad, Al-Mansour",
+      initials: "SK",
+      date: "1 week ago",
+    },
+    ar: {
+      quote:
+        "تواصلنا مع المكتب بخصوص إجازة استثمارية. أوضحوا المتطلبات ونسقوا الأوراق القانونية بمهنية عالية.",
+      name: "سارة ك.",
+      caseType: "إجازات الاستثمار",
+      location: "بغداد، المنصور",
+      initials: "سك",
+      date: "قبل أسبوع",
+    },
+  },
+  {
+    rating: 4,
+    en: {
+      quote:
+        "They handled our NGO registration questions with patience and gave us a realistic timeline. The follow-up was consistent throughout the process.",
+      name: "Omar R.",
+      caseType: "Organization Registration",
+      location: "Baghdad, Palestine Street",
+      initials: "OR",
+      date: "4 months ago",
+    },
+    ar: {
+      quote:
+        "تعاملوا مع أسئلتنا حول تسجيل منظمة بصبر وقدموا لنا جدولاً زمنياً واقعياً. كانت المتابعة مستمرة طوال الإجراءات.",
+      name: "عمر ر.",
+      caseType: "تسجيل المنظمات",
+      location: "بغداد، شارع فلسطين",
+      initials: "عر",
+      date: "قبل 4 أشهر",
+    },
+  },
+];
 
 function TestimonialsSection() {
-  const { t } = useLanguage();
+  const { t, language, isRTL } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState<"left" | "right">(
     "right",
   );
   const [allReviewsOpen, setAllReviewsOpen] = useState(false);
+  const testimonials = TESTIMONIALS.map((testimonial) => ({
+    ...testimonial[language],
+    rating: testimonial.rating,
+  }));
 
   useEffect(() => {
     const timer = setInterval(() => {
       setSlideDirection("right");
-      setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   const goTo = (index: number) => {
     setSlideDirection(index > activeIndex ? "right" : "left");
     setActiveIndex(index);
   };
 
-  const prev = () => {
-    setSlideDirection("left");
-    setActiveIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const prev = (direction: "left" | "right" = "left") => {
+    setSlideDirection(direction);
+    setActiveIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
   };
 
-  const next = () => {
-    setSlideDirection("right");
-    setActiveIndex((i) => (i + 1) % TESTIMONIALS.length);
+  const next = (direction: "left" | "right" = "right") => {
+    setSlideDirection(direction);
+    setActiveIndex((i) => (i + 1) % testimonials.length);
   };
 
   return (
@@ -332,7 +470,9 @@ function TestimonialsSection() {
                   </div>
                   <span className="text-gold font-semibold text-sm">4.9/5</span>
                   <span className="text-medium-gray dark:text-gray-400 text-sm">
-                    ({TESTIMONIALS.length} reviews)
+                    {language === "ar"
+                      ? `(${testimonials.length} تقييمات)`
+                      : `(${testimonials.length} reviews)`}
                   </span>
                 </div>
               </div>
@@ -366,7 +506,7 @@ function TestimonialsSection() {
               </span>
             </div>
             <div className="space-y-4">
-              {TESTIMONIALS.map((tm) => (
+              {testimonials.map((tm) => (
                 <div
                   key={tm.name}
                   className="p-4 border border-border-gray dark:border-gray-700 rounded-lg hover:border-gold/30 transition-colors"
@@ -470,10 +610,10 @@ function TestimonialsSection() {
                     className="text-gray-100 text-base md:text-xl leading-relaxed mb-6 md:mb-8 italic"
                     style={{ fontFamily: "var(--font-playfair), serif" }}
                   >
-                    &ldquo;{TESTIMONIALS[activeIndex].quote}&rdquo;
+                    &ldquo;{testimonials[activeIndex].quote}&rdquo;
                   </p>
                   <div className="flex items-center justify-center gap-1 mb-4">
-                    {[...Array(TESTIMONIALS[activeIndex].rating)].map(
+                    {[...Array(testimonials[activeIndex].rating)].map(
                       (_, i) => (
                         <Star
                           key={i}
@@ -487,20 +627,20 @@ function TestimonialsSection() {
                   <div className="flex items-center justify-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-gold flex items-center justify-center shrink-0">
                       <span className="text-charcoal font-bold text-sm">
-                        {TESTIMONIALS[activeIndex].initials}
+                        {testimonials[activeIndex].initials}
                       </span>
                     </div>
                     <div className="text-left">
                       <p className="text-white font-semibold">
-                        {TESTIMONIALS[activeIndex].name}
+                        {testimonials[activeIndex].name}
                       </p>
                       <p className="text-gold text-xs uppercase tracking-wider">
-                        {TESTIMONIALS[activeIndex].caseType}
+                        {testimonials[activeIndex].caseType}
                       </p>
                       <div className="flex items-center gap-1 mt-0.5">
                         <MapPin size={10} className="text-gray-300" />
                         <p className="text-gray-300 text-xs">
-                          {TESTIMONIALS[activeIndex].location}
+                          {testimonials[activeIndex].location}
                         </p>
                       </div>
                     </div>
@@ -511,14 +651,14 @@ function TestimonialsSection() {
 
             {/* Navigation arrows */}
             <button
-              onClick={prev}
+              onClick={() => (isRTL ? next("left") : prev("left"))}
               className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 w-11 h-11 min-w-[44px] min-h-[44px] border border-gold/30 text-gold flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={20} />
             </button>
             <button
-              onClick={next}
+              onClick={() => (isRTL ? prev("right") : next("right"))}
               className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 w-11 h-11 min-w-[44px] min-h-[44px] border border-gold/30 text-gold flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all"
               aria-label="Next testimonial"
             >
@@ -527,7 +667,7 @@ function TestimonialsSection() {
 
             {/* Dots */}
             <div className="flex items-center justify-center gap-2 mt-8">
-              {TESTIMONIALS.map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => goTo(i)}
@@ -566,7 +706,7 @@ function CounterStatsSection() {
           <div className="hidden md:block w-px h-16 bg-gold/20" />
           <CounterItem
             icon={<TrendingUp size={28} className="md:w-[40px] md:h-[40px]" />}
-            value={25}
+            value={12}
             suffix="+"
             label={t.counter.yearsExperience}
             delay={200}
@@ -582,7 +722,7 @@ function CounterStatsSection() {
           <div className="hidden md:block w-px h-16 bg-gold/20" />
           <CounterItem
             icon={<Users size={28} className="md:w-[40px] md:h-[40px]" />}
-            value={50}
+            value={12}
             suffix="+"
             label={t.counter.expertLawyers}
             delay={600}
@@ -762,7 +902,7 @@ function PracticeAreaShareButtons({ title }: { title: string }) {
 }
 
 export function HomePage() {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
   const { navigate } = useRouter();
   const [caseIndex, setCaseIndex] = useState(0);
   const [selectedPracticeAreaIndex, setSelectedPracticeAreaIndex] = useState<
@@ -1121,7 +1261,7 @@ export function HomePage() {
                 <span className="font-medium">{t.hero.callFree}:</span>
                 <a
                   href="tel:07802233000"
-                  className="text-gold font-semibold hover:text-gold-light transition-colors pulsing-dot ml-2 md:ml-4 min-h-[44px] flex items-center"
+                  className="text-gold font-semibold hover:text-gold-light transition-colors ml-2 md:ml-4 min-h-[44px] flex items-center"
                 >
                   <span dir="ltr" className="phone-ltr">
                     07802233000
@@ -1157,7 +1297,7 @@ export function HomePage() {
                 {/* Small diamond at bottom-right corner */}
                 <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gold rotate-45 z-30" />
                 <img
-                  src="/images/lawyer-hero.jpeg"
+                  src="/images/lawyer-hero.png"
                   alt={t.hero.name}
                   className="relative z-10 max-h-[500px] object-cover shadow-2xl rounded-b-lg"
                 />
@@ -1168,32 +1308,6 @@ export function HomePage() {
 
         {/* Gradient overlay at bottom of hero blending into next section */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal to-transparent z-10 pointer-events-none" />
-      </section>
-
-      {/* Emergency Service Banner */}
-      <section className="bg-charcoal py-6 md:py-8 border-t border-b border-gold/20">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
-          <div className="flex items-center gap-3 md:gap-4">
-            <Phone
-              size={24}
-              className="text-gold animate-wave-pulse md:w-[32px] md:h-[32px]"
-            />
-            <div>
-              <h3 className="text-white font-semibold text-base md:text-lg">
-                {t.emergency.title}
-              </h3>
-            </div>
-          </div>
-          <a
-            href="tel:07802233000"
-            className="text-gold text-lg md:text-2xl font-bold hover:text-gold-light transition-colors animate-wave-pulse"
-          >
-            {t.emergency.callFree}:{" "}
-            <span dir="ltr" className="phone-ltr">
-              07802233000
-            </span>
-          </a>
-        </div>
       </section>
 
       {/* Counter Stats Section */}
@@ -1236,10 +1350,7 @@ export function HomePage() {
                 delay={index * 100}
                 className="h-full"
               >
-                <div
-                  onClick={() => handlePracticeAreaClick(index)}
-                  className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md cursor-pointer group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300"
-                >
+                <div className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300">
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-gold/10 dark:bg-gold/5 text-gold group-hover:bg-gold group-hover:text-white transition-all group-hover:rotate-6 duration-300 rounded-lg">
@@ -1249,27 +1360,19 @@ export function HomePage() {
                       className="md:w-[32px] md:h-[32px]"
                     />
                   </div>
-                  <div className="relative z-10 flex-1 pb-8">
+                  <div className="relative z-10 flex-1">
                     <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1 group-hover:text-gold transition-colors">
                       {t.practiceAreas.items[index].title}
                     </h3>
                     <p className="text-medium-gray dark:text-gray-300 text-sm">
                       {t.practiceAreas.items[index].desc}
                     </p>
-                    <div className="absolute left-0 right-0 bottom-0 pointer-events-none">
-                      {/* Gold underline animation on hover */}
-                      <div className="h-0.5 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                      {/* Learn More text on hover */}
-                      <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold uppercase tracking-wider mt-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                        {t.practiceAreas.learnMore} <ArrowRight size={12} />
-                      </span>
-                    </div>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection>
+          {/* <AnimatedSection>
             <div className="text-center mt-10">
               <button
                 onClick={() => navigate("practice-areas")}
@@ -1278,7 +1381,7 @@ export function HomePage() {
                 {t.practiceAreas.viewAll}
               </button>
             </div>
-          </AnimatedSection>
+          </AnimatedSection> */}
         </div>
       </section>
 
@@ -1303,13 +1406,19 @@ export function HomePage() {
             <div className="hidden md:flex absolute top-1/3 left-[33.33%] -translate-x-1/2 z-20 text-gold">
               <div className="relative">
                 <div className="w-12 h-px bg-gold" />
-                <ArrowRight size={16} className="absolute -right-2 -top-2" />
+                <ArrowRight
+                  size={16}
+                  className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
+                />
               </div>
             </div>
             <div className="hidden md:flex absolute top-1/3 left-[66.66%] -translate-x-1/2 z-20 text-gold">
               <div className="relative">
                 <div className="w-12 h-px bg-gold" />
-                <ArrowRight size={16} className="absolute -right-2 -top-2" />
+                <ArrowRight
+                  size={16}
+                  className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
+                />
               </div>
             </div>
 
@@ -1329,12 +1438,9 @@ export function HomePage() {
                   <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2">
                     {t.howItWorks.items[index].title}
                   </h3>
-                  <p className="text-medium-gray dark:text-gray-300 mb-4 text-sm">
+                  <p className="text-medium-gray dark:text-gray-300 text-sm">
                     {t.howItWorks.items[index].subtitle}
                   </p>
-                  <button className="text-gold text-sm font-semibold flex items-center gap-1 mx-auto hover:gap-2 transition-all">
-                    {t.howItWorks.items[index].btnText} <ArrowRight size={14} />
-                  </button>
                 </div>
               </AnimatedSection>
             ))}
@@ -1445,99 +1551,37 @@ export function HomePage() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* Verdicts & Settlements Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection>
-            <SectionTitle
-              title={t.verdicts.title}
-              subtitle={t.verdicts.subtitle}
-            />
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.verdicts.items.map(
-              (
-                verdict: {
-                  caseType: string;
-                  amount: string;
-                  description: string;
-                  outcome: string;
-                },
-                index: number,
-              ) => (
-                <AnimatedSection key={index} delay={index * 100}>
-                  <div className="practice-card p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden">
-                    {/* Gold top accent bar */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-medium-gray dark:text-gray-300 text-sm uppercase tracking-wider font-medium">
-                        {verdict.caseType}
-                      </span>
-                      <span
-                        className={`text-xs uppercase tracking-wider font-bold px-2.5 py-1 ${verdict.outcome === t.verdicts.verdict ? "bg-gold/10 text-gold" : "bg-charcoal/5 dark:bg-white/5 text-charcoal dark:text-gray-300"}`}
-                      >
-                        {verdict.outcome}
-                      </span>
-                    </div>
-                    <div
-                      className="text-3xl md:text-4xl font-bold text-gold mb-3"
-                      style={{ fontFamily: "var(--font-playfair), serif" }}
-                    >
-                      {verdict.amount}
-                    </div>
-                    <p className="text-medium-gray dark:text-gray-300 text-sm leading-relaxed">
-                      {verdict.description}
-                    </p>
-                  </div>
-                </AnimatedSection>
-              ),
-            )}
-          </div>
-          <AnimatedSection>
-            <div className="text-center mt-10">
-              <button
-                onClick={() => navigate("practice-areas")}
-                className="btn-ripple btn-primary-hover border-2 border-gold text-gold px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-charcoal transition-all"
-              >
-                {t.practiceAreas.viewAll}
-              </button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* Client Logo Carousel Section */}
-      <section className="py-8 md:py-12 bg-light-gray dark:bg-charcoal overflow-hidden transition-colors duration-300">
+      <section className="py-8 md:py-12 bg-light-gray dark:bg-gold overflow-hidden transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 mb-8">
           <AnimatedSection>
             <SectionTitle title={t.clientLogos.title} subtitle="Our Clients" />
           </AnimatedSection>
         </div>
         <div className="relative overflow-hidden group">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-light-gray dark:from-charcoal to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-light-gray dark:from-charcoal to-transparent z-10 pointer-events-none" />
           {/* Top and bottom gold accent lines */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-px bg-gold/30" />
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-px bg-gold/30" />
           {/* Marquee - double items for seamless loop */}
           <div className="flex animate-ticker">
             {[
-              ...t.clientLogos.items,
-              ...t.clientLogos.items,
-              ...t.clientLogos.items,
-              ...t.clientLogos.items,
-            ].map((name: string, i: number) => (
+              ...CLIENT_LOGOS,
+              ...CLIENT_LOGOS,
+              ...CLIENT_LOGOS,
+              ...CLIENT_LOGOS,
+              ...CLIENT_LOGOS,
+              ...CLIENT_LOGOS,
+            ].map((logo, i) => (
               <div
-                key={`${name}-${i}`}
-                className="flex-shrink-0 mx-6 md:mx-10 flex items-center justify-center h-24 px-6 md:px-8 border border-transparent hover:border-gold/20 rounded-lg transition-all duration-300"
+                key={`${logo.alt}-${i}`}
+                className="flex-shrink-0 mx-6 md:mx-10 flex items-center justify-center h-24 w-44 md:w-56 px-5 md:px-8 border border-transparent hover:border-gold/20 rounded-lg transition-all duration-300"
               >
-                <span
-                  className="text-charcoal/25 dark:text-white/15 font-bold text-xl md:text-2xl tracking-wider whitespace-nowrap hover:text-gold dark:hover:text-gold transition-all duration-300 cursor-default select-none hover:scale-105"
-                  style={{ fontFamily: "var(--font-playfair), serif" }}
-                >
-                  {name}
-                </span>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  className="max-h-16 w-full object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105"
+                />
               </div>
             ))}
           </div>
@@ -1583,35 +1627,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Immigration Law Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <SectionTitle
-                  title={t.immigration.title}
-                  subtitle="Specialty"
-                  className="text-left [&>*]:text-left [&>*]:justify-start"
-                />
-                <p className="text-medium-gray dark:text-gray-300 leading-relaxed">
-                  {t.immigration.description}
-                </p>
-              </div>
-              <div className="relative">
-                <img
-                  src="/images/practice-bg.png"
-                  alt={t.immigration.title}
-                  loading="lazy"
-                  className="w-full h-80 object-cover shadow-xl"
-                />
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-2 border-gold" />
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gold relative overflow-hidden">
         {/* Decorative pattern behind */}
@@ -1649,50 +1664,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Trust Badges Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-charcoal-dark relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.02] pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #D4AF37 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <AnimatedSection>
-            <SectionTitle
-              title="Why Trust Us"
-              subtitle="Our Credentials"
-              light
-            />
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            {TRUST_BADGE_ICONS.map((Icon, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <div className="text-center p-6 md:p-8 border border-gold/20 bg-charcoal/50 group hover:border-gold/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold transition-colors duration-300">
-                    <Icon
-                      size={28}
-                      className="text-gold group-hover:text-charcoal transition-colors duration-300"
-                    />
-                  </div>
-                  <h3
-                    className="text-white font-bold text-lg mb-3 group-hover:text-gold transition-colors"
-                    style={{ fontFamily: "var(--font-playfair), serif" }}
-                  >
-                    {t.trustBadges.items[index].title}
-                  </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {t.trustBadges.items[index].desc}
-                  </p>
-                  <div className="w-8 h-0.5 bg-gold mx-auto mt-5 group-hover:w-16 transition-all duration-300" />
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

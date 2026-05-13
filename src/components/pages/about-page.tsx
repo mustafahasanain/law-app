@@ -653,13 +653,15 @@ export function AboutPage() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
-                    src="/images/lawyer-hero.jpeg"
+                    src="/images/lawyer-hero.png"
                     alt="D.Baraa A. Khaleel"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
                   />
                   <div className="absolute bottom-6 left-0 right-0 z-20 bg-charcoal/80 py-3 text-center">
-                    <p className="text-white font-semibold">D.Baraa A. Khaleel</p>
+                    <p className="text-white font-semibold">
+                      D.Baraa A. Khaleel
+                    </p>
                     <p className="text-gold text-sm">
                       Criminal Justice Attorney
                     </p>
