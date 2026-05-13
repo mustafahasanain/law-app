@@ -13,7 +13,6 @@ import { HomePage } from '@/components/pages/home-page';
 import { AboutPage } from '@/components/pages/about-page';
 import { PracticeAreasPage } from '@/components/pages/practice-areas-page';
 import { FAQPage } from '@/components/pages/faq-page';
-import { BlogPage } from '@/components/pages/blog-page';
 import { ContactPage } from '@/components/pages/contact-page';
 
 const PAGE_COMPONENTS: Record<string, React.ComponentType> = {
@@ -21,7 +20,6 @@ const PAGE_COMPONENTS: Record<string, React.ComponentType> = {
   about: AboutPage,
   'practice-areas': PracticeAreasPage,
   faq: FAQPage,
-  blog: BlogPage,
   contact: ContactPage,
 };
 

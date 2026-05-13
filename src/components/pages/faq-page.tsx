@@ -1,28 +1,40 @@
-'use client';
+"use client";
 
-import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { PageHero } from '../thelaw/page-hero';
-import { SectionTitle } from '../thelaw/section-title';
-import { AnimatedSection } from '../thelaw/scroll-animation';
+import React, { useState, useCallback, useRef, useEffect } from "react";
+import { PageHero } from "../thelaw/page-hero";
+import { SectionTitle } from "../thelaw/section-title";
+import { AnimatedSection } from "../thelaw/scroll-animation";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { HelpCircle, Send, Plus, Minus, MessageCircle, Phone, ChevronRight, Search, ThumbsUp, ThumbsDown, X } from 'lucide-react';
-import { useRouter } from '../thelaw/router';
-import { useToast } from '@/hooks/use-toast';
-import { useLanguage } from '@/lib/i18n/language-context';
+} from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  HelpCircle,
+  Send,
+  Plus,
+  Minus,
+  MessageCircle,
+  Phone,
+  ChevronRight,
+  Search,
+  ThumbsUp,
+  ThumbsDown,
+  X,
+} from "lucide-react";
+import { useRouter } from "../thelaw/router";
+import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 /* ===== Feedback State ===== */
 interface FeedbackState {
   up: number;
   down: number;
-  userVote: 'up' | 'down' | null;
+  userVote: "up" | "down" | null;
 }
 
 function FeedbackButtons({ itemId }: { itemId: string }) {
@@ -32,15 +44,22 @@ function FeedbackButtons({ itemId }: { itemId: string }) {
     try {
       const saved = localStorage.getItem(`faq-feedback-${itemId}`);
       if (saved) return JSON.parse(saved);
-    } catch { /* ignore */ }
-    return { up: Math.floor(Math.random() * 20) + 5, down: Math.floor(Math.random() * 5) + 1, userVote: null };
+    } catch {
+      /* ignore */
+    }
+    return {
+      up: Math.floor(Math.random() * 20) + 5,
+      down: Math.floor(Math.random() * 5) + 1,
+      userVote: null,
+    };
   });
-  const [pulseActive, setPulseActive] = useState<'up' | 'down' | null>(null);
+  const [pulseActive, setPulseActive] = useState<"up" | "down" | null>(null);
 
   const totalVotes = feedback.up + feedback.down;
-  const helpfulPercent = totalVotes > 0 ? Math.round((feedback.up / totalVotes) * 100) : 0;
+  const helpfulPercent =
+    totalVotes > 0 ? Math.round((feedback.up / totalVotes) * 100) : 0;
 
-  const handleFeedback = (type: 'up' | 'down') => {
+  const handleFeedback = (type: "up" | "down") => {
     if (feedback.userVote) return;
     const newFeedback: FeedbackState = {
       ...feedback,
@@ -50,36 +69,51 @@ function FeedbackButtons({ itemId }: { itemId: string }) {
     setFeedback(newFeedback);
     setPulseActive(type);
     setTimeout(() => setPulseActive(null), 600);
-    try { localStorage.setItem(`faq-feedback-${itemId}`, JSON.stringify(newFeedback)); } catch { /* ignore */ }
+    try {
+      localStorage.setItem(
+        `faq-feedback-${itemId}`,
+        JSON.stringify(newFeedback),
+      );
+    } catch {
+      /* ignore */
+    }
     toast({
-      title: type === 'up' ? t.faqPage.feedback.thanksPositive : t.faqPage.feedback.thanksNegative,
-      description: type === 'up' ? t.faqPage.feedback.helpful : t.faqPage.feedback.notHelpful,
+      title:
+        type === "up"
+          ? t.faqPage.feedback.thanksPositive
+          : t.faqPage.feedback.thanksNegative,
+      description:
+        type === "up"
+          ? t.faqPage.feedback.helpful
+          : t.faqPage.feedback.notHelpful,
     });
   };
 
   return (
     <div className="mt-4 pt-3 border-t border-border-gray dark:border-gray-700">
       <div className="flex items-center gap-3 flex-wrap">
-        <span className="text-medium-gray dark:text-gray-400 text-sm">{t.faqPage.feedback.helpful}?</span>
+        <span className="text-medium-gray dark:text-gray-400 text-sm">
+          {t.faqPage.feedback.helpful}?
+        </span>
         <button
-          onClick={() => handleFeedback('up')}
+          onClick={() => handleFeedback("up")}
           className={`flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md border transition-all ${
-            feedback.userVote === 'up'
-              ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
-              : 'border-border-gray dark:border-gray-600 text-medium-gray dark:text-gray-400 hover:border-green-400 hover:text-green-500'
-          } ${pulseActive === 'up' ? 'animate-gold-button-pulse' : ''}`}
+            feedback.userVote === "up"
+              ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400"
+              : "border-border-gray dark:border-gray-600 text-medium-gray dark:text-gray-400 hover:border-green-400 hover:text-green-500"
+          } ${pulseActive === "up" ? "animate-gold-button-pulse" : ""}`}
           disabled={feedback.userVote !== null}
         >
           <ThumbsUp size={14} />
           <span>{t.faqPage.feedback.helpful}</span>
         </button>
         <button
-          onClick={() => handleFeedback('down')}
+          onClick={() => handleFeedback("down")}
           className={`flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md border transition-all ${
-            feedback.userVote === 'down'
-              ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
-              : 'border-border-gray dark:border-gray-600 text-medium-gray dark:text-gray-400 hover:border-red-400 hover:text-red-500'
-          } ${pulseActive === 'down' ? 'animate-gold-button-pulse' : ''}`}
+            feedback.userVote === "down"
+              ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400"
+              : "border-border-gray dark:border-gray-600 text-medium-gray dark:text-gray-400 hover:border-red-400 hover:text-red-500"
+          } ${pulseActive === "down" ? "animate-gold-button-pulse" : ""}`}
           disabled={feedback.userVote !== null}
         >
           <ThumbsDown size={14} />
@@ -105,9 +139,9 @@ function FeedbackButtons({ itemId }: { itemId: string }) {
 
 export function FAQPage() {
   const { t } = useLanguage();
-  const [askDepartment, setAskDepartment] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const [askDepartment, setAskDepartment] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
   const { navigate } = useRouter();
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -125,17 +159,26 @@ export function FAQPage() {
     };
   }, []);
 
-  const generalItems = t.faqPage.general.items as Array<{ q: string; a: string }>;
+  const generalItems = t.faqPage.general.items as Array<{
+    q: string;
+    a: string;
+  }>;
   const legalItems = t.faqPage.legal.items as Array<{ q: string; a: string }>;
 
   const filteredGeneral = generalItems.filter((faq) => {
     if (!debouncedSearch) return true;
-    return faq.q.toLowerCase().includes(debouncedSearch) || faq.a.toLowerCase().includes(debouncedSearch);
+    return (
+      faq.q.toLowerCase().includes(debouncedSearch) ||
+      faq.a.toLowerCase().includes(debouncedSearch)
+    );
   });
 
   const filteredLegal = legalItems.filter((faq) => {
     if (!debouncedSearch) return true;
-    return faq.q.toLowerCase().includes(debouncedSearch) || faq.a.toLowerCase().includes(debouncedSearch);
+    return (
+      faq.q.toLowerCase().includes(debouncedSearch) ||
+      faq.a.toLowerCase().includes(debouncedSearch)
+    );
   });
 
   const hasResults = filteredGeneral.length > 0 || filteredLegal.length > 0;
@@ -144,60 +187,10 @@ export function FAQPage() {
 
   return (
     <div className="overflow-x-hidden max-w-full">
-      <PageHero title={t.faqPage.hero.title} breadcrumb={t.faqPage.hero.breadcrumb.current} />
-
-      {/* Ask Us Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection animation="fade-left">
-            <SectionTitle title={t.faqPage.askForm.title} subtitle={t.faqPage.general.subtitle} />
-          </AnimatedSection>
-          <AnimatedSection delay={200}>
-            <div className="max-w-2xl mx-auto bg-white dark:bg-charcoal-dark p-8 md:p-10 shadow-md border border-border-gray dark:border-gray-700">
-              <div className="text-center mb-6">
-                <div className="w-14 h-14 bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle size={28} className="text-gold" />
-                </div>
-                <h3 className="text-lg font-bold text-charcoal dark:text-white" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-                  {t.faqPage.askForm.title}
-                </h3>
-                <p className="text-medium-gray dark:text-gray-400 text-sm mt-1">{t.faqPage.askForm.subtitle}</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-                <div>
-                  <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.faqPage.askForm.nameLabel} <span className="text-red-500">*</span></label>
-                  <Input placeholder={t.faqPage.askForm.namePlaceholder} className="border-border-gray dark:border-gray-600 bg-white dark:bg-charcoal-dark text-charcoal dark:text-white focus:border-gold focus:ring-1 focus:ring-gold h-11" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.faqPage.askForm.emailLabel} <span className="text-red-500">*</span></label>
-                  <Input placeholder={t.faqPage.askForm.emailPlaceholder} type="email" className="border-border-gray dark:border-gray-600 bg-white dark:bg-charcoal-dark text-charcoal dark:text-white focus:border-gold focus:ring-1 focus:ring-gold h-11" />
-                </div>
-              </div>
-              <div className="mb-5">
-                <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.faqPage.askForm.departmentLabel}</label>
-                <select
-                  value={askDepartment}
-                  onChange={(e) => setAskDepartment(e.target.value)}
-                  className="w-full p-2.5 border border-border-gray dark:border-gray-600 text-sm text-charcoal dark:text-white bg-white dark:bg-charcoal-dark focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold h-11 rounded-md"
-                >
-                  <option value="">{t.faqPage.askForm.departmentPlaceholder}</option>
-                  {departments.map((dept) => (
-                    <option key={dept} value={dept}>{dept}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-charcoal dark:text-gray-300 mb-1.5">{t.faqPage.askForm.questionLabel} <span className="text-red-500">*</span></label>
-                <Textarea placeholder={t.faqPage.askForm.questionPlaceholder} className="border-border-gray dark:border-gray-600 bg-white dark:bg-charcoal-dark text-charcoal dark:text-white focus:border-gold focus:ring-1 focus:ring-gold min-h-[130px]" />
-              </div>
-              <Button className="w-full bg-gold text-charcoal hover:bg-gold-dark font-semibold uppercase tracking-wider h-12 text-sm">
-                <Send size={16} className="mr-2" />
-                {t.faqPage.askForm.submit}
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <PageHero
+        title={t.faqPage.hero.title}
+        breadcrumb={t.faqPage.hero.breadcrumb.current}
+      />
 
       {/* FAQ Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark relative overflow-hidden transition-colors duration-300">
@@ -229,10 +222,13 @@ export function FAQPage() {
                   onChange={(e) => handleSearchChange(e.target.value)}
                   className="pl-11 pr-10 h-14 border-2 border-border-gray dark:border-gray-600 bg-white dark:bg-charcoal text-charcoal dark:text-white focus:border-gold focus:ring-2 focus:ring-gold/20 text-base rounded-lg shadow-sm"
                 />
-                <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-medium-gray dark:text-gray-500" />
+                <Search
+                  size={20}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-medium-gray dark:text-gray-500"
+                />
                 {searchTerm && (
                   <button
-                    onClick={() => handleSearchChange('')}
+                    onClick={() => handleSearchChange("")}
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-medium-gray hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                   >
                     <X size={18} />
@@ -245,15 +241,21 @@ export function FAQPage() {
           {!hasResults && debouncedSearch ? (
             <AnimatedSection>
               <div className="text-center py-16">
-                <Search size={48} className="text-medium-gray dark:text-gray-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                <Search
+                  size={48}
+                  className="text-medium-gray dark:text-gray-500 mx-auto mb-4"
+                />
+                <h3
+                  className="text-xl font-bold text-charcoal dark:text-white mb-2"
+                  style={{ fontFamily: "var(--font-playfair), serif" }}
+                >
                   {t.faqPage.search.noResults}
                 </h3>
                 <p className="text-medium-gray dark:text-gray-400 mb-6">
                   {t.faqPage.search.noResults} &ldquo;{searchTerm}&rdquo;
                 </p>
                 <button
-                  onClick={() => handleSearchChange('')}
+                  onClick={() => handleSearchChange("")}
                   className="text-gold font-semibold hover:text-gold-dark transition-colors"
                 >
                   {t.faqPage.search.clearSearch}
@@ -266,19 +268,36 @@ export function FAQPage() {
               {filteredGeneral.length > 0 && (
                 <>
                   <AnimatedSection animation="fade-left">
-                    <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-8 flex items-center gap-3" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                    <h3
+                      className="text-2xl font-bold text-charcoal dark:text-white mb-8 flex items-center gap-3"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
                       <span className="w-1 h-7 bg-gold inline-block" />
                       {t.faqPage.general.title}
                     </h3>
                   </AnimatedSection>
-                  <Accordion type="single" collapsible className="mb-14 space-y-4">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="mb-14 space-y-4"
+                  >
                     {filteredGeneral.map((faq, index) => (
-                      <AccordionItem key={`general-${index}`} value={`general-${index}`} className="border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal hover:border-gold/30 transition-all duration-300 data-[state=open]:border-l-gold data-[state=open]:border-l-4 data-[state=open]:shadow-md data-[state=open]:bg-white dark:data-[state=open]:bg-charcoal-dark">
+                      <AccordionItem
+                        key={`general-${index}`}
+                        value={`general-${index}`}
+                        className="border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal hover:border-gold/30 transition-all duration-300 data-[state=open]:border-l-gold data-[state=open]:border-l-4 data-[state=open]:shadow-md data-[state=open]:bg-white dark:data-[state=open]:bg-charcoal-dark"
+                      >
                         <AccordionTrigger className="text-left text-charcoal dark:text-white hover:text-gold font-medium py-5 px-6 text-base hover:no-underline [&>svg]:hidden transition-colors duration-200">
                           <span className="flex-1">{faq.q}</span>
                           <div className="relative w-7 h-7 flex items-center justify-center shrink-0 ml-4 rounded-full border border-gold/30 group-hover:border-gold transition-colors">
-                            <Plus size={14} className="text-gold absolute transition-all duration-200 data-[state=open]:opacity-0 data-[state=open]:rotate-90" />
-                            <Minus size={14} className="text-gold absolute opacity-0 transition-all duration-200 data-[state=open]:opacity-100" />
+                            <Plus
+                              size={14}
+                              className="text-gold absolute transition-all duration-200 data-[state=open]:opacity-0 data-[state=open]:rotate-90"
+                            />
+                            <Minus
+                              size={14}
+                              className="text-gold absolute opacity-0 transition-all duration-200 data-[state=open]:opacity-100"
+                            />
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="text-medium-gray dark:text-gray-300 leading-relaxed pb-6 px-6 pt-0 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
@@ -297,19 +316,32 @@ export function FAQPage() {
               {filteredLegal.length > 0 && (
                 <>
                   <AnimatedSection animation="fade-left">
-                    <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-8 flex items-center gap-3" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                    <h3
+                      className="text-2xl font-bold text-charcoal dark:text-white mb-8 flex items-center gap-3"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
                       <span className="w-1 h-7 bg-gold inline-block" />
                       {t.faqPage.legal.title}
                     </h3>
                   </AnimatedSection>
                   <Accordion type="single" collapsible className="space-y-4">
                     {filteredLegal.map((faq, index) => (
-                      <AccordionItem key={`legal-${index}`} value={`legal-${index}`} className="border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal hover:border-gold/30 transition-all duration-300 data-[state=open]:border-l-gold data-[state=open]:border-l-4 data-[state=open]:shadow-md data-[state=open]:bg-white dark:data-[state=open]:bg-charcoal-dark">
+                      <AccordionItem
+                        key={`legal-${index}`}
+                        value={`legal-${index}`}
+                        className="border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal hover:border-gold/30 transition-all duration-300 data-[state=open]:border-l-gold data-[state=open]:border-l-4 data-[state=open]:shadow-md data-[state=open]:bg-white dark:data-[state=open]:bg-charcoal-dark"
+                      >
                         <AccordionTrigger className="text-left text-charcoal dark:text-white hover:text-gold font-medium py-5 px-6 text-base hover:no-underline [&>svg]:hidden transition-colors duration-200">
                           <span className="flex-1">{faq.q}</span>
                           <div className="relative w-7 h-7 flex items-center justify-center shrink-0 ml-4 rounded-full border border-gold/30 group-hover:border-gold transition-colors">
-                            <Plus size={14} className="text-gold absolute transition-all duration-200 data-[state=open]:opacity-0 data-[state=open]:rotate-90" />
-                            <Minus size={14} className="text-gold absolute opacity-0 transition-all duration-200 data-[state=open]:opacity-100" />
+                            <Plus
+                              size={14}
+                              className="text-gold absolute transition-all duration-200 data-[state=open]:opacity-0 data-[state=open]:rotate-90"
+                            />
+                            <Minus
+                              size={14}
+                              className="text-gold absolute opacity-0 transition-all duration-200 data-[state=open]:opacity-100"
+                            />
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="text-medium-gray dark:text-gray-300 leading-relaxed pb-6 px-6 pt-0 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
@@ -331,14 +363,21 @@ export function FAQPage() {
       {/* Still Have Questions CTA */}
       <section className="py-12 md:py-16 lg:py-20 bg-charcoal dark:bg-charcoal-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212,175,55,0.1) 10px, rgba(212,175,55,0.1) 11px)',
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212,175,55,0.1) 10px, rgba(212,175,55,0.1) 11px)",
+            }}
+          />
         </div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
             <HelpCircle size={48} className="text-gold mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
               {t.faqPage.stillHaveQuestions.title}
             </h2>
             <p className="text-gray-100 mb-8 max-w-xl mx-auto">
@@ -346,19 +385,12 @@ export function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => navigate('contact')}
+                onClick={() => navigate("contact")}
                 className="bg-gold text-charcoal px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold-light transition-all flex items-center gap-2"
               >
                 <MessageCircle size={16} />
                 {t.faqPage.stillHaveQuestions.contactUs}
               </button>
-              <a
-                href="tel:07802233000"
-                className="border-2 border-gold text-gold px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-white transition-all flex items-center gap-2"
-              >
-                <Phone size={16} />
-                {t.faqPage.stillHaveQuestions.callFree}: <span dir="ltr" className="phone-ltr">07802233000</span>
-              </a>
             </div>
           </AnimatedSection>
         </div>

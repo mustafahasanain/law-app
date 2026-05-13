@@ -19,6 +19,7 @@ import {
   Copyright,
   Landmark,
   Phone,
+  Mail,
   ArrowRight,
   Send,
   Search,
@@ -45,6 +46,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { ImageLightbox } from "../thelaw/image-lightbox";
+import { AppointmentForm } from "../thelaw/appointment-form";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/lib/i18n/language-context";
 
@@ -949,6 +951,29 @@ export function HomePage() {
   const visibleCasesEnd = caseIndex + 4;
   const canGoLeft = caseIndex > 0;
   const canGoRight = caseIndex < caseItems.length - 4;
+  const contactCards = [
+    {
+      icon: Phone,
+      label: t.contactPage.info.phone.title,
+      value: t.contactPage.info.phone.number,
+      href: `tel:${t.contactPage.info.phone.number.replace(/\s/g, "")}`,
+      subtitle: t.contactPage.hours.weekdayHours,
+    },
+    {
+      icon: Mail,
+      label: t.contactPage.info.email.title,
+      value: t.contactPage.info.email.address,
+      href: `mailto:${t.contactPage.info.email.address}`,
+      subtitle: t.contactPage.form.title,
+    },
+    {
+      icon: MapPin,
+      label: t.contactPage.info.address.title,
+      value: t.contactPage.info.address.full.replace("\n", ", "),
+      href: "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en",
+      subtitle: t.contactPage.addressCard.title,
+    },
+  ];
 
   const handlePracticeAreaClick = (index: number) => {
     setSelectedPracticeAreaIndex(index);
@@ -1661,6 +1686,55 @@ export function HomePage() {
               {t.cta.contactUs}
             </button>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Appointment Booking Form */}
+      <AppointmentForm />
+
+      {/* Contact Info Cards */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4">
+          <AnimatedSection>
+            <SectionTitle
+              title={t.contactPage.hero.title}
+              subtitle={t.contactPage.addressCard.title}
+            />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactCards.map((card, index) => {
+              const Icon = card.icon;
+
+              return (
+                <AnimatedSection key={card.label} delay={index * 100}>
+                  <a
+                    href={card.href}
+                    target={card.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      card.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="group flex h-full flex-col items-center text-center bg-white dark:bg-charcoal p-6 md:p-8 rounded-lg border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gold transition-all duration-300"
+                  >
+                    <div className="w-16 h-16 flex items-center justify-center bg-gold/10 text-gold rounded-full mb-5 group-hover:bg-gold group-hover:text-charcoal transition-colors">
+                      <Icon size={28} strokeWidth={1.75} />
+                    </div>
+                    <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2">
+                      {card.label}
+                    </h3>
+                    <p className="text-gold font-semibold mb-2 break-words max-w-full">
+                      {card.value}
+                    </p>
+                    <p className="text-medium-gray dark:text-gray-300 text-sm">
+                      {card.subtitle}
+                    </p>
+                  </a>
+                </AnimatedSection>
+              );
+            })}
+          </div>
         </div>
       </section>
 

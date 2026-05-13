@@ -24,7 +24,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { AppointmentForm } from "../thelaw/appointment-form";
 import { useLanguage } from "@/lib/i18n/language-context";
 
 export function ContactPage() {
@@ -41,30 +40,6 @@ export function ContactPage() {
     message: "",
   });
   const { toast } = useToast();
-
-  const CONTACT_CARDS = [
-    {
-      icon: Phone,
-      label: t.contactPage.info.phone.title,
-      value: t.contactPage.info.phone.number,
-      href: `tel:${t.contactPage.info.phone.number.replace(/\s/g, "")}`,
-      subtitle: t.contactPage.hours.weekdayHours,
-    },
-    {
-      icon: Mail,
-      label: t.contactPage.info.email.title,
-      value: t.contactPage.info.email.address,
-      href: `mailto:${t.contactPage.info.email.address}`,
-      subtitle: t.contactPage.form.title,
-    },
-    {
-      icon: MapPin,
-      label: t.contactPage.info.address.title,
-      value: t.contactPage.info.address.full.replace("\n", ", "),
-      href: "#",
-      subtitle: t.contactPage.addressCard.title,
-    },
-  ];
 
   const WORKING_HOURS = [
     {
@@ -160,236 +135,6 @@ export function ContactPage() {
         title={t.contactPage.hero.title}
         breadcrumb={t.contactPage.hero.breadcrumb.current}
       />
-
-      {/* Contact Info Cards */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {CONTACT_CARDS.map((card, index) => (
-              <AnimatedSection key={card.label} delay={index * 100}>
-                <div className="practice-card bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 p-8 text-center group cursor-pointer hover:border-gold">
-                  <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold transition-colors">
-                    <card.icon
-                      size={28}
-                      className="text-gold group-hover:text-white transition-colors"
-                    />
-                  </div>
-                  <h3 className="text-charcoal dark:text-white font-bold text-lg mb-2">
-                    {card.label}
-                  </h3>
-                  <a
-                    href={card.href}
-                    dir={card.icon === Phone ? "ltr" : undefined}
-                    className={`text-gold font-semibold hover:text-gold-dark transition-colors block mb-1 ${card.icon === Phone ? "phone-ltr" : ""}`}
-                  >
-                    {card.value}
-                  </a>
-                  <p className="text-medium-gray dark:text-gray-400 text-sm">
-                    {card.subtitle}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section with Location Card Overlay */}
-      <section className="relative">
-        <div className="h-4 bg-gold" />
-        <div
-          className={`relative bg-light-gray dark:bg-charcoal transition-all duration-500 ease-in-out ${isMapExpanded ? "h-[40rem]" : "h-96"}`}
-        >
-          <iframe
-            src={MAP_EMBED_URL}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={`${OFFICE_LOCATIONS[selectedOffice].name} Office Location`}
-            className="w-full h-full"
-          />
-
-          {/* Location Card Overlay */}
-          <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10">
-            <div className="bg-white dark:bg-charcoal-dark p-5 md:p-6 shadow-xl border border-border-gray dark:border-gray-700 max-w-xs">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gold flex items-center justify-center shrink-0">
-                  <MapPin size={20} className="text-charcoal" />
-                </div>
-                <div>
-                  <h4 className="text-charcoal dark:text-white font-bold text-sm">
-                    {OFFICE_LOCATIONS[selectedOffice].name}
-                  </h4>
-                  <p className="text-gold text-xs uppercase tracking-wider">
-                    Office
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-start gap-2">
-                  <MapPin size={14} className="text-gold mt-0.5 shrink-0" />
-                  <span className="text-medium-gray dark:text-gray-300">
-                    {OFFICE_LOCATIONS[selectedOffice].address}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone size={14} className="text-gold shrink-0" />
-                  <a
-                    href={`tel:${OFFICE_LOCATIONS[selectedOffice].phone.replace(/\s/g, "")}`}
-                    dir="ltr"
-                    className="phone-ltr text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
-                  >
-                    {OFFICE_LOCATIONS[selectedOffice].phone}
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail size={14} className="text-gold shrink-0" />
-                  <a
-                    href={`mailto:${OFFICE_LOCATIONS[selectedOffice].email}`}
-                    className="text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
-                  >
-                    {OFFICE_LOCATIONS[selectedOffice].email}
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock size={14} className="text-gold shrink-0" />
-                  <span className="text-medium-gray dark:text-gray-300">
-                    {OFFICE_LOCATIONS[selectedOffice].hours}
-                  </span>
-                </div>
-              </div>
-
-              {/* Direction Buttons */}
-              <div className="mt-4 pt-3 border-t border-border-gray dark:border-gray-700 space-y-2">
-                <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-gold text-charcoal px-4 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-gold-dark transition-all"
-                >
-                  <Navigation size={14} />
-                  Get Directions
-                </a>
-                <a
-                  href={MAP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full border border-gold text-gold px-4 py-2 text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-charcoal transition-all"
-                >
-                  <ExternalLink size={14} />
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Expand/Collapse Map Button */}
-          <button
-            onClick={() => setIsMapExpanded(!isMapExpanded)}
-            className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 bg-white dark:bg-charcoal-dark border border-border-gray dark:border-gray-700 shadow-lg flex items-center justify-center hover:border-gold transition-colors min-w-[44px] min-h-[44px]"
-            aria-label={isMapExpanded ? "Collapse map" : "Expand map"}
-          >
-            {isMapExpanded ? (
-              <Minimize2
-                size={18}
-                className="text-charcoal dark:text-gray-300"
-              />
-            ) : (
-              <Maximize2
-                size={18}
-                className="text-charcoal dark:text-gray-300"
-              />
-            )}
-          </button>
-        </div>
-
-        {/* Office Location Cards */}
-        <div className="bg-white dark:bg-charcoal-dark py-8 border-b border-border-gray dark:border-gray-700">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {OFFICE_LOCATIONS.map((office, index) => (
-                <button
-                  key={`${office.name}-${index}`}
-                  onClick={() => setSelectedOffice(index)}
-                  className={`text-left p-5 border-2 transition-all duration-300 ${
-                    selectedOffice === index
-                      ? "border-gold bg-gold/5 dark:bg-gold/10 shadow-md"
-                      : "border-border-gray dark:border-gray-700 hover:border-gold/50 bg-white dark:bg-charcoal"
-                  }`}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div
-                      className={`w-10 h-10 flex items-center justify-center shrink-0 transition-colors ${
-                        selectedOffice === index
-                          ? "bg-gold text-charcoal"
-                          : "bg-gold/10 text-gold"
-                      }`}
-                    >
-                      <MapPin size={18} />
-                    </div>
-                    <div>
-                      <h4
-                        className={`font-bold text-sm ${selectedOffice === index ? "text-gold" : "text-charcoal dark:text-white"}`}
-                      >
-                        {office.name}
-                      </h4>
-                    </div>
-                  </div>
-                  <p className="text-medium-gray dark:text-gray-400 text-xs mb-2">
-                    {office.address}
-                  </p>
-                  <div className="flex items-center gap-1 text-xs">
-                    <Phone size={10} className="text-gold shrink-0" />
-                    <span
-                      dir="ltr"
-                      className="phone-ltr text-medium-gray dark:text-gray-400"
-                    >
-                      {office.phone}
-                    </span>
-                  </div>
-                  <div className="mt-3 flex items-center gap-1 text-xs text-gold font-semibold">
-                    <Navigation size={10} />
-                    <span>Get Directions</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Get Directions CTA below map */}
-        <div className="bg-charcoal-dark py-5">
-          <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 text-white">
-              <MapPin size={20} className="text-gold" />
-              <div>
-                <p className="font-semibold text-sm">
-                  {OFFICE_LOCATIONS[selectedOffice].name}
-                </p>
-                <p className="text-gray-400 text-xs">
-                  {OFFICE_LOCATIONS[selectedOffice].address}
-                </p>
-              </div>
-            </div>
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gold text-charcoal px-6 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold-light transition-all flex items-center gap-2"
-            >
-              <Navigation size={16} />
-              Get Directions
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Appointment Booking Form */}
-      <AppointmentForm />
-
       {/* Contact Form & Sidebar */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
@@ -627,6 +372,119 @@ export function ContactPage() {
               </AnimatedSection>
             </aside>
           </div>
+        </div>
+      </section>
+
+      {/* Map Section with Location Card Overlay */}
+      <section className="relative">
+        <div className="h-4 bg-gold" />
+        <div
+          className={`relative bg-light-gray dark:bg-charcoal transition-all duration-500 ease-in-out ${isMapExpanded ? "h-[40rem]" : "h-96"}`}
+        >
+          <iframe
+            src={MAP_EMBED_URL}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title={`${OFFICE_LOCATIONS[selectedOffice].name} Office Location`}
+            className="w-full h-full"
+          />
+
+          {/* Location Card Overlay */}
+          <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10">
+            <div className="bg-white dark:bg-charcoal-dark p-5 md:p-6 shadow-xl border border-border-gray dark:border-gray-700 max-w-xs">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gold flex items-center justify-center shrink-0">
+                  <MapPin size={20} className="text-charcoal" />
+                </div>
+                <div>
+                  <h4 className="text-charcoal dark:text-white font-bold text-sm">
+                    {OFFICE_LOCATIONS[selectedOffice].name}
+                  </h4>
+                  <p className="text-gold text-xs uppercase tracking-wider">
+                    Office
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start gap-2">
+                  <MapPin size={14} className="text-gold mt-0.5 shrink-0" />
+                  <span className="text-medium-gray dark:text-gray-300">
+                    {OFFICE_LOCATIONS[selectedOffice].address}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone size={14} className="text-gold shrink-0" />
+                  <a
+                    href={`tel:${OFFICE_LOCATIONS[selectedOffice].phone.replace(/\s/g, "")}`}
+                    dir="ltr"
+                    className="phone-ltr text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
+                  >
+                    {OFFICE_LOCATIONS[selectedOffice].phone}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail size={14} className="text-gold shrink-0" />
+                  <a
+                    href={`mailto:${OFFICE_LOCATIONS[selectedOffice].email}`}
+                    className="text-charcoal dark:text-gray-300 hover:text-gold transition-colors"
+                  >
+                    {OFFICE_LOCATIONS[selectedOffice].email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={14} className="text-gold shrink-0" />
+                  <span className="text-medium-gray dark:text-gray-300">
+                    {OFFICE_LOCATIONS[selectedOffice].hours}
+                  </span>
+                </div>
+              </div>
+
+              {/* Direction Buttons */}
+              <div className="mt-4 pt-3 border-t border-border-gray dark:border-gray-700 space-y-2">
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-gold text-charcoal px-4 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-gold-dark transition-all"
+                >
+                  <Navigation size={14} />
+                  Get Directions
+                </a>
+                <a
+                  href={MAP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full border border-gold text-gold px-4 py-2 text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-charcoal transition-all"
+                >
+                  <ExternalLink size={14} />
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Expand/Collapse Map Button */}
+          <button
+            onClick={() => setIsMapExpanded(!isMapExpanded)}
+            className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 bg-white dark:bg-charcoal-dark border border-border-gray dark:border-gray-700 shadow-lg flex items-center justify-center hover:border-gold transition-colors min-w-[44px] min-h-[44px]"
+            aria-label={isMapExpanded ? "Collapse map" : "Expand map"}
+          >
+            {isMapExpanded ? (
+              <Minimize2
+                size={18}
+                className="text-charcoal dark:text-gray-300"
+              />
+            ) : (
+              <Maximize2
+                size={18}
+                className="text-charcoal dark:text-gray-300"
+              />
+            )}
+          </button>
         </div>
       </section>
     </div>

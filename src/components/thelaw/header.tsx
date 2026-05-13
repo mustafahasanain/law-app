@@ -19,7 +19,6 @@ export function Header() {
     { label: t.header.about, page: 'about' },
     { label: t.header.practiceAreas, page: 'practice-areas' },
     { label: t.header.faq, page: 'faq' },
-    { label: t.header.blog, page: 'blog' },
     { label: t.header.contact, page: 'contact' },
   ];
 

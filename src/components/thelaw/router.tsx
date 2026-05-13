@@ -2,9 +2,9 @@
 
 import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 
-export type PageName = 'home' | 'about' | 'practice-areas' | 'faq' | 'blog' | 'contact';
+export type PageName = 'home' | 'about' | 'practice-areas' | 'faq' | 'contact';
 
-const VALID_PAGES: PageName[] = ['home', 'about', 'practice-areas', 'faq', 'blog', 'contact'];
+const VALID_PAGES: PageName[] = ['home', 'about', 'practice-areas', 'faq', 'contact'];
 
 interface RouterContextType {
   currentPage: PageName;

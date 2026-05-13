@@ -133,7 +133,7 @@ export const translations = {
     },
     // Free Case Evaluation
     freeEvaluation: {
-      subtitle: "Free Case Evaluation",
+      subtitle: "Get legal advice",
       title: "Submit Your Request & Get a Free Consultation",
       description:
         "We will review your case and get back to you within 24 hours with a comprehensive legal assessment.",
@@ -509,7 +509,7 @@ export const translations = {
         ],
       },
       freeEvaluation: {
-        title: "Free Case Evaluation",
+        title: "Get legal advice",
         description:
           "Get expert legal advice at no cost. Our attorneys will review your case and provide a comprehensive assessment.",
         contactUs: "Contact Us",
@@ -675,7 +675,7 @@ export const translations = {
       stillHaveQuestions: {
         title: "Still Have Questions?",
         description:
-          "Our team is ready to help. Contact us for a free consultation.",
+          "Our team is ready to help. Contact us for a consultation.",
         contactUs: "Contact Us for Help",
         callFree: "Call Free",
       },
@@ -1066,8 +1066,8 @@ export const translations = {
     },
     // Free Case Evaluation
     freeEvaluation: {
-      subtitle: "تقييم مجاني للقضية",
-      title: "أرسل طلبك واحصل على استشارة مجانية",
+      subtitle: "احصل على استشارة قانونية ",
+      title: "أرسل طلبك واحصل على استشارة ",
       description: "سنراجع قضيتك ونعود إليك خلال 24 ساعة بتقييم قانوني شامل.",
       submitRequest: "أرسل طلبك",
     },
@@ -1357,7 +1357,7 @@ export const translations = {
         ],
       },
       freeEvaluation: {
-        title: "تقييم مجاني للقضية",
+        title: "احصل على استشارة قانونية ",
         description:
           "احصل على مشورة قانونية متخصصة بدون تكلفة. سيقوم محامونا بمراجعة قضيتك وتقديم تقييم شامل.",
         contactUs: "اتصل بنا",
@@ -1520,8 +1520,7 @@ export const translations = {
       },
       stillHaveQuestions: {
         title: "لا تزال لديك أسئلة؟",
-        description:
-          "فريقنا مستعد للمساعدة. اتصل بنا للحصول على استشارة مجانية.",
+        description: "فريقنا مستعد للمساعدة. اتصل بنا للحصول على استشارة.",
         contactUs: "اتصل بنا للمساعدة",
         callFree: "احصل عل استشارة قانونية",
       },

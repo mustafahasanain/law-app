@@ -180,7 +180,7 @@ export function AboutPage() {
   const aboutCounters = [
     {
       icon: <TrendingUp size={40} />,
-      value: 25,
+      value: 12,
       suffix: "+",
       label: t.counter.yearsExperience,
     },
@@ -198,7 +198,7 @@ export function AboutPage() {
     },
     {
       icon: <Users size={40} />,
-      value: 50,
+      value: 12,
       suffix: "+",
       label: t.counter.expertLawyers,
     },
@@ -287,6 +287,21 @@ export function AboutPage() {
               "Celebrated 25 years of legal excellence, having served over 10,000 clients and recovered more than $100M in verdicts and settlements.",
           },
         ],
+      };
+  const aboutMe = isRTL
+    ? {
+        title: "عنّي",
+        subtitle: "نبذة شخصية",
+        description:
+          "أنا د. براء عبد الحكيم خليل، محامٍ ومستشار قانوني أعمل على تقديم حلول قانونية واضحة وعملية للأفراد والشركات. أركز في عملي على فهم تفاصيل كل قضية، وشرح الخيارات القانونية للموكلين بشفافية، ثم بناء مسار قانوني منظم يحمي مصالحهم أمام الجهات الرسمية والمحاكم.",
+        imageAlt: "د. براء عبد الحكيم خليل",
+      }
+    : {
+        title: "About Me",
+        subtitle: "Personal Profile",
+        description:
+          "I am Dr. Baraa Abdulhakeem Khaleel, an attorney and legal consultant focused on providing clear, practical legal solutions for individuals and businesses. My work starts with understanding each case in detail, explaining the available legal options transparently, and building an organized legal path that protects my clients' interests before official authorities and courts.",
+        imageAlt: "Dr. Baraa Abdulhakeem Khaleel",
       };
   const [profileModalOpen, setProfileModalOpen] = useState(false);
 
@@ -530,7 +545,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Our History Timeline Section */}
+      {/* About Me Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
         <div
           className="absolute inset-0 opacity-[0.02] pointer-events-none"
@@ -540,73 +555,30 @@ export function AboutPage() {
           }}
         />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <AnimatedSection>
-            <SectionTitle
-              title={aboutHistory.title}
-              subtitle={aboutHistory.subtitle}
-            />
-          </AnimatedSection>
-          <div className="relative mt-6 md:mt-8">
-            {/* Vertical gold line */}
-            <div
-              className={`absolute top-0 bottom-0 w-0.5 bg-gold/40 timeline-line-animated ${
-                isRTL
-                  ? "right-4 md:right-1/2 md:translate-x-px"
-                  : "left-4 md:left-1/2 md:-translate-x-px"
-              }`}
-            />
-
-            {aboutHistory.items.map((event, index) => (
-              <AnimatedSection key={event.year} delay={index * 150}>
-                <div
-                  className={`relative flex items-start mb-12 last:mb-0 ${
-                    isRTL
-                      ? "md:flex-row-reverse"
-                      : index % 2 === 0
-                        ? "md:flex-row"
-                        : "md:flex-row-reverse"
-                  }`}
-                >
-                  {/* Content */}
-                  <div
-                    className={`${
-                      isRTL
-                        ? "mr-12 text-right md:mr-0 md:w-[calc(50%-2rem)] md:pl-8"
-                        : `ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"}`
-                    }`}
-                  >
-                    <span className="inline-block text-gold font-bold text-lg tracking-wider mb-3 bg-gold/10 px-3 py-1 rounded">
-                      {event.year}
-                    </span>
-                    <h3
-                      className="text-2xl font-bold text-charcoal dark:text-white mb-2"
-                      style={{ fontFamily: "var(--font-playfair), serif" }}
-                    >
-                      {event.title}
-                    </h3>
-                    <p
-                      className={`text-medium-gray dark:text-gray-300 text-sm leading-relaxed max-w-xl ${
-                        isRTL ? "" : index % 2 === 0 ? "md:ml-auto" : ""
-                      }`}
-                    >
-                      {event.description}
-                    </p>
-                  </div>
-
-                  {/* Gold dot on timeline */}
-                  <div
-                    className={`absolute w-4 h-4 bg-gold rounded-full border-4 border-light-gray dark:border-charcoal-dark mt-1 z-10 ${
-                      isRTL
-                        ? "right-4 md:right-1/2 translate-x-1/2"
-                        : "left-4 md:left-1/2 -translate-x-1/2"
-                    }`}
-                  />
-
-                  {/* Spacer for the other side */}
-                  <div className="hidden md:block md:w-[calc(50%-2rem)]" />
-                </div>
-              </AnimatedSection>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <AnimatedSection>
+              <div className="relative max-w-md mx-auto lg:mx-0">
+                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
+                <img
+                  src="/images/lawyer-hero.png"
+                  alt={aboutMe.imageAlt}
+                  loading="lazy"
+                  className="relative z-10 w-full max-h-[520px] object-cover object-top shadow-xl"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <div>
+                <SectionTitle
+                  title={aboutMe.title}
+                  subtitle={aboutMe.subtitle}
+                  className="text-left [&>*]:text-left [&>*]:justify-start"
+                />
+                <p className="text-medium-gray dark:text-gray-300 leading-relaxed text-base md:text-lg">
+                  {aboutMe.description}
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -674,7 +646,7 @@ export function AboutPage() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-charcoal">
+      {/* <section className="py-12 md:py-16 lg:py-20 bg-charcoal">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <AnimatedSection>
             <Scale size={48} className="text-gold mx-auto mb-6" />
@@ -693,7 +665,7 @@ export function AboutPage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Mission Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
@@ -762,13 +734,17 @@ export function AboutPage() {
               subtitle={t.about.legalAdvice.subtitle}
             />
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {t.about.legalAdvice.items.map(
               (item: { title: string; desc: string }, index: number) => {
                 const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
                 return (
-                  <AnimatedSection key={item.title} delay={index * 100}>
-                    <div className="practice-card text-center p-8 border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal-dark group cursor-pointer hover:border-gold">
+                  <AnimatedSection
+                    key={item.title}
+                    delay={index * 100}
+                    className="h-full"
+                  >
+                    <div className="practice-card h-full min-h-[300px] text-center p-8 border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal-dark group cursor-pointer hover:border-gold flex flex-col items-center">
                       <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold transition-colors">
                         <Icon
                           size={28}
@@ -784,7 +760,7 @@ export function AboutPage() {
                       <p className="text-medium-gray dark:text-gray-300 text-sm leading-relaxed">
                         {item.desc}
                       </p>
-                      <div className="w-8 h-0.5 bg-gold mx-auto mt-5 group-hover:w-16 transition-all duration-300" />
+                      <div className="w-8 h-0.5 bg-gold mx-auto mt-auto group-hover:w-16 transition-all duration-300" />
                     </div>
                   </AnimatedSection>
                 );
@@ -795,7 +771,7 @@ export function AboutPage() {
       </section>
 
       {/* Our Clients Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
+      {/* <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
         <div
           className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{
@@ -826,7 +802,7 @@ export function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Free Case Evaluation CTA */}
       <section className="py-12 md:py-16 lg:py-20 bg-charcoal relative overflow-hidden">
@@ -861,134 +837,8 @@ export function AboutPage() {
                 <ArrowRight size={16} />
                 {t.about.freeEvaluation.contactUs}
               </button>
-              <a
-                href="tel:07802233000"
-                className="border-2 border-gold text-gold px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-white transition-all flex items-center gap-2"
-              >
-                <Phone size={16} />
-                {t.about.freeEvaluation.callFree}:{" "}
-                <span dir="ltr" className="phone-ltr">
-                  07802233000
-                </span>
-              </a>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Our Expert Team Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark relative overflow-hidden transition-colors duration-300">
-        <div
-          className="absolute inset-0 opacity-[0.015] pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #D4AF37 1px, transparent 1px)",
-            backgroundSize: "35px 35px",
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <AnimatedSection>
-            <SectionTitle
-              title={t.about.team.title}
-              subtitle={t.about.team.subtitle}
-            />
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {teamMembers.map(
-              (member: (typeof TEAM_MEMBERS)[0], index: number) => (
-                <AnimatedSection key={member.name} delay={index * 150}>
-                  <div
-                    onClick={() => handleMemberClick(member)}
-                    className="practice-card group cursor-pointer overflow-hidden"
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={member.img}
-                        alt={member.name}
-                        loading="lazy"
-                        className="w-full h-80 object-cover object-top group-hover:scale-110 transition-transform duration-700"
-                      />
-                      {/* Gold overlay with social icons on hover - enhanced slide-up animation */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-gold/80 via-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-8">
-                        <div className="flex gap-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                          <a
-                            href="#"
-                            className="w-10 h-10 bg-charcoal/80 flex items-center justify-center text-gold hover:bg-charcoal hover:text-white hover:scale-110 transition-all duration-200"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Facebook size={18} />
-                          </a>
-                          <a
-                            href="#"
-                            className="w-10 h-10 bg-charcoal/80 flex items-center justify-center text-gold hover:bg-charcoal hover:text-white hover:scale-110 transition-all duration-200"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Twitter size={18} />
-                          </a>
-                          <a
-                            href="#"
-                            className="w-10 h-10 bg-charcoal/80 flex items-center justify-center text-gold hover:bg-charcoal hover:text-white hover:scale-110 transition-all duration-200"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Linkedin size={18} />
-                          </a>
-                          <a
-                            href={`mailto:${member.email}`}
-                            className="w-10 h-10 bg-charcoal/80 flex items-center justify-center text-gold hover:bg-charcoal hover:text-white hover:scale-110 transition-all duration-200"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Mail size={18} />
-                          </a>
-                        </div>
-                      </div>
-                      {/* Default overlay for name */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal/80 to-transparent group-hover:opacity-0 transition-opacity duration-300">
-                        <div className="flex gap-3 opacity-70 group-hover:opacity-0 transition-opacity">
-                          <a
-                            href="#"
-                            className="text-gold hover:text-gold-light"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Facebook size={18} />
-                          </a>
-                          <a
-                            href="#"
-                            className="text-gold hover:text-gold-light"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Twitter size={18} />
-                          </a>
-                          <a
-                            href="#"
-                            className="text-gold hover:text-gold-light"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Linkedin size={18} />
-                          </a>
-                          <a
-                            href={`mailto:${member.email}`}
-                            className="text-gold hover:text-gold-light"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Mail size={18} />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="p-4 text-center border border-t-0 border-border-gray dark:border-gray-700">
-                      <h3
-                        className="font-bold text-charcoal dark:text-white text-lg"
-                        style={{ fontFamily: "var(--font-playfair), serif" }}
-                      >
-                        {member.name}
-                      </h3>
-                      <p className="text-gold text-sm">{member.role}</p>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ),
-            )}
-          </div>
         </div>
       </section>
     </div>
