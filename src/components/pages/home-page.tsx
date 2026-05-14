@@ -43,9 +43,9 @@ import {
   Twitter,
   Linkedin,
   Check,
+  MessageCircle,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ImageLightbox } from "../thelaw/image-lightbox";
 import { AppointmentForm } from "../thelaw/appointment-form";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -161,10 +161,12 @@ const CASE_IMAGES = [
   "/images/blog-2.png",
   "/images/blog-3.png",
   "/images/blog-4.png",
+  "/images/blog-5.png",
   "/images/blog-1.png",
   "/images/blog-2.png",
   "/images/blog-3.png",
   "/images/blog-4.png",
+  "/images/blog-5.png",
 ];
 
 const CLIENT_LOGOS = [
@@ -911,8 +913,6 @@ export function HomePage() {
     number | null
   >(null);
   const [practiceAreaModalOpen, setPracticeAreaModalOpen] = useState(false);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
   const [heroSlide, setHeroSlide] = useState(0);
   const [typedName, setTypedName] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -979,20 +979,6 @@ export function HomePage() {
     setSelectedPracticeAreaIndex(index);
     setPracticeAreaModalOpen(true);
   };
-
-  const handleCaseClick = (index: number) => {
-    setLightboxIndex(caseIndex + index);
-    setLightboxOpen(true);
-  };
-
-  const lightboxImages = caseItems.map(
-    (c: { title: string; category: string }, i: number) => ({
-      src: CASE_IMAGES[i],
-      alt: c.title,
-      title: c.title,
-      category: c.category,
-    }),
-  );
 
   const selectedPracticeArea =
     selectedPracticeAreaIndex !== null
@@ -1094,14 +1080,6 @@ export function HomePage() {
           )}
         </DialogContent>
       </Dialog>
-
-      {/* Image Lightbox for Case Cards */}
-      <ImageLightbox
-        images={lightboxImages}
-        initialIndex={lightboxIndex}
-        open={lightboxOpen}
-        onOpenChange={setLightboxOpen}
-      />
 
       {/* Hero Section */}
       <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] bg-charcoal overflow-hidden max-w-full">
@@ -1278,7 +1256,7 @@ export function HomePage() {
                 {heroDescriptions[heroSlide]}
               </p>
 
-              <div className="flex flex-wrap items-center gap-2 text-white text-base md:text-lg max-w-full">
+              {/* <div className="flex flex-wrap items-center gap-2 text-white text-base md:text-lg max-w-full">
                 <Phone
                   size={18}
                   className="text-gold md:w-[20px] md:h-[20px] shrink-0"
@@ -1292,6 +1270,16 @@ export function HomePage() {
                     07802233000
                   </span>
                 </a>
+              </div> */}
+
+              <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
+                <button
+                  onClick={() => navigate("contact")}
+                  className="bg-gold text-charcoal px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold-light transition-all flex items-center gap-2"
+                >
+                  <Phone size={16} />
+                  {t.faqPage.stillHaveQuestions.contactUs}
+                </button>
               </div>
 
               {/* Slider dots - functional with auto-cycle */}
@@ -1510,19 +1498,15 @@ export function HomePage() {
                       key={caseIndex + index}
                       delay={index * 100}
                     >
-                      <div
-                        onClick={() => handleCaseClick(index)}
-                        className="practice-card group cursor-pointer overflow-hidden relative"
-                      >
+                      <div className="overflow-hidden relative">
                         <div className="relative h-44 md:h-56 overflow-hidden">
                           <img
                             src={CASE_IMAGES[caseIndex + index]}
                             alt={caseItem.title}
                             loading="lazy"
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full object-cover"
                           />
-                          {/* Better overlay gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent group-hover:from-charcoal/80 group-hover:via-charcoal/50 group-hover:to-transparent transition-all duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
                           {/* Category badge */}
                           <div className="absolute top-3 left-3">
                             <span className="bg-gold text-charcoal text-xs uppercase tracking-wider font-bold px-3 py-1">
@@ -1534,15 +1518,8 @@ export function HomePage() {
                               {caseItem.title}
                             </h3>
                           </div>
-                          {/* View Case overlay button on hover */}
-                          <div className="view-case-overlay">
-                            <span className="view-case-btn">
-                              {t.cases.viewCase}
-                            </span>
-                          </div>
                         </div>
-                        {/* Gold accent bar at bottom */}
-                        <div className="h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                        <div className="h-1 bg-gold" />
                       </div>
                     </AnimatedSection>
                   ),
@@ -1614,7 +1591,7 @@ export function HomePage() {
       </section>
 
       {/* Practice Area List Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal transition-colors duration-300">
+      {/* <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1650,10 +1627,10 @@ export function HomePage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gold relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-gold dark:bg-[#1a1a1a] transition-colors duration-300">
         {/* Decorative pattern behind */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -1671,17 +1648,17 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
             <h2
-              className="text-3xl md:text-4xl font-bold text-charcoal mb-4"
+              className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-4"
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
               {t.cta.title}
             </h2>
-            <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-charcoal/80 dark:text-white/85 mb-8 max-w-2xl mx-auto">
               {t.cta.description}
             </p>
             <button
               onClick={() => navigate("contact")}
-              className="btn-ripple btn-primary-hover bg-white text-charcoal border-2 border-charcoal px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
+              className="btn-ripple btn-primary-hover bg-white text-charcoal border-2 border-charcoal dark:border-white px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-charcoal hover:text-white hover:border-charcoal dark:hover:bg-white dark:hover:text-charcoal dark:hover:border-white transition-all"
             >
               {t.cta.contactUs}
             </button>
@@ -1691,53 +1668,6 @@ export function HomePage() {
 
       {/* Appointment Booking Form */}
       <AppointmentForm />
-
-      {/* Contact Info Cards */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection>
-            <SectionTitle
-              title={t.contactPage.hero.title}
-              subtitle={t.contactPage.addressCard.title}
-            />
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactCards.map((card, index) => {
-              const Icon = card.icon;
-
-              return (
-                <AnimatedSection key={card.label} delay={index * 100}>
-                  <a
-                    href={card.href}
-                    target={card.href.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      card.href.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="group flex h-full flex-col items-center text-center bg-white dark:bg-charcoal p-6 md:p-8 rounded-lg border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gold transition-all duration-300"
-                  >
-                    <div className="w-16 h-16 flex items-center justify-center bg-gold/10 text-gold rounded-full mb-5 group-hover:bg-gold group-hover:text-charcoal transition-colors">
-                      <Icon size={28} strokeWidth={1.75} />
-                    </div>
-                    <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2">
-                      {card.label}
-                    </h3>
-                    <p className="text-gold font-semibold mb-2 break-words max-w-full">
-                      {card.value}
-                    </p>
-                    <p className="text-medium-gray dark:text-gray-300 text-sm">
-                      {card.subtitle}
-                    </p>
-                  </a>
-                </AnimatedSection>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

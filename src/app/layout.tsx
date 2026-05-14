@@ -33,7 +33,8 @@ export const metadata: Metadata = {
     default: "D.Baraa A. Khaleel - Criminal Justice Attorney",
     template: "%s | D.Baraa A. Khaleel",
   },
-  description: "D.Baraa A. Khaleel - Experienced Criminal Justice Attorney providing aggressive legal representation in criminal defense, personal injury, family law, business disputes, and more. Over 25 years of dedicated service with a 98% success rate. Free consultation available 24/7.",
+  description:
+    "D.Baraa A. Khaleel - Experienced Criminal Justice Attorney providing aggressive legal representation in criminal defense, personal injury, family law, business disputes, and more. Over 25 years of dedicated service with a 98% success rate. Legal Consultation available 24/7.",
   keywords: [
     "law firm",
     "criminal defense attorney",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     "business disputes",
     "DUI defense",
     "legal representation",
-    "free consultation",
+    "Legal Consultation",
     "24/7 emergency lawyer",
     "بغداد, المنصور, شارع مطعم الساعة",
     "litigation",
@@ -54,7 +55,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://thelawfirm.com"),
   openGraph: {
     title: "D.Baraa A. Khaleel - Criminal Justice Attorney",
-    description: "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate. Free consultation available 24/7.",
+    description:
+      "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate. Legal Consultation available 24/7.",
     type: "website",
     siteName: "D.Baraa A. Khaleel",
     locale: "en_US",
@@ -62,7 +64,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "D.Baraa A. Khaleel - Criminal Justice Attorney",
-    description: "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate.",
+    description:
+      "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate.",
   },
   robots: {
     index: true,
@@ -76,9 +79,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/images/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/images/favicon.svg", type: "image/svg+xml" }],
   },
 };
 
@@ -94,7 +95,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${montserrat.variable} ${playfair.variable} ${cairo.variable} antialiased bg-background text-foreground font-sans transition-colors duration-300`}
-        style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+        style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
         <ThemeProvider
           attribute="class"

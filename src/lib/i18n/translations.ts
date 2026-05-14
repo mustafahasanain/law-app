@@ -14,8 +14,8 @@ export const translations = {
   en: {
     // Header
     header: {
-      logo: "D.Baraa A. Khaleel",
-      freeConsultation: "Free Consultation",
+      logo: "Dr. Baraa Abdulhakim Khalil",
+      freeConsultation: "Legal Consultation",
       home: "Home",
       about: "About Us",
       practiceAreas: "Practice Areas",
@@ -25,25 +25,25 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Get a Free Consultation",
-      name: "D.Baraa A. Khaleel",
+      badge: "Get a Legal Consultation",
+      name: "Dr. Baraa Abdulhakim Khalil",
       subtitles: [
         "Criminal Justice Attorney",
         "Trusted Legal Advisor",
         "Your Advocate in Court",
       ],
       descriptions: [
-        "Dedicated to providing exceptional legal representation and fighting for justice in every case.",
-        "Over 25 years of experience defending clients with passion, integrity, and unwavering commitment.",
-        "When your future is at stake, you need an attorney who will fight relentlessly for your rights.",
+        "Committed to providing dependable legal representation that protects your rights in every case.",
+        "More than 12 years of experience serving clients with care, integrity, and professional dedication.",
+        "When you need legal support, we stand beside you with clarity and experience to safeguard your rights.",
       ],
       contactUs: "Contact Us",
-      callFree: "Call Free",
+      callFree: "Get Legal Advice",
     },
     // Emergency Banner
     emergency: {
-      title: "Emergency Legal Service 24/7",
-      callFree: "Call Free",
+      title: "Emergency Legal Service Around the Clock",
+      callFree: "Get Legal Advice",
     },
     // Counter Stats
     counter: {
@@ -56,61 +56,61 @@ export const translations = {
     practiceAreas: {
       subtitle: "Practice Areas",
       title: "Our Practice Areas",
-      viewAll: "View All Departments",
+      viewAll: "View All Sections",
       items: [
         {
-          title: "Legal Advices",
-          desc: "Expert counsel for complex legal matters and strategic planning.",
+          title: "Legal Consultations",
+          desc: "Accurate legal advice for a wide range of matters and disputes.",
+        },
+        {
+          title: "Foreign Company Registration",
+          desc: "Professional handling of foreign company registration procedures.",
         },
         {
           title: "Litigation",
-          desc: "Aggressive courtroom representation to protect your interests.",
+          desc: "Legal representation before all courts and judicial authorities.",
         },
         {
-          title: "Lawsuits",
-          desc: "Skilled handling of civil lawsuits from filing to resolution.",
+          title: "Labor and Social Security Law",
+          desc: "Legal solutions for labor, employment, and social security matters.",
         },
         {
-          title: "Business Law",
-          desc: "Comprehensive legal solutions for corporate and business needs.",
-        },
-        {
-          title: "Criminal Defense",
-          desc: "Vigorous defense strategies to safeguard your freedom and rights.",
+          title: "Foreign and Local Organization Registration",
+          desc: "Efficient establishment and registration of organizations.",
         },
         {
           title: "Disputes",
-          desc: "Effective resolution through mediation, arbitration, or trial.",
+          desc: "Effective resolution of legal and commercial disputes.",
         },
         {
-          title: "Copyrights",
-          desc: "Protection and enforcement of your intellectual property rights.",
+          title: "Investment Affairs",
+          desc: "Handling investment-related procedures before the National Investment Commission.",
         },
         {
-          title: "Criminal Law",
-          desc: "Dedicated advocacy in all areas of criminal justice proceedings.",
+          title: "Commercial Contract Drafting",
+          desc: "Precise drafting and review of commercial contracts.",
         },
       ],
       learnMore: "Learn More",
     },
     // How It Works
     howItWorks: {
-      subtitle: "How it Works",
+      subtitle: "How It Works",
       title: "3 Easy Steps to Get Legal Help",
       items: [
         {
-          title: "Request a quote",
-          subtitle: "Send Us your Request",
+          title: "Request a Consultation",
+          subtitle: "Send us the details of your case",
           btnText: "Send Request",
         },
         {
-          title: "Investigation",
-          subtitle: "We will investigate about your case",
-          btnText: "Learn more",
+          title: "Book an Appointment",
+          subtitle: "We will review your case",
+          btnText: "Learn More",
         },
         {
-          title: "Case Fight",
-          subtitle: "We will fight your case in court",
+          title: "Receive a Fee Quote",
+          subtitle: "We will represent your case in court",
           btnText: "See Results",
         },
       ],
@@ -133,8 +133,8 @@ export const translations = {
     },
     // Free Case Evaluation
     freeEvaluation: {
-      subtitle: "Get legal advice",
-      title: "Submit Your Request & Get a Free Consultation",
+      subtitle: "Get Legal Advice",
+      title: "Submit Your Request and Get a Consultation",
       description:
         "We will review your case and get back to you within 24 hours with a comprehensive legal assessment.",
       submitRequest: "Submit Your Request",
@@ -143,7 +143,7 @@ export const translations = {
     attorneyQuote: {
       quote:
         "Justice is not a passive concept — it requires dedicated advocates who are willing to fight tirelessly for the rights of every individual, regardless of the circumstances.",
-      name: "D.Baraa A. Khaleel",
+      name: "Dr. Baraa Abdulhakim Khalil",
       title: "Senior Partner, Criminal Justice Attorney",
     },
     // Testimonials
@@ -160,24 +160,24 @@ export const translations = {
       title: "Practice Areas",
       subtitle: "Our Expertise",
       items: [
-        "Business organizations law",
-        "Civil law or common law",
-        "Communications law",
+        "Commercial Organizations Law",
+        "Civil and Common Law",
+        "Telecommunications Law",
         "Constitutional law",
-        "Cultural property law",
-        "Mergers & acquisitions law",
-        "Native American law",
-        "Product liability litigation",
-        "Real estate law",
-        "Obscenity law",
-        "Nationality law",
-        "Procedural law",
-        "International human rights law",
-        "Health law",
-        "Immigration law",
-        "Environmental law",
-        "Cyber law",
-        "Consumer law",
+        "Cultural Property Law",
+        "Mergers and Acquisitions Law",
+        "Native American Law",
+        "Product Liability Litigation",
+        "Real Estate Law",
+        "Obscenity Law",
+        "Nationality Law",
+        "Procedural Law",
+        "International Human Rights Law",
+        "Health Law",
+        "Immigration Law",
+        "Environmental Law",
+        "Cyber Law",
+        "Consumer Protection Law",
       ],
     },
     // Immigration Section
@@ -244,11 +244,11 @@ export const translations = {
       subtitle: "Our Credentials",
       items: [
         {
-          title: "Licensed & Insured",
+          title: "Licensed and Insured",
           desc: "Fully licensed to practice law with comprehensive professional liability insurance for your protection.",
         },
         {
-          title: "Award Winning",
+          title: "Award-Winning",
           desc: "Recognized by national legal organizations for excellence in client advocacy and courtroom results.",
         },
         {
@@ -256,7 +256,7 @@ export const translations = {
           desc: "Our attorneys are available around the clock for emergencies and urgent legal matters.",
         },
         {
-          title: "Free Consultation",
+          title: "Legal Consultation",
           desc: "Start with a no-obligation consultation. We review your case and explain your options at no cost.",
         },
       ],
@@ -312,8 +312,7 @@ export const translations = {
     // CTA Section
     cta: {
       title: "Need Legal Assistance?",
-      description:
-        "Contact us today for a free consultation and let our experienced attorneys fight for your rights.",
+      description: "Contact us today for a legal consultation.",
       contactUs: "Contact Us Now",
       callUs: "Call Us",
     },
@@ -336,7 +335,7 @@ export const translations = {
       },
       quote: {
         text: "The law is not merely a set of rules — it is the foundation upon which we build a fair and equitable society.",
-        author: "D.Baraa A. Khaleel, Founding Partner",
+        author: "Dr. Baraa Abdulhakim Khalil, Founding Partner",
       },
       mission: {
         subtitle: "Our Mission",
@@ -396,7 +395,7 @@ export const translations = {
       },
       clients: {
         subtitle: "Our Clients",
-        title: "Trusted by Leading Organizations",
+        title: "Trusted by Leading Institutions",
         items: [
           "Apex Holdings",
           "Sterling Corp",
@@ -438,7 +437,7 @@ export const translations = {
       },
       legalAdvice: {
         subtitle: "Get Advice",
-        title: "Get Your Legal Advice",
+        title: "Get Your Legal Consultation",
         items: [
           {
             title: "Legal Consultation",
@@ -467,11 +466,11 @@ export const translations = {
         ],
       },
       freeEvaluation: {
-        title: "Get legal advice",
+        title: "Get Legal Advice",
         description:
           "Get expert legal advice at no cost. Our attorneys will review your case and provide a comprehensive assessment.",
         contactUs: "Contact Us",
-        callFree: "Call Free",
+        callFree: "Get Legal Advice",
       },
     },
     // Practice Areas Page
@@ -481,7 +480,7 @@ export const translations = {
         breadcrumb: { home: "Home", current: "Practice Areas" },
       },
       intro:
-        "With over 25 years of experience, our attorneys specialize in a wide range of legal practice areas. We provide aggressive and dedicated representation to protect your rights and achieve the best possible outcomes.",
+        "With more than 25 years of experience, our attorneys handle a broad range of legal practice areas. We provide dedicated and assertive representation to protect your rights and pursue the best possible outcome.",
       subtitle: "What We Do",
       title: "Our Practice Areas",
       viewMore: "Learn More",
@@ -495,15 +494,15 @@ export const translations = {
           },
           {
             title: "Proven Results",
-            desc: "A 98% success rate with millions recovered for our clients.",
+            desc: "A 98% success rate and millions recovered for our clients.",
           },
           {
             title: "Personal Attention",
             desc: "Every case receives dedicated attention from a senior attorney.",
           },
           {
-            title: "No Win, No Fee",
-            desc: "You pay nothing unless we win your case. Free initial consultation.",
+            title: "No Fee Unless We Win",
+            desc: "You pay nothing unless we win your case. Your initial consultation is free.",
           },
         ],
       },
@@ -526,7 +525,7 @@ export const translations = {
       cta: {
         title: "Need Legal Help?",
         description:
-          "Schedule a free consultation with one of our experienced attorneys.",
+          "Schedule a Legal Consultation with one of our experienced attorneys.",
         button: "Contact Us Now",
       },
       hours: {
@@ -540,7 +539,7 @@ export const translations = {
       },
       contact: {
         title: "Contact Info",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
+        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
         phone: "07802233000",
         email: "info@xtralawyer.com",
       },
@@ -559,8 +558,8 @@ export const translations = {
         namePlaceholder: "Enter your name",
         emailLabel: "Your Email",
         emailPlaceholder: "Enter your email",
-        departmentLabel: "Department",
-        departmentPlaceholder: "Select department",
+        departmentLabel: "Section",
+        departmentPlaceholder: "Select a section",
         questionLabel: "Your Question",
         questionPlaceholder: "Type your question here...",
         submit: "Submit Question",
@@ -580,7 +579,7 @@ export const translations = {
         items: [
           {
             q: "What legal services does Dr. Baraa A. Khaleel provide?",
-            a: "The office provides legal consultation, litigation, lawsuits, business law services, criminal defense, dispute resolution, copyright matters, company registration, contract review, property disputes, and representation before courts and official authorities.",
+            a: "The office provides legal consultations, litigation, representation for companies and individuals before the courts, commercial law services, criminal defense, dispute resolution, intellectual property matters, company registration, contract review, and property disputes.",
           },
           {
             q: "How can I book an appointment?",
@@ -614,7 +613,7 @@ export const translations = {
           },
           {
             q: "Can the office represent me in criminal complaints or investigations?",
-            a: "Yes. The office handles criminal defense and criminal law matters, including legal advice before statements, review of investigation papers, preparation of defense strategy, and representation before competent authorities and courts.",
+            a: "Yes. The office handles criminal defense and criminal law matters, including legal advice before giving statements, review of investigation papers, preparation of a defense strategy, and representation before the competent authorities and the courts.",
           },
           {
             q: "How can a property dispute be handled?",
@@ -644,7 +643,7 @@ export const translations = {
         description:
           "Our team is ready to help. Contact us for a consultation.",
         contactUs: "Contact Us for Help",
-        callFree: "Call Free",
+        callFree: "Get Legal Advice",
       },
       feedback: {
         helpful: "Helpful",
@@ -656,7 +655,7 @@ export const translations = {
     // Blog Page
     blogPage: {
       hero: {
-        title: "Blog & News",
+        title: "Blog and News",
         breadcrumb: { home: "Home", current: "Blog" },
       },
       featured: "Featured",
@@ -676,43 +675,43 @@ export const translations = {
             "Learn about your constitutional rights when facing criminal charges and how an experienced attorney can help protect them.",
           category: "Criminal Law",
           date: "January 15, 2026",
-          author: "D.Baraa A. Khaleel",
+          author: "Dr. Baraa Abdulhakim Khalil",
           readTime: "5 min read",
           content:
-            "When facing criminal charges, understanding your constitutional rights is the first and most critical step in protecting yourself. The United States Constitution provides several fundamental protections that apply to every person accused of a crime, regardless of the nature or severity of the charges.\n\n## Your Right to Remain Silent\nThe Fifth Amendment protects you from being compelled to be a witness against yourself. This means you have the absolute right to refuse to answer questions from law enforcement. Exercise this right politely but firmly — simply state that you wish to speak with an attorney before answering any questions.\n\n## Your Right to Legal Representation\nThe Sixth Amendment guarantees your right to have an attorney present during any questioning. If you cannot afford an attorney, one will be appointed for you. Having legal representation is not an admission of guilt — it is a smart exercise of your constitutional rights.\n\n## Your Right to Due Process\nThe Fourteenth Amendment ensures that no state can deprive you of life, liberty, or property without due process of law. This means the government must follow fair procedures before taking away your freedom, including proper notice of charges and a fair hearing.\n\n## Protecting Your Rights\nIf you or a loved one is facing criminal charges, it is essential to consult with an experienced criminal defense attorney as soon as possible. The earlier you involve legal counsel, the better protected your rights will be throughout the criminal justice process.",
+            "When facing criminal charges, understanding your constitutional rights is the first and most important step in protecting yourself. The United States Constitution provides several core safeguards that apply to every person accused of a crime.\n\n## Your Right to Remain Silent\nThe Fifth Amendment protects you from being compelled to testify against yourself. Exercise this right politely but firmly by stating that you want to speak with an attorney before answering any questions.\n\n## Your Right to Legal Representation\nThe Sixth Amendment guarantees your right to have a lawyer present during questioning. If you cannot afford one, counsel will be appointed for you.\n\n## Protecting Your Rights\nIf you or someone close to you is facing criminal charges, speak with an experienced criminal defense attorney as early as possible.",
         },
         {
           title: "The Impact of Recent Legislation on Business Owners",
           excerpt:
-            "New regulatory changes are affecting businesses across the country. Here's what you need to know to stay compliant.",
+            "New regulatory changes are affecting businesses across the country. Here is what you need to know.",
           category: "Business Law",
           date: "January 10, 2026",
           author: "David Chen",
           readTime: "7 min read",
           content:
-            "Recent legislative changes have introduced new compliance requirements that affect businesses of all sizes. Understanding these changes is critical for avoiding penalties and maintaining smooth operations.\n\n## Key Changes in Corporate Compliance\nThe new regulations require businesses to implement more robust compliance programs, including enhanced reporting requirements and stricter oversight of financial transactions. Companies must now maintain detailed records of all transactions above certain thresholds and submit quarterly compliance reports.\n\n## Employment Law Updates\nSignificant changes to employment law include new requirements for workplace safety, updated anti-discrimination provisions, and revised guidelines for independent contractor classification. Employers should review their current policies and procedures to ensure compliance.\n\n## Tax Implications\nThe legislation introduces several changes to the tax code that affect business deductions, depreciation schedules, and international tax obligations. Business owners should work closely with their tax advisors to understand how these changes impact their specific situation.\n\n## Taking Action\nDon't wait until you receive a notice of non-compliance. Proactively reviewing your business practices and implementing necessary changes now can save significant time and expense in the future. Contact our business law team for a comprehensive compliance review.",
+            "Recent legislative changes have introduced new compliance requirements that affect businesses of every size. Understanding these changes is essential to avoid penalties and maintain smooth operations.\n\n## Key Compliance Changes\nThe new regulations require companies to implement stronger compliance programs.\n\n## Employment Law Updates\nMajor labor law changes include new workplace safety requirements.\n\n## Take Action\nDo not wait for a notice of non-compliance. A proactive review of your business practices now can save significant time and expense later.",
         },
         {
           title: "Family Law: Navigating Child Custody Disputes",
           excerpt:
-            "Child custody can be one of the most emotionally challenging aspects of family law. Learn about the process and your options.",
+            "Child custody can be one of the most emotionally challenging aspects of family law.",
           category: "Family Law",
           date: "January 5, 2026",
           author: "Sarah Mitchell",
           readTime: "6 min read",
           content:
-            "Child custody disputes are among the most emotionally challenging legal matters that families face. Understanding the legal framework and process can help you navigate this difficult time more effectively.\n\n## Types of Custody\nCourts distinguish between legal custody (the right to make decisions about the child's upbringing) and physical custody (where the child lives). Both types can be awarded solely to one parent or jointly to both parents, depending on what the court determines is in the child's best interest.\n\n## The Best Interest Standard\nFamily courts make custody decisions based on the \"best interest of the child\" standard. Factors considered include the child's relationship with each parent, each parent's ability to provide a stable environment, the child's adjustment to school and community, and any history of domestic violence or substance abuse.\n\n## Modifying Custody Orders\nCustody orders are not set in stone. If circumstances have changed significantly since the original order was issued, you can petition the court for a modification. Common reasons for modification include relocation, changes in work schedule, or concerns about the child's safety and well-being.\n\n## Getting Help\nIf you are facing a custody dispute, having an experienced family law attorney on your side can make a significant difference. Our team is here to advocate for your parental rights while keeping your child's best interests at heart.",
+            'Child custody disputes are among the most emotionally difficult legal matters families face. Understanding the legal framework and the process can help you navigate this period more effectively.\n\n## Types of Custody\nCourts distinguish between legal custody and physical custody.\n\n## The Best Interest Standard\nFamily courts make custody decisions based on the "best interests of the child."\n\n## Getting Help\nIf you are facing a custody dispute, having an experienced family law attorney by your side can make a meaningful difference.',
         },
         {
           title: "Personal Injury: What to Do After an Accident",
           excerpt:
-            "Knowing the right steps to take immediately after an accident can significantly impact your ability to recover compensation.",
+            "Knowing the right steps to take immediately after an accident can significantly affect your ability to recover compensation.",
           category: "Personal Injury",
           date: "December 28, 2025",
           author: "Alex Thomson",
           readTime: "4 min read",
           content:
-            "The moments and days following an accident are crucial for protecting your health and your legal right to compensation. Here is a step-by-step guide on what to do after being involved in an accident.\n\n## Step 1: Seek Medical Attention\nYour health is the top priority. Even if you believe your injuries are minor, seek medical evaluation immediately. Some injuries, such as whiplash or internal injuries, may not present symptoms right away. Medical records also serve as important evidence for your claim.\n\n## Step 2: Document Everything\nTake photographs of the accident scene, your injuries, and any property damage. Collect contact information from witnesses. Write down your recollection of events as soon as possible while the details are fresh in your mind.\n\n## Step 3: Report the Accident\nFile a police report or incident report as required. Notify your insurance company, but be cautious about giving recorded statements without first consulting an attorney.\n\n## Step 4: Contact an Attorney\nBefore accepting any settlement offer or signing any documents from an insurance company, consult with a personal injury attorney. Insurance companies often try to settle quickly for less than you deserve. An experienced attorney will protect your rights and fight for full and fair compensation.",
+            "The moments and days after an accident are critical to protecting both your health and your legal right to compensation.\n\n## Step 1: Seek Medical Care\nYour health comes first. Even if you think your injuries are minor, get medical attention immediately.\n\n## Step 2: Document Everything\nTake photographs of the accident scene, your injuries, and any property damage.\n\n## Step 3: Contact a Lawyer\nBefore accepting any settlement offer or signing documents from an insurance company, consult a personal injury attorney.",
         },
       ],
       categoriesList: [
@@ -746,7 +745,10 @@ export const translations = {
       info: {
         phone: { title: "Phone", number: "07802233000" },
         email: { title: "Email", address: "info@yoursite.com" },
-        address: { title: "Address", full: "بغداد, المنصور, شارع مطعم الساعة" },
+        address: {
+          title: "Address",
+          full: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        },
       },
       form: {
         title: "Send Us a Message",
@@ -775,14 +777,14 @@ export const translations = {
       emergency: {
         title: "Emergency Contact",
         description: "Available 24/7 for urgent legal matters",
-        callFree: "Call Free",
+        callFree: "Get Legal Advice",
       },
       addressCard: {
         title: "Our Offices",
         main: "Main Office",
-        mainAddress: "بغداد, المنصور, شارع مطعم الساعة",
+        mainAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
         branch: "Branch Office",
-        branchAddress: "بغداد, المنصور, شارع مطعم الساعة",
+        branchAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
       },
       appointment: {
         title: "Book an Appointment",
@@ -822,8 +824,8 @@ export const translations = {
     },
     // Footer
     footer: {
-      hereToHelp: "We're Here to Help",
-      freeConsultation: "Free Consultation • Available 24/7",
+      hereToHelp: "We Are Here to Help",
+      freeConsultation: "Legal Consultation • Available 24/7",
       newsletter: {
         title: "Subscribe to Our Newsletter",
         description:
@@ -844,7 +846,7 @@ export const translations = {
       contact: {
         title: "Contact",
         addressLabel: "Address:",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
+        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
         telLabel: "Tel:",
         phone: "07802233000",
         emailLabel: "Email:",
@@ -854,10 +856,10 @@ export const translations = {
         title: "Quick Links",
         about: "About Us",
         faq: "FAQ",
-        practiceArea: "Practice Area",
+        practiceArea: "Practice Areas",
         contact: "Contact",
       },
-      copyright: "Copyright 2026 D.Baraa A. Khaleel. All Rights Reserved.",
+      copyright: "Copyright 2026 Law Theme. All rights reserved.",
       backToTop: "Back to Top",
     },
     // Cookie Banner
@@ -915,7 +917,7 @@ export const translations = {
     // Header
     header: {
       logo: "د. براء عبدالحكيم خليل",
-      freeConsultation: "استشارة مجانية",
+      freeConsultation: "استشارة قانونية",
       home: "الرئيسية",
       about: "من نحن",
       practiceAreas: "مجالات الممارسة",
@@ -925,7 +927,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "احصل على استشارة مجانية",
+      badge: "احصل على استشارة قانونية",
       name: "د. براء عبدالحكيم خليل",
       subtitles: [
         "محامي العدالة الجنائية",
@@ -933,9 +935,9 @@ export const translations = {
         "مدافعك في المحكمة",
       ],
       descriptions: [
-        "مكرس لتقديم تمثيل قانوني استثنائي والقتال من أجل العدالة في كل قضية.",
-        "أكثر من 25 عامًا من الخبرة في الدفاع عن العملاء بشغف ونزاهة والتزام لا يتزعزع.",
-        "عندما يكون مستقبلك على المحك، تحتاج إلى محامٍ سيقاتل بلا هوادة من أجل حقوقك.",
+        "ملتزم بتقديم تمثيل قانوني موثوق يحفظ حقوقك في كل قضية.",
+        "أكثر من 12 عامًا من الخبرة في خدمة العملاء باهتمام ونزاهة والتزام مهني.",
+        "عندما تحتاج إلى دعم قانوني، نكون إلى جانبك بخبرة ووضوح لحماية حقوقك.",
       ],
       contactUs: "اتصل بنا",
       callFree: "احصل عل استشارة قانونية",
@@ -1155,7 +1157,7 @@ export const translations = {
           desc: "محامونا متاحون على مدار الساعة لحالات الطوارئ والمسائل القانونية العاجلة.",
         },
         {
-          title: "استشارة مجانية",
+          title: "استشارة قانونية",
           desc: "ابدأ باستشارة بدون التزام. نراجع قضيتك ونشرح خياراتك بدون تكلفة.",
         },
       ],
@@ -1211,8 +1213,7 @@ export const translations = {
     // CTA Section
     cta: {
       title: "هل تحتاج مساعدة قانونية؟",
-      description:
-        "اتصل بنا اليوم للحصول على استشارة مجانية ودع محامينا ذوي الخبرة يقاتلون من أجل حقوقك.",
+      description: "اتصل بنا اليوم للحصول على استشارة قانونية.",
       contactUs: "اتصل بنا الآن",
       callUs: "اتصل بنا",
     },
@@ -1382,7 +1383,7 @@ export const translations = {
       },
       cta: {
         title: "هل تحتاج مساعدة قانونية؟",
-        description: "حدد موعداً لاستشارة مجانية مع أحد محامينا ذوي الخبرة.",
+        description: "حدد موعداً لاستشارة قانونية مع أحد محامينا ذوي الخبرة.",
         button: "اتصل بنا الآن",
       },
       hours: {
@@ -1677,7 +1678,7 @@ export const translations = {
     // Footer
     footer: {
       hereToHelp: "نحن هنا للمساعدة",
-      freeConsultation: "استشارة مجانية • متاح على مدار الساعة",
+      freeConsultation: "استشارة قانونية • متاح على مدار الساعة",
       newsletter: {
         title: "اشترك في نشرتنا الإخبارية",
         description:

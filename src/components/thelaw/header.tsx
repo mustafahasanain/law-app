@@ -8,7 +8,7 @@ import { ThemeToggle } from './theme-toggle';
 import { LanguageSwitcher } from './language-switcher';
 
 export function Header() {
-  const { currentPage, navigate } = useRouter();
+  const { currentPage, navigate, navigateToSection } = useRouter();
   const { t, isRTL } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
@@ -84,7 +84,7 @@ export function Header() {
             </a>
           </div>
           <button
-            onClick={() => handleNavigate('contact')}
+            onClick={() => navigateToSection('home', 'book-appointment')}
             className="bg-gold text-white px-4 py-1 text-xs font-semibold uppercase tracking-wider hover:bg-gold-light transition-all"
           >
             {t.header.freeConsultation}
@@ -212,7 +212,10 @@ export function Header() {
           {/* CTA button */}
           <div className="absolute bottom-0 left-0 right-0 px-5 py-4 border-t border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal-dark">
             <button
-              onClick={() => handleNavigate('contact')}
+              onClick={() => {
+                navigateToSection('home', 'book-appointment');
+                closeMobileMenu();
+              }}
               className="w-full bg-gold text-white px-4 py-2.5 text-sm font-semibold uppercase tracking-wider hover:bg-gold-light transition-all"
             >
               {t.header.freeConsultation}

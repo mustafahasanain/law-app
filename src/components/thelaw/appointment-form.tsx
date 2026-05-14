@@ -91,7 +91,10 @@ export function AppointmentForm() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
+    <section
+      id="book-appointment"
+      className="scroll-mt-28 py-12 md:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300"
+    >
       {/* Decorative background pattern */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
         backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
