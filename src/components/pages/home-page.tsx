@@ -172,6 +172,12 @@ const CASE_IMAGES = [
 const CLIENT_LOGOS = [
   { src: "/images/sbc.png", alt: "SBC" },
   { src: "/images/e2next.png", alt: "E2next" },
+  { src: "/images/img1.png", alt: "img1" },
+  { src: "/images/img2.png", alt: "img2" },
+  { src: "/images/img3.jpeg", alt: "img3" },
+  { src: "/images/img4.jpeg", alt: "img4" },
+  { src: "/images/img5.jpeg", alt: "img5" },
+  { src: "/images/img6.jpeg", alt: "img6" },
 ];
 
 /*

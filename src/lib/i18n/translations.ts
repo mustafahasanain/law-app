@@ -84,7 +84,7 @@ export const translations = {
         },
         {
           title: "Investment Affairs",
-          desc: "Handling investment-related procedures before the National Investment Commission.",
+          desc: "Completion of transactions and investment approvals at the National Investment Commission.",
         },
         {
           title: "Commercial Contract Drafting",
@@ -986,7 +986,7 @@ export const translations = {
         },
         {
           title: "شؤون الاستثمار",
-          desc: "انجاز المنجزات الاستثمارية في الهيئة الوطنية للاستثمار.",
+          desc: "انجار المعاملات والموافقات الاستثمارية في الهيئة الوطنية للاستثمار.",
         },
         {
           title: "صياغة العقود التجارية",
