@@ -90,6 +90,10 @@ export const translations = {
           title: "Commercial Contract Drafting",
           desc: "Precise drafting and review of commercial contracts.",
         },
+        {
+          title: "Legal Partnerships",
+          desc: "Local and international legal partnerships.",
+        },
       ],
       learnMore: "Learn More",
     },
@@ -541,7 +545,7 @@ export const translations = {
         title: "Contact Info",
         address: "Baghdad, Al-Mansour, Clock Restaurant Street",
         phone: "07802233000",
-        email: "info@xtralawyer.com",
+        email: "info@baraa-alsamraie.com",
       },
     },
     // FAQ Page
@@ -850,7 +854,7 @@ export const translations = {
         telLabel: "Tel:",
         phone: "07802233000",
         emailLabel: "Email:",
-        email: "info@xtralawyer.com",
+        email: "info@baraa-alsamraie.com",
       },
       quickLinks: {
         title: "Quick Links",
@@ -991,6 +995,10 @@ export const translations = {
         {
           title: "صياغة العقود التجارية",
           desc: "صياغة ومراجعة العقود التجارية بدقة.",
+        },
+        {
+          title: "شراكات قانونية",
+          desc: "شراكة قانونية ودولية",
         },
       ],
       learnMore: "اعرف المزيد",
@@ -1399,7 +1407,7 @@ export const translations = {
         title: "معلومات الاتصال",
         address: "بغداد, المنصور, شارع مطعم الساعة",
         phone: "07802233000",
-        email: "info@xtralawyer.com",
+        email: "info@baraa-alsamraie.com",
       },
     },
     // FAQ Page
@@ -1703,7 +1711,7 @@ export const translations = {
         telLabel: "هاتف:",
         phone: "07802233000",
         emailLabel: "بريد إلكتروني:",
-        email: "info@xtralawyer.com",
+        email: "info@baraa-alsamraie.com",
       },
       quickLinks: {
         title: "روابط سريعة",

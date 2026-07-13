@@ -66,11 +66,9 @@ export function ContactPage() {
     },
   ];
 
-  const MAP_URL =
-    "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en";
+  const MAP_URL = "https://maps.app.goo.gl/KktA8GJ9Nn6VcA4r5";
   const MAP_EMBED_URL =
     "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en&output=embed";
-  const MAP_DESTINATION = "33.31884002685547,44.33299255371094";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -446,7 +444,7 @@ export function ContactPage() {
               {/* Direction Buttons */}
               <div className="mt-4 pt-3 border-t border-border-gray dark:border-gray-700 space-y-2">
                 <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${MAP_DESTINATION}`}
+                  href={MAP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gold text-charcoal px-4 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-gold-dark transition-all"

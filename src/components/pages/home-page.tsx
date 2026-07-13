@@ -44,6 +44,7 @@ import {
   Linkedin,
   Check,
   MessageCircle,
+  Handshake,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AppointmentForm } from "../thelaw/appointment-form";
@@ -61,6 +62,7 @@ const PRACTICE_AREA_ICONS = [
   MessageSquare,
   Copyright,
   Landmark,
+  Handshake,
 ];
 
 const PRACTICE_AREA_DETAILS = [
@@ -150,6 +152,17 @@ const PRACTICE_AREA_DETAILS = [
       "Juvenile defense",
       "Bail and bond hearings",
       "Criminal investigation representation",
+    ],
+  },
+  {
+    description:
+      "Our legal partnership services provide coordinated, reliable counsel for clients managing cross-border transactions, regulatory requirements, and complex legal matters. We work closely with trusted legal professionals to deliver clear guidance and practical representation tailored to each client's needs.",
+    services: [
+      "Legal representation coordination",
+      "Cross-border transaction support",
+      "Regulatory and compliance guidance",
+      "Contract and document review",
+      "Ongoing legal counsel",
     ],
   },
 ];
@@ -1316,7 +1329,7 @@ export function HomePage() {
                 {/* Small diamond at bottom-right corner */}
                 <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gold rotate-45 z-30" />
                 <img
-                  src="/images/lawyer-hero.png"
+                  src="/images/lawyer-hero-new.png"
                   alt={t.hero.name}
                   className="relative z-10 max-h-[500px] object-cover shadow-2xl rounded-b-lg"
                 />
@@ -1362,34 +1375,38 @@ export function HomePage() {
               subtitle={t.practiceAreas.subtitle}
             />
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PRACTICE_AREA_ICONS.map((Icon, index) => (
-              <AnimatedSection
-                key={index}
-                delay={index * 100}
-                className="h-full"
-              >
-                <div className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300">
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-gold/10 dark:bg-gold/5 text-gold group-hover:bg-gold group-hover:text-white transition-all group-hover:rotate-6 duration-300 rounded-lg">
-                    <Icon
-                      size={24}
-                      strokeWidth={1.5}
-                      className="md:w-[32px] md:h-[32px]"
-                    />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {t.practiceAreas.items.map((area, index) => {
+              const Icon = PRACTICE_AREA_ICONS[index] ?? Scale;
+
+              return (
+                <AnimatedSection
+                  key={index}
+                  delay={index * 100}
+                  className="h-full"
+                >
+                  <div className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300">
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-gold/10 dark:bg-gold/5 text-gold group-hover:bg-gold group-hover:text-white transition-all group-hover:rotate-6 duration-300 rounded-lg">
+                      <Icon
+                        size={24}
+                        strokeWidth={1.5}
+                        className="md:w-[32px] md:h-[32px]"
+                      />
+                    </div>
+                    <div className="relative z-10 flex-1">
+                      <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1 group-hover:text-gold transition-colors">
+                        {area.title}
+                      </h3>
+                      <p className="text-medium-gray dark:text-gray-300 text-sm">
+                        {area.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div className="relative z-10 flex-1">
-                    <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1 group-hover:text-gold transition-colors">
-                      {t.practiceAreas.items[index].title}
-                    </h3>
-                    <p className="text-medium-gray dark:text-gray-300 text-sm">
-                      {t.practiceAreas.items[index].desc}
-                    </p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              );
+            })}
           </div>
           {/* <AnimatedSection>
             <div className="text-center mt-10">
