@@ -145,13 +145,6 @@ export function Footer() {
         <p className="text-gray-400 text-xs md:text-sm">{t.footer.copyright}</p>
         <div className="flex items-center gap-3 md:gap-4">
           <a
-            href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr"
-            title="Facebook"
-            className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <Facebook size={20} />
-          </a>
-          <a
             href="#"
             title="Twitter"
             className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
@@ -164,23 +157,6 @@ export function Footer() {
             className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <Linkedin size={20} />
-          </a>
-          <a
-            href="https://www.instagram.com/_lawyer_baraa?igsh=MXkyN3NncmRoejJ6Mw%3D%3D&utm_source=qr"
-            title="Instagram"
-            className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <Instagram size={20} />
-          </a>
-          <a
-            href="https://wa.me/9647802233000"
-            target="_blank"
-            rel="noreferrer"
-            title="WhatsApp"
-            aria-label="Contact us on WhatsApp"
-            className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <WhatsAppIcon size={20} />
           </a>
           <a
             href="#"

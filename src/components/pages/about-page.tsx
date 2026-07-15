@@ -64,7 +64,7 @@ const TEAM_MEMBERS = [
       "American Bar Association - Litigation Section",
     ],
     email: "m.brown@thelawfirm.com",
-    phone: "07802233000",
+    phone: "",
   },
   {
     name: "Jane Doe",
@@ -89,7 +89,7 @@ const TEAM_MEMBERS = [
       "Certified E-Discovery Specialist",
     ],
     email: "j.doe@thelawfirm.com",
-    phone: "07802233000",
+    phone: "",
   },
   {
     name: "Alex Darayov",
@@ -114,7 +114,7 @@ const TEAM_MEMBERS = [
       "Baghdad Bar Association",
     ],
     email: "a.darayov@thelawfirm.com",
-    phone: "07802233000",
+    phone: "",
   },
 ];
 
@@ -254,7 +254,7 @@ export function AboutPage() {
             year: "1998",
             title: "Founded",
             description:
-              "D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
+              "Our firm was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
           },
           {
             year: "2003",
@@ -290,18 +290,17 @@ export function AboutPage() {
       };
   const aboutMe = isRTL
     ? {
-        title: "عنّي",
-        subtitle: "نبذة شخصية",
-        description:
-          "أنا د. براء عبد الحكيم خليل، محامٍ ومستشار قانوني أعمل على تقديم حلول قانونية واضحة وعملية للأفراد والشركات. أركز في عملي على فهم تفاصيل كل قضية، وشرح الخيارات القانونية للموكلين بشفافية، ثم بناء مسار قانوني منظم يحمي مصالحهم أمام الجهات الرسمية والمحاكم.",
-        imageAlt: "د. براء عبد الحكيم خليل",
+        title: "عن المكتب",
+        subtitle: "نبذة عامة",
+        description: "نقدم حلولاً قانونية واضحة وعملية للأفراد والشركات.",
+        imageAlt: "مكتب محاماة",
       }
     : {
-        title: "About Me",
-        subtitle: "Personal Profile",
+        title: "About the Firm",
+        subtitle: "Overview",
         description:
-          "I am Dr. Baraa Abdulhakeem Khaleel, an attorney and legal consultant focused on providing clear, practical legal solutions for individuals and businesses. My work starts with understanding each case in detail, explaining the available legal options transparently, and building an organized legal path that protects my clients' interests before official authorities and courts.",
-        imageAlt: "Dr. Baraa Abdulhakeem Khaleel",
+          "Our firm provides clear, practical legal solutions for individuals and businesses.",
+        imageAlt: "Law firm",
       };
   const [profileModalOpen, setProfileModalOpen] = useState(false);
 
@@ -560,7 +559,7 @@ export function AboutPage() {
               <div className="relative max-w-md mx-auto lg:mx-0">
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                 <img
-                  src="/images/lawyer-hero.png"
+                  src="/images/lawyer-hero.jpg"
                   alt={aboutMe.imageAlt}
                   loading="lazy"
                   className="relative z-10 w-full max-h-[520px] object-cover object-top shadow-xl"
@@ -625,14 +624,14 @@ export function AboutPage() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
-                    src="/images/lawyer-hero.png"
-                    alt="D.Baraa A. Khaleel"
+                    src="/images/lawyer-hero.jpg"
+                    alt="Law firm"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
                   />
                   <div className="absolute bottom-6 left-0 right-0 z-20 bg-charcoal/80 py-3 text-center">
                     <p className="text-white font-semibold">
-                      D.Baraa A. Khaleel
+                      The Law Firm
                     </p>
                     <p className="text-gold text-sm">
                       Criminal Justice Attorney

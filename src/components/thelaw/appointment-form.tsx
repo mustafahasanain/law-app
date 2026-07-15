@@ -280,10 +280,6 @@ export function AppointmentForm() {
                 </Button>
 
                 {/* Emergency note */}
-                <div className="flex items-center gap-2 text-sm text-medium-gray dark:text-gray-400 pt-2">
-                  <Phone size={14} className="text-gold shrink-0" />
-                  <span>For emergencies, call <a href="tel:07802233000" dir="ltr" className="phone-ltr text-gold font-semibold hover:text-gold-dark transition-colors">07802233000</a> (24/7)</span>
-                </div>
               </form>
             </div>
           </div>

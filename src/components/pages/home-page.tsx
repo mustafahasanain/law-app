@@ -183,14 +183,12 @@ const CASE_IMAGES = [
 ];
 
 const CLIENT_LOGOS = [
-  { src: "/images/sbc.png", alt: "SBC" },
-  { src: "/images/e2next.png", alt: "E2next" },
-  { src: "/images/img1.png", alt: "img1" },
-  { src: "/images/img2.png", alt: "img2" },
-  { src: "/images/img3.jpeg", alt: "img3" },
-  { src: "/images/img4.jpeg", alt: "img4" },
-  { src: "/images/img5.jpeg", alt: "img5" },
-  { src: "/images/img6.jpeg", alt: "img6" },
+  { src: "/images/img1.webp", alt: "img1" },
+  { src: "/images/img2.svg", alt: "img2" },
+  { src: "/images/img3.png", alt: "img3" },
+  { src: "/images/img4.png", alt: "img4" },
+  { src: "/images/img5.png", alt: "img5" },
+  { src: "/images/img6.png", alt: "img6" },
 ];
 
 /*
@@ -200,17 +198,17 @@ const LEGACY_TESTIMONIALS = [
       "John handled my case with the utmost professionalism and care. He was always available to answer my questions and fought tirelessly for my rights.",
     name: "Sarah M.",
     caseType: "Family Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "SM",
     rating: 5,
     date: "2 months ago",
   },
   {
     quote:
-      "After my arrest, I was terrified. D.Baraa A. Khaleel guided me through every step and achieved the best possible outcome. I can't thank them enough.",
+      "After my arrest, I was terrified. The legal team guided me through every step and achieved the best possible outcome. I can't thank them enough.",
     name: "David R.",
     caseType: "Criminal Defense",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "DR",
     rating: 5,
     date: "3 weeks ago",
@@ -220,17 +218,17 @@ const LEGACY_TESTIMONIALS = [
       "Their business law expertise saved our company from a potentially devastating lawsuit. Highly recommended for any corporate legal needs.",
     name: "Michael T.",
     caseType: "Business Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "MT",
     rating: 5,
     date: "1 month ago",
   },
   {
     quote:
-      "When our corporation faced a complex merger dispute, D.Baraa A. Khaleel's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
+      "When our corporation faced a complex merger dispute, the firm's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
     name: "Jennifer K.",
     caseType: "Corporate Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "JK",
     rating: 5,
     date: "5 months ago",
@@ -240,17 +238,17 @@ const LEGACY_TESTIMONIALS = [
       "Going through a custody battle was the hardest thing I've ever faced. Their family law team showed genuine compassion while being fierce advocates in court. I got full custody of my children and I'll forever be grateful.",
     name: "Robert L.",
     caseType: "Family Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "RL",
     rating: 5,
     date: "1 week ago",
   },
   {
     quote:
-      "After being wrongfully terminated, I didn't know where to turn. D.Baraa A. Khaleel took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
+      "After being wrongfully terminated, I didn't know where to turn. The firm took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
     name: "Amanda P.",
     caseType: "Employment Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "AP",
     rating: 5,
     date: "4 months ago",
@@ -260,17 +258,17 @@ const LEGACY_TESTIMONIALS = [
       "My immigration case was incredibly complex, but this firm navigated every hurdle with expertise. I now have my green card and couldn't be happier. Thank you for changing my life.",
     name: "Carlos V.",
     caseType: "Immigration Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "CV",
     rating: 5,
     date: "6 months ago",
   },
   {
     quote:
-      "I was injured in a commercial truck accident and the insurance company offered me almost nothing. D.Baraa A. Khaleel secured a $1.2M settlement that covers all my medical needs.",
+      "I was injured in a commercial truck accident and the insurance company offered me almost nothing. The firm secured a settlement that covers all my medical needs.",
     name: "Patricia W.",
     caseType: "Personal Injury",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "PW",
     rating: 5,
     date: "2 weeks ago",
@@ -280,7 +278,7 @@ const LEGACY_TESTIMONIALS = [
       "As a small business owner, having reliable legal counsel is essential. This firm has been our go-to for contract reviews, compliance issues, and dispute resolution for over 5 years.",
     name: "Thomas H.",
     caseType: "Business Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "TH",
     rating: 5,
     date: "3 months ago",
@@ -290,7 +288,7 @@ const LEGACY_TESTIMONIALS = [
       "The real estate closing on our first home hit unexpected legal complications. The team resolved everything quickly and kept us informed throughout. Professional and thorough.",
     name: "Linda S.",
     caseType: "Real Estate",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "",
     initials: "LS",
     rating: 4,
     date: "8 months ago",
@@ -315,7 +313,7 @@ const TESTIMONIALS = [
         "راجع المكتب مستندات تسجيل شركتنا بدقة وشرح لنا كل خطوة مطلوبة قبل التقديم. كانت الإجراءات منظمة وواضحة.",
       name: "أحمد ح.",
       caseType: "تسجيل الشركات",
-      location: "بغداد، المنصور",
+      location: "",
       initials: "أح",
       date: "قبل شهرين",
     },
@@ -399,7 +397,7 @@ const TESTIMONIALS = [
         "تواصلنا مع المكتب بخصوص إجازة استثمارية. أوضحوا المتطلبات ونسقوا الأوراق القانونية بمهنية عالية.",
       name: "سارة ك.",
       caseType: "إجازات الاستثمار",
-      location: "بغداد، المنصور",
+      location: "",
       initials: "سك",
       date: "قبل أسبوع",
     },
@@ -878,7 +876,7 @@ function PracticeAreaShareButtons({ title }: { title: string }) {
   };
 
   const handleShareTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Learn about ${title} at D.Baraa A. Khaleel`)}&url=${encodeURIComponent(window.location.href)}`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Learn about ${title} at The Law Firm`)}&url=${encodeURIComponent(window.location.href)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
@@ -1281,14 +1279,6 @@ export function HomePage() {
                   className="text-gold md:w-[20px] md:h-[20px] shrink-0"
                 />
                 <span className="font-medium">{t.hero.callFree}:</span>
-                <a
-                  href="tel:07802233000"
-                  className="text-gold font-semibold hover:text-gold-light transition-colors ml-2 md:ml-4 min-h-[44px] flex items-center"
-                >
-                  <span dir="ltr" className="phone-ltr">
-                    07802233000
-                  </span>
-                </a>
               </div> */}
 
               <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
@@ -1329,7 +1319,7 @@ export function HomePage() {
                 {/* Small diamond at bottom-right corner */}
                 <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gold rotate-45 z-30" />
                 <img
-                  src="/images/lawyer-hero-new.png"
+                  src="/images/lawyer-hero.jpg"
                   alt={t.hero.name}
                   className="relative z-10 max-h-[500px] object-cover shadow-2xl rounded-b-lg"
                 />

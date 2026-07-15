@@ -189,7 +189,7 @@ export function CaseEvaluationModal({ open, onOpenChange, context }: CaseEvaluat
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="07802233000"
+                    placeholder="Phone number"
                     className="w-full px-4 py-2.5 border border-border-gray dark:border-gray-600 bg-white dark:bg-charcoal text-charcoal dark:text-white rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-colors"
                   />
                 </div>

@@ -14,7 +14,7 @@ export const translations = {
   en: {
     // Header
     header: {
-      logo: "Dr. Baraa Abdulhakim Khalil",
+      logo: "Demo Legal Group",
       freeConsultation: "Legal Consultation",
       home: "Home",
       about: "About Us",
@@ -26,7 +26,7 @@ export const translations = {
     // Hero
     hero: {
       badge: "Get a Legal Consultation",
-      name: "Dr. Baraa Abdulhakim Khalil",
+      name: "Demo Legal Group",
       subtitles: [
         "Criminal Justice Attorney",
         "Trusted Legal Advisor",
@@ -147,7 +147,7 @@ export const translations = {
     attorneyQuote: {
       quote:
         "Justice is not a passive concept — it requires dedicated advocates who are willing to fight tirelessly for the rights of every individual, regardless of the circumstances.",
-      name: "Dr. Baraa Abdulhakim Khalil",
+      name: "Demo Legal Group",
       title: "Senior Partner, Criminal Justice Attorney",
     },
     // Testimonials
@@ -301,16 +301,16 @@ export const translations = {
     clientLogos: {
       title: "Trusted By Leading Organizations",
       items: [
-        "Apex Holdings",
-        "Sterling Corp",
-        "Guardian Group",
-        "Meridian Trust",
-        "Pacific Ventures",
-        "Atlas Capital",
-        "Summit Partners",
-        "Vanguard Legal",
-        "Pinnacle Finance",
-        "Ironclad Inc",
+        "Demo Holdings",
+        "Sample Corporation",
+        "Example Group",
+        "Demo Trust",
+        "Sample Ventures",
+        "Example Capital",
+        "Demo Partners",
+        "Sample Legal",
+        "Example Finance",
+        "Demo Industries",
       ],
     },
     // CTA Section
@@ -339,7 +339,7 @@ export const translations = {
       },
       quote: {
         text: "The law is not merely a set of rules — it is the foundation upon which we build a fair and equitable society.",
-        author: "Dr. Baraa Abdulhakim Khalil, Founding Partner",
+        author: "Demo Legal Group, Founding Partner",
       },
       mission: {
         subtitle: "Our Mission",
@@ -363,7 +363,7 @@ export const translations = {
             year: "1998",
             title: "Founded",
             description:
-              "D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
+              "Demo Legal Group was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
           },
           {
             year: "2003",
@@ -401,12 +401,12 @@ export const translations = {
         subtitle: "Our Clients",
         title: "Trusted by Leading Institutions",
         items: [
-          "Apex Holdings",
-          "Sterling Corp",
-          "Guardian Group",
-          "Meridian Trust",
-          "Pacific Ventures",
-          "Atlas Capital",
+          "Demo Holdings",
+          "Sample Corporation",
+          "Example Group",
+          "Demo Trust",
+          "Sample Ventures",
+          "Example Capital",
         ],
       },
       team: {
@@ -414,19 +414,19 @@ export const translations = {
         title: "Expert Team Members",
         members: [
           {
-            name: "Alex Thomson",
+            name: "John Carter",
             role: "Senior Partner",
             specialties: "Criminal Law, Litigation",
             bio: "Alex has over 20 years of experience in criminal defense and has successfully represented thousands of clients in state and federal courts.",
           },
           {
-            name: "Sarah Mitchell",
+            name: "Emily Davis",
             role: "Family Law Attorney",
             specialties: "Family Law, Mediation",
             bio: "Sarah specializes in complex family law matters, including high-asset divorces and contentious custody disputes.",
           },
           {
-            name: "David Chen",
+            name: "Michael Brooks",
             role: "Corporate Counsel",
             specialties: "Business Law, M&A",
             bio: "David advises businesses of all sizes on corporate governance, mergers and acquisitions, and regulatory compliance.",
@@ -543,9 +543,9 @@ export const translations = {
       },
       contact: {
         title: "Contact Info",
-        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
-        phone: "07802233000",
-        email: "info@baraa-alsamraie.com",
+        address: "Address available upon request",
+        phone: "",
+        email: "",
       },
     },
     // FAQ Page
@@ -582,7 +582,7 @@ export const translations = {
         title: "General Questions",
         items: [
           {
-            q: "What legal services does Dr. Baraa A. Khaleel provide?",
+            q: "What legal services does Demo Legal Group provide?",
             a: "The office provides legal consultations, litigation, representation for companies and individuals before the courts, commercial law services, criminal defense, dispute resolution, intellectual property matters, company registration, contract review, and property disputes.",
           },
           {
@@ -679,7 +679,7 @@ export const translations = {
             "Learn about your constitutional rights when facing criminal charges and how an experienced attorney can help protect them.",
           category: "Criminal Law",
           date: "January 15, 2026",
-          author: "Dr. Baraa Abdulhakim Khalil",
+          author: "Demo Legal Group",
           readTime: "5 min read",
           content:
             "When facing criminal charges, understanding your constitutional rights is the first and most important step in protecting yourself. The United States Constitution provides several core safeguards that apply to every person accused of a crime.\n\n## Your Right to Remain Silent\nThe Fifth Amendment protects you from being compelled to testify against yourself. Exercise this right politely but firmly by stating that you want to speak with an attorney before answering any questions.\n\n## Your Right to Legal Representation\nThe Sixth Amendment guarantees your right to have a lawyer present during questioning. If you cannot afford one, counsel will be appointed for you.\n\n## Protecting Your Rights\nIf you or someone close to you is facing criminal charges, speak with an experienced criminal defense attorney as early as possible.",
@@ -690,7 +690,7 @@ export const translations = {
             "New regulatory changes are affecting businesses across the country. Here is what you need to know.",
           category: "Business Law",
           date: "January 10, 2026",
-          author: "David Chen",
+          author: "Michael Brooks",
           readTime: "7 min read",
           content:
             "Recent legislative changes have introduced new compliance requirements that affect businesses of every size. Understanding these changes is essential to avoid penalties and maintain smooth operations.\n\n## Key Compliance Changes\nThe new regulations require companies to implement stronger compliance programs.\n\n## Employment Law Updates\nMajor labor law changes include new workplace safety requirements.\n\n## Take Action\nDo not wait for a notice of non-compliance. A proactive review of your business practices now can save significant time and expense later.",
@@ -701,7 +701,7 @@ export const translations = {
             "Child custody can be one of the most emotionally challenging aspects of family law.",
           category: "Family Law",
           date: "January 5, 2026",
-          author: "Sarah Mitchell",
+          author: "Emily Davis",
           readTime: "6 min read",
           content:
             'Child custody disputes are among the most emotionally difficult legal matters families face. Understanding the legal framework and the process can help you navigate this period more effectively.\n\n## Types of Custody\nCourts distinguish between legal custody and physical custody.\n\n## The Best Interest Standard\nFamily courts make custody decisions based on the "best interests of the child."\n\n## Getting Help\nIf you are facing a custody dispute, having an experienced family law attorney by your side can make a meaningful difference.',
@@ -712,7 +712,7 @@ export const translations = {
             "Knowing the right steps to take immediately after an accident can significantly affect your ability to recover compensation.",
           category: "Personal Injury",
           date: "December 28, 2025",
-          author: "Alex Thomson",
+          author: "John Carter",
           readTime: "4 min read",
           content:
             "The moments and days after an accident are critical to protecting both your health and your legal right to compensation.\n\n## Step 1: Seek Medical Care\nYour health comes first. Even if you think your injuries are minor, get medical attention immediately.\n\n## Step 2: Document Everything\nTake photographs of the accident scene, your injuries, and any property damage.\n\n## Step 3: Contact a Lawyer\nBefore accepting any settlement offer or signing documents from an insurance company, consult a personal injury attorney.",
@@ -747,11 +747,11 @@ export const translations = {
         breadcrumb: { home: "Home", current: "Contact Us" },
       },
       info: {
-        phone: { title: "Phone", number: "07802233000" },
-        email: { title: "Email", address: "info@yoursite.com" },
+        phone: { title: "Phone", number: "" },
+        email: { title: "Email", address: "" },
         address: {
           title: "Address",
-          full: "Baghdad, Al-Mansour, Clock Restaurant Street",
+          full: "Address available upon request",
         },
       },
       form: {
@@ -786,9 +786,9 @@ export const translations = {
       addressCard: {
         title: "Our Offices",
         main: "Main Office",
-        mainAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        mainAddress: "Address available upon request",
         branch: "Branch Office",
-        branchAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        branchAddress: "Address available upon request",
       },
       appointment: {
         title: "Book an Appointment",
@@ -850,11 +850,11 @@ export const translations = {
       contact: {
         title: "Contact",
         addressLabel: "Address:",
-        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        address: "Address available upon request",
         telLabel: "Tel:",
-        phone: "07802233000",
+        phone: "",
         emailLabel: "Email:",
-        email: "info@baraa-alsamraie.com",
+        email: "",
       },
       quickLinks: {
         title: "Quick Links",
@@ -920,7 +920,7 @@ export const translations = {
   ar: {
     // Header
     header: {
-      logo: "د. براء عبدالحكيم خليل",
+      logo: "مجموعة ديمو القانونية",
       freeConsultation: "استشارة قانونية",
       home: "الرئيسية",
       about: "من نحن",
@@ -932,7 +932,7 @@ export const translations = {
     // Hero
     hero: {
       badge: "احصل على استشارة قانونية",
-      name: "د. براء عبدالحكيم خليل",
+      name: "مجموعة ديمو القانونية",
       subtitles: [
         "محامي العدالة الجنائية",
         "مستشار قانوني موثوق",
@@ -986,7 +986,7 @@ export const translations = {
         },
         {
           title: "النزاعات",
-          desc: "حل النزاعات القانونية والتجارية بفعالية.",
+          desc: "حل النزاعات مجموعة ديمو القانونيةية والتجارية بفعالية.",
         },
         {
           title: "شؤون الاستثمار",
@@ -1031,11 +1031,11 @@ export const translations = {
       title: "قضايا مثل قضيتك",
       items: [
         { title: "غسيل الأموال", category: "قانون جنائي" },
-        { title: "نزاعات الملكية", category: "القانون المدني" },
+        { title: "نزاعات الملكية", category: "مجموعة ديمو القانونية المدني" },
         { title: "دعوى جنائية", category: "قضايا جنائية" },
         { title: "قضايا النزاهة", category: "قانون النزاهة" },
         {
-          title: "التمثيل القانوني للشركات أمام المحاكم",
+          title: "التمثيل مجموعة ديمو القانونيةي للشركات أمام المحاكم",
           category: "قانون الشركات",
         },
       ],
@@ -1052,7 +1052,7 @@ export const translations = {
     attorneyQuote: {
       quote:
         "العدالة ليست مفهوماً سلبياً — بل تتطلب مناصرين متفانين على استعداد للقتال بلا كلل من أجل حقوق كل فرد، بغض النظر عن الظروف.",
-      name: "د. براء عبدالحكيم خليل",
+      name: "مجموعة ديمو القانونية",
       title: "شريك أول، محامي العدالة الجنائية",
     },
     // Testimonials
@@ -1070,9 +1070,9 @@ export const translations = {
       subtitle: "خبراتنا",
       items: [
         "قانون المنظمات التجارية",
-        "القانون المدني أو العام",
+        "مجموعة ديمو القانونية المدني أو العام",
         "قانون الاتصالات",
-        "القانون الدستوري",
+        "مجموعة ديمو القانونية الدستوري",
         "قانون الممتلكات الثقافية",
         "قانون الاندماج والاستحواذ",
         "قانون الأمريكيين الأصليين",
@@ -1080,12 +1080,12 @@ export const translations = {
         "قانون العقارات",
         "قانون الفحش",
         "قانون الجنسية",
-        "القانون الإجرائي",
+        "مجموعة ديمو القانونية الإجرائي",
         "قانون حقوق الإنسان الدولي",
         "قانون الصحة",
         "قانون الهجرة",
         "قانون البيئة",
-        "القانون الإلكتروني",
+        "مجموعة ديمو القانونية الإلكتروني",
         "قانون حماية المستهلك",
       ],
     },
@@ -1154,15 +1154,15 @@ export const translations = {
       items: [
         {
           title: "مرخص ومؤمن",
-          desc: "مرخص بالكامل لممارسة القانون مع تأمين شامل للمسؤولية المهنية لحمايتك.",
+          desc: "مرخص بالكامل لممارسة مجموعة ديمو القانونية مع تأمين شامل للمسؤولية المهنية لحمايتك.",
         },
         {
           title: "حائز على جوائز",
-          desc: "معترف به من قبل المنظمات القانونية الوطنية للتميز في الدفاع عن العملاء ونتائج المحكمة.",
+          desc: "معترف به من قبل المنظمات مجموعة ديمو القانونيةية الوطنية للتميز في الدفاع عن العملاء ونتائج المحكمة.",
         },
         {
           title: "متاح على مدار الساعة",
-          desc: "محامونا متاحون على مدار الساعة لحالات الطوارئ والمسائل القانونية العاجلة.",
+          desc: "محامونا متاحون على مدار الساعة لحالات الطوارئ والمسائل مجموعة ديمو القانونيةية العاجلة.",
         },
         {
           title: "استشارة قانونية",
@@ -1188,7 +1188,7 @@ export const translations = {
         {
           title: "هل تحتاج الشركات إلى دعم قانوني مستمر؟",
           description:
-            "الدعم القانوني المستمر يساعد الشركات على مراجعة العقود، وإدارة الامتثال، ومعالجة النزاعات مبكراً، وتجهيز المستندات الرسمية، وتقليل المخاطر قبل وصولها إلى المحكمة.",
+            "الدعم مجموعة ديمو القانونيةي المستمر يساعد الشركات على مراجعة العقود، وإدارة الامتثال، ومعالجة النزاعات مبكراً، وتجهيز المستندات الرسمية، وتقليل المخاطر قبل وصولها إلى المحكمة.",
         },
         {
           title: "ما المستندات المهمة في نزاع عقاري أو تعاقدي؟",
@@ -1198,7 +1198,7 @@ export const translations = {
         {
           title: "هل يمكن حل النزاع دون دعوى قضائية؟",
           description:
-            "يمكن حل كثير من النزاعات من خلال التفاوض، أو الإنذارات القانونية، أو التسوية، أو الوساطة. وإذا لم تكن هذه الخيارات مناسبة، فقد يكون التقاضي هو الإجراء الأفضل.",
+            "يمكن حل كثير من النزاعات من خلال التفاوض، أو الإنذارات مجموعة ديمو القانونيةية، أو التسوية، أو الوساطة. وإذا لم تكن هذه الخيارات مناسبة، فقد يكون التقاضي هو الإجراء الأفضل.",
         },
       ],
     },
@@ -1206,16 +1206,16 @@ export const translations = {
     clientLogos: {
       title: "موثوق من قبل المؤسسات الرائدة",
       items: [
-        "أبيكس القابضة",
-        "سترلينغ كورب",
-        "مجموعة الحارس",
-        "ميريديان تراست",
-        "باسيفيك فينشرز",
-        "أطلس كابيتال",
-        "شركاء القمة",
-        "فانغارد القانونية",
-        "بيناكيل للمالية",
-        "آيرونكلاد",
+        "ديمو القابضة",
+        "شركة نموذجية",
+        "مجموعة تجريبية",
+        "ديمو تراست",
+        "مشاريع نموذجية",
+        "رأس مال تجريبي",
+        "شركاء ديمو",
+        "فانغارد مجموعة ديمو القانونيةية",
+        "التمويل التجريبي",
+        "صناعات ديمو",
       ],
     },
     // CTA Section
@@ -1235,7 +1235,7 @@ export const translations = {
         subtitle: "رؤيتنا",
         title: "رؤيتنا للعدالة",
         description:
-          "نؤمن أن كل شخص يستحق الوصول إلى تمثيل قانوني عالي الجودة، بغض النظر عن خلفيته أو ظروفه. رؤيتنا هي خلق مجتمع أكثر عدالة حيث يعمل القانون كدرع للضعفاء، وليس سلاحاً للأقوياء.",
+          "نؤمن أن كل شخص يستحق الوصول إلى تمثيل قانوني عالي الجودة، بغض النظر عن خلفيته أو ظروفه. رؤيتنا هي خلق مجتمع أكثر عدالة حيث يعمل مجموعة ديمو القانونية كدرع للضعفاء، وليس سلاحاً للأقوياء.",
         stats: [
           { label: "رضا العملاء", value: 95 },
           { label: "نسبة نجاح القضايا", value: 98 },
@@ -1243,8 +1243,8 @@ export const translations = {
         ],
       },
       quote: {
-        text: "القانون ليس مجرد مجموعة من القواعد — إنه الأساس الذي نبني عليه مجتمعاً عادلاً ومنصفاً.",
-        author: "د. براء عبدالحكيم خليل، الشريك المؤسس",
+        text: "مجموعة ديمو القانونية ليس مجرد مجموعة من القواعد — إنه الأساس الذي نبني عليه مجتمعاً عادلاً ومنصفاً.",
+        author: "مجموعة ديمو القانونية، الشريك المؤسس",
       },
       mission: {
         subtitle: "مهمتنا",
@@ -1264,12 +1264,12 @@ export const translations = {
         subtitle: "عملاؤنا",
         title: "موثوق من قبل المؤسسات الرائدة",
         items: [
-          "أبيكس القابضة",
-          "سترلينغ كورب",
-          "مجموعة الحارس",
-          "ميريديان تراست",
-          "باسيفيك فينشرز",
-          "أطلس كابيتال",
+          "ديمو القابضة",
+          "شركة نموذجية",
+          "مجموعة تجريبية",
+          "ديمو تراست",
+          "مشاريع نموذجية",
+          "رأس مال تجريبي",
         ],
       },
       team: {
@@ -1277,19 +1277,19 @@ export const translations = {
         title: "أعضاء الفريق الخبراء",
         members: [
           {
-            name: "أليكس تومسون",
+            name: "جون كارتر",
             role: "شريك أول",
-            specialties: "القانون الجنائي، المحاكمات",
+            specialties: "مجموعة ديمو القانونية الجنائي، المحاكمات",
             bio: "أليكس لديه أكثر من 20 عاماً من الخبرة في الدفاع الجنائي ومثل بنجاح آلاف العملاء في المحاكم الفيدرالية والولائية.",
           },
           {
-            name: "سارة ميتشل",
+            name: "إيميلي ديفيس",
             role: "محامية قانون الأسرة",
             specialties: "قانون الأسرة، الوساطة",
             bio: "سارة متخصصة في مسائل قانون الأسرة المعقدة، بما في ذلك حالات الطلاق عالية الأصول ونزاعات الحضانة.",
           },
           {
-            name: "ديفيد تشن",
+            name: "مايكل بروكس",
             role: "مستشار الشركات",
             specialties: "قانون الأعمال، الاندماج والاستحواذ",
             bio: "ديفيد يستشير الشركات من جميع الأحجام حول الحوكمة المؤسسية والاندماجات والاستحواذ والامتثال التنظيمي.",
@@ -1304,7 +1304,7 @@ export const translations = {
       },
       legalAdvice: {
         subtitle: "احصل على مشورة",
-        title: "احصل على مشورتك القانونية",
+        title: "احصل على مشورتك مجموعة ديمو القانونيةية",
         items: [
           {
             title: "استشارة قانونية",
@@ -1316,7 +1316,7 @@ export const translations = {
           },
           {
             title: "مراجعة المستندات",
-            desc: "دع فريقنا الخبير يراجع مستنداتك القانونية.",
+            desc: "دع فريقنا الخبير يراجع مستنداتك مجموعة ديمو القانونيةية.",
           },
           {
             title: "التمثيل في المحكمة",
@@ -1328,7 +1328,7 @@ export const translations = {
           },
           {
             title: "مساعدة الاستئناف",
-            desc: "احصل على مساعدة في تقديم ومتابعة الاستئنافات القانونية بفعالية.",
+            desc: "احصل على مساعدة في تقديم ومتابعة الاستئنافات مجموعة ديمو القانونيةية بفعالية.",
           },
         ],
       },
@@ -1347,7 +1347,7 @@ export const translations = {
         breadcrumb: { home: "الرئيسية", current: "مجالات الممارسة" },
       },
       intro:
-        "مع أكثر من 25 عاماً من الخبرة، يتخصص محامونا في مجموعة واسعة من مجالات الممارسة القانونية. نقدم تمثيلاً عدوانياً ومتفانياً لحماية حقوقك وتحقيق أفضل النتائج الممكنة.",
+        "مع أكثر من 25 عاماً من الخبرة، يتخصص محامونا في مجموعة واسعة من مجالات الممارسة مجموعة ديمو القانونيةية. نقدم تمثيلاً عدوانياً ومتفانياً لحماية حقوقك وتحقيق أفضل النتائج الممكنة.",
       subtitle: "ماذا نفعل",
       title: "مجالات ممارستنا",
       viewMore: "اعرف المزيد",
@@ -1357,7 +1357,7 @@ export const translations = {
         items: [
           {
             title: "فريق ذو خبرة",
-            desc: "أكثر من 25 عاماً من الخبرة القانونية المشتركة عبر مجالات ممارسة متعددة.",
+            desc: "أكثر من 25 عاماً من الخبرة مجموعة ديمو القانونيةية المشتركة عبر مجالات ممارسة متعددة.",
           },
           {
             title: "نتائج مثبتة",
@@ -1380,7 +1380,7 @@ export const translations = {
         items: [
           "قانون العمل",
           "قانون العقارات",
-          "القانون الضريبي",
+          "مجموعة ديمو القانونية الضريبي",
           "قانون الهجرة",
           "قانون البيئة",
           "الملكية الفكرية",
@@ -1405,9 +1405,9 @@ export const translations = {
       },
       contact: {
         title: "معلومات الاتصال",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
-        phone: "07802233000",
-        email: "info@baraa-alsamraie.com",
+        address: "العنوان متاح عند الطلب",
+        phone: "",
+        email: "",
       },
     },
     // FAQ Page
@@ -1418,7 +1418,7 @@ export const translations = {
       },
       askForm: {
         title: "اسألنا سؤالاً",
-        subtitle: "احصل على إجابات لأسئلتك القانونية من محامينا ذوي الخبرة.",
+        subtitle: "احصل على إجابات لأسئلتك مجموعة ديمو القانونيةية من محامينا ذوي الخبرة.",
         nameLabel: "اسمك",
         namePlaceholder: "أدخل اسمك",
         emailLabel: "بريدك الإلكتروني",
@@ -1443,12 +1443,12 @@ export const translations = {
         title: "أسئلة عامة",
         items: [
           {
-            q: "ما هي الخدمات القانونية التي يقدمها مكتب الدكتور براء عبد الحكيم خليل؟",
-            a: "يقدم المكتب الاستشارات القانونية، والدعاوى القضائية، وتمثيل الشركات والأفراد أمام المحاكم، وقضايا القانون التجاري، والدفاع الجنائي، وتسوية النزاعات، وحقوق الملكية الفكرية، وتسجيل الشركات، ومراجعة العقود، والنزاعات العقارية.",
+            q: "ما هي الخدمات مجموعة ديمو القانونيةية التي يقدمها مجموعة ديمو مجموعة ديمو القانونيةية؟",
+            a: "يقدم المكتب الاستشارات مجموعة ديمو القانونيةية، والدعاوى القضائية، وتمثيل الشركات والأفراد أمام المحاكم، وقضايا مجموعة ديمو القانونية التجاري، والدفاع الجنائي، وتسوية النزاعات، وحقوق الملكية الفكرية، وتسجيل الشركات، ومراجعة العقود، والنزاعات العقارية.",
           },
           {
             q: "كيف يمكنني حجز موعد مع المحامي؟",
-            a: "يمكنك حجز موعد من خلال نموذج المواعيد في الصفحة الرئيسية أو التواصل مع المكتب هاتفياً. يرجى ذكر الاسم ومعلومات الاتصال والوقت المناسب وشرح مختصر للموضوع القانوني.",
+            a: "يمكنك حجز موعد من خلال نموذج المواعيد في الصفحة الرئيسية أو التواصل مع المكتب هاتفياً. يرجى ذكر الاسم ومعلومات الاتصال والوقت المناسب وشرح مختصر للموضوع مجموعة ديمو القانونيةي.",
           },
           {
             q: "ماذا يجب أن أحضر لاجتماعي الأول؟",
@@ -1456,15 +1456,15 @@ export const translations = {
           },
           {
             q: "هل يمكن مراجعة المستندات قبل البدء بالقضية؟",
-            a: "نعم. مراجعة المستندات خطوة أساسية قبل اتخاذ أي إجراء. يمكن للمحامي فحص العقود، والتبليغات، وأوراق الدعوى، وملفات الشركات، والأدلة لتوضيح الموقف القانوني واقتراح الإجراء المناسب.",
+            a: "نعم. مراجعة المستندات خطوة أساسية قبل اتخاذ أي إجراء. يمكن للمحامي فحص العقود، والتبليغات، وأوراق الدعوى، وملفات الشركات، والأدلة لتوضيح الموقف مجموعة ديمو القانونيةي واقتراح الإجراء المناسب.",
           },
           {
             q: "هل يمثل المكتب الشركات والمنظمات؟",
-            a: "نعم. يساعد المكتب الشركات والمنظمات في التسجيل، والامتثال القانوني، والعقود، والنزاعات، والتمثيل أمام المحاكم، وإجراءات إجازات الاستثمار، والاستشارات القانونية المستمرة.",
+            a: "نعم. يساعد المكتب الشركات والمنظمات في التسجيل، والامتثال مجموعة ديمو القانونيةي، والعقود، والنزاعات، والتمثيل أمام المحاكم، وإجراءات إجازات الاستثمار، والاستشارات مجموعة ديمو القانونيةية المستمرة.",
           },
           {
             q: "أين يقع المكتب وما هي أوقات العمل؟",
-            a: "يقع المكتب الرئيسي في بغداد، المنصور. أوقات العمل من الاثنين إلى الجمعة من 9:00 إلى 16:30، ويوم السبت من 9:00 إلى 15:30. أما يوم الأحد فهو مخصص للاتصالات الطارئة.",
+            a: "يتم توفير موقع المكتب وساعات العمل عند الطلب.",
           },
         ],
       },
@@ -1478,7 +1478,7 @@ export const translations = {
           },
           {
             q: "هل يتولى المكتب القضايا الجنائية والتحقيقات؟",
-            a: "نعم. يتعامل المكتب مع قضايا الدفاع الجنائي والقانون الجنائي، بما في ذلك المشورة قبل الإدلاء بالأقوال، ومراجعة أوراق التحقيق، وإعداد خطة الدفاع، والتمثيل أمام الجهات المختصة والمحاكم.",
+            a: "نعم. يتعامل المكتب مع قضايا الدفاع الجنائي ومجموعة ديمو القانونية الجنائي، بما في ذلك المشورة قبل الإدلاء بالأقوال، ومراجعة أوراق التحقيق، وإعداد خطة الدفاع، والتمثيل أمام الجهات المختصة والمحاكم.",
           },
           {
             q: "كيف يتم التعامل مع النزاعات العقارية؟",
@@ -1486,11 +1486,11 @@ export const translations = {
           },
           {
             q: "هل يمكن صياغة أو مراجعة العقود التجارية؟",
-            a: "نعم. يقوم المكتب بمراجعة وصياغة العقود التجارية، واتفاقيات الشراكة، وعقود الخدمات، ومحاضر التسوية، والمراسلات القانونية المرتبطة بها لتقليل المخاطر وتوضيح الالتزامات قبل التوقيع.",
+            a: "نعم. يقوم المكتب بمراجعة وصياغة العقود التجارية، واتفاقيات الشراكة، وعقود الخدمات، ومحاضر التسوية، والمراسلات مجموعة ديمو القانونيةية المرتبطة بها لتقليل المخاطر وتوضيح الالتزامات قبل التوقيع.",
           },
           {
             q: "هل يساعد المكتب في تسجيل الشركات أو المنظمات؟",
-            a: "نعم. يساعد المكتب في تسجيل الشركات المحلية والأجنبية، وتسجيل المنظمات، وتجهيز المتطلبات القانونية، ومتابعة الإجراءات لدى الجهات الرسمية المختصة.",
+            a: "نعم. يساعد المكتب في تسجيل الشركات المحلية والأجنبية، وتسجيل المنظمات، وتجهيز المتطلبات مجموعة ديمو القانونيةية، ومتابعة الإجراءات لدى الجهات الرسمية المختصة.",
           },
           {
             q: "ما هي الخطوة الأولى في نزاع بين شركاء أو شركات؟",
@@ -1537,12 +1537,12 @@ export const translations = {
           title: "فهم حقوقك: دليل الدفاع الجنائي",
           excerpt:
             "تعرف على حقوقك الدستورية عند مواجهة تهم جنائية وكيف يمكن للمحامي ذوي الخبرة المساعدة في حمايتها.",
-          category: "القانون الجنائي",
+          category: "مجموعة ديمو القانونية الجنائي",
           date: "15 يناير 2026",
-          author: "د. براء عبدالحكيم خليل",
+          author: "مجموعة ديمو القانونية",
           readTime: "5 دقائق قراءة",
           content:
-            "عند مواجهة تهم جنائية، فهم حقوقك الدستورية هو الخطوة الأولى والأكثر أهمية في حماية نفسك. يوفر دستور الولايات المتحدة عدة حمايات أساسية تنطبق على كل شخص متهم بجريمة.\n\n## حقك في الصمت\nيحميك التعديل الخامس من الإجبار على أن تكون شاهداً ضد نفسك. مارس هذا الحق بأدب ولكن بحزم — ببساطة اذكر أنك ترغب في التحدث مع محامٍ قبل الإجابة على أي أسئلة.\n\n## حقك في التمثيل القانوني\nيضمن التعديل السادس حقك في وجود محامٍ أثناء أي استجواب. إذا لم تستطع تحمل تكاليف محامٍ، سيتم تعيين واحد لك.\n\n## حماية حقوقك\nإذا كنت أو أحد أحبائك يواجه تهم جنائية، من الضروري استشارة محامي دفاع جنائي ذي خبرة في أقرب وقت ممكن.",
+            "عند مواجهة تهم جنائية، فهم حقوقك الدستورية هو الخطوة الأولى والأكثر أهمية في حماية نفسك. يوفر دستور الولايات المتحدة عدة حمايات أساسية تنطبق على كل شخص متهم بجريمة.\n\n## حقك في الصمت\nيحميك التعديل الخامس من الإجبار على أن تكون شاهداً ضد نفسك. مارس هذا الحق بأدب ولكن بحزم — ببساطة اذكر أنك ترغب في التحدث مع محامٍ قبل الإجابة على أي أسئلة.\n\n## حقك في التمثيل مجموعة ديمو القانونيةي\nيضمن التعديل السادس حقك في وجود محامٍ أثناء أي استجواب. إذا لم تستطع تحمل تكاليف محامٍ، سيتم تعيين واحد لك.\n\n## حماية حقوقك\nإذا كنت أو أحد أحبائك يواجه تهم جنائية، من الضروري استشارة محامي دفاع جنائي ذي خبرة في أقرب وقت ممكن.",
         },
         {
           title: "تأثير التشريعات الأخيرة على أصحاب الأعمال",
@@ -1550,7 +1550,7 @@ export const translations = {
             "التغييرات التنظيمية الجديدة تؤثر على الشركات في جميع أنحاء البلاد. إليك ما تحتاج لمعرفته.",
           category: "قانون الأعمال",
           date: "10 يناير 2026",
-          author: "ديفيد تشن",
+          author: "مايكل بروكس",
           readTime: "7 دقائق قراءة",
           content:
             "أدخلت التغييرات التشريعية الأخيرة متطلبات امتثال جديدة تؤثر على الشركات من جميع الأحجام. فهم هذه التغييرات أمر بالغ الأهمية لتجنب العقوبات والحفاظ على عمليات سلسة.\n\n## تغييرات رئيسية في الامتثال المؤسسي\nتتطلب اللوائح الجديدة من الشركات تنفيذ برامج امتثال أكثر قوة.\n\n## تحديثات قانون العمل\nتشمل التغييرات الكبيرة في قانون العمل متطلبات جديدة لسلامة مكان العمل.\n\n## اتخاذ إجراء\nلا تنتظر حتى تتلقى إشعار عدم الامتثال. المراجعة الاستباقية لممارساتك التجارية الآن يمكن أن توفر وقتاً ونفقات كبيرة.",
@@ -1561,10 +1561,10 @@ export const translations = {
             "حضانة الأطفال يمكن أن تكون واحدة من أكثر جوانب قانون الأسرة تحدياً عاطفياً.",
           category: "قانون الأسرة",
           date: "5 يناير 2026",
-          author: "سارة ميتشل",
+          author: "إيميلي ديفيس",
           readTime: "6 دقائق قراءة",
           content:
-            'نزاعات حضانة الأطفال هي من أصعب المسائل القانونية عاطفياً التي تواجهها الأسر. فهم الإطار القانوني والعملية يمكن أن يساعدك على التنقل في هذا الوقت الصعب بشكل أكثر فعالية.\n\n## أنواع الحضانة\nتميز المحاكم بين الحضانة القانونية والحضانة الجسدية.\n\n## معيار المصلحة الفضلى\nتتخذ محاكم الأسرة قرارات الحضانة بناءً على معيار "مصلحة الطفل الفضلى".\n\n## الحصول على المساعدة\nإذا كنت تواجه نزاع حضانة، وجود محامي قانون أسرة ذي خبرة بجانبك يمكن أن يحدث فرقاً كبيراً.',
+            'نزاعات حضانة الأطفال هي من أصعب المسائل مجموعة ديمو القانونيةية عاطفياً التي تواجهها الأسر. فهم الإطار مجموعة ديمو القانونيةي والعملية يمكن أن يساعدك على التنقل في هذا الوقت الصعب بشكل أكثر فعالية.\n\n## أنواع الحضانة\nتميز المحاكم بين الحضانة مجموعة ديمو القانونيةية والحضانة الجسدية.\n\n## معيار المصلحة الفضلى\nتتخذ محاكم الأسرة قرارات الحضانة بناءً على معيار "مصلحة الطفل الفضلى".\n\n## الحصول على المساعدة\nإذا كنت تواجه نزاع حضانة، وجود محامي قانون أسرة ذي خبرة بجانبك يمكن أن يحدث فرقاً كبيراً.',
         },
         {
           title: "إصابة شخصية: ماذا تفعل بعد حادث",
@@ -1572,14 +1572,14 @@ export const translations = {
             "معرفة الخطوات الصحيحة فوراً بعد الحادث يمكن أن تؤثر بشكل كبير على قدرتك على استرداد التعويض.",
           category: "إصابة شخصية",
           date: "28 ديسمبر 2025",
-          author: "أليكس تومسون",
+          author: "جون كارتر",
           readTime: "4 دقائق قراءة",
           content:
-            "اللحظات والأيام التي تلي الحادث حاسمة لحماية صحتك وحقك القانوني في التعويض.\n\n## الخطوة 1: اطلب الرعاية الطبية\nصحتك هي الأولوية القصوى. حتى لو تعتقد أن إصاباتك طفيفة، اطلب تقييماً طبياً فوراً.\n\n## الخطوة 2: وثق كل شيء\nالتقط صوراً لموقع الحادث وإصاباتك وأي أضرار في الممتلكات.\n\n## الخطوة 3: اتصل بمحامٍ\nقبل قبول أي عرض تسوية أو توقيع أي مستندات من شركة التأمين، استشر محامي إصابة شخصية.",
+            "اللحظات والأيام التي تلي الحادث حاسمة لحماية صحتك وحقك مجموعة ديمو القانونيةي في التعويض.\n\n## الخطوة 1: اطلب الرعاية الطبية\nصحتك هي الأولوية القصوى. حتى لو تعتقد أن إصاباتك طفيفة، اطلب تقييماً طبياً فوراً.\n\n## الخطوة 2: وثق كل شيء\nالتقط صوراً لموقع الحادث وإصاباتك وأي أضرار في الممتلكات.\n\n## الخطوة 3: اتصل بمحامٍ\nقبل قبول أي عرض تسوية أو توقيع أي مستندات من شركة التأمين، استشر محامي إصابة شخصية.",
         },
       ],
       categoriesList: [
-        { name: "القانون الجنائي", count: 12 },
+        { name: "مجموعة ديمو القانونية الجنائي", count: 12 },
         { name: "قانون الأعمال", count: 8 },
         { name: "قانون الأسرة", count: 6 },
         { name: "إصابة شخصية", count: 10 },
@@ -1607,9 +1607,9 @@ export const translations = {
         breadcrumb: { home: "الرئيسية", current: "اتصل بنا" },
       },
       info: {
-        phone: { title: "الهاتف", number: "07802233000" },
-        email: { title: "البريد الإلكتروني", address: "info@yoursite.com" },
-        address: { title: "العنوان", full: "بغداد, المنصور, شارع مطعم الساعة" },
+        phone: { title: "الهاتف", number: "" },
+        email: { title: "البريد الإلكتروني", address: "" },
+        address: { title: "العنوان", full: "العنوان متاح عند الطلب" },
       },
       form: {
         title: "أرسل لنا رسالة",
@@ -1637,15 +1637,15 @@ export const translations = {
       },
       emergency: {
         title: "اتصال الطوارئ",
-        description: "متاح على مدار الساعة للمسائل القانونية العاجلة",
+        description: "متاح على مدار الساعة للمسائل مجموعة ديمو القانونيةية العاجلة",
         callFree: "احصل عل استشارة قانونية",
       },
       addressCard: {
         title: "مكاتبنا",
         main: "المكتب الرئيسي",
-        mainAddress: "بغداد, المنصور, شارع مطعم الساعة",
+        mainAddress: "العنوان متاح عند الطلب",
         branch: "المكتب الفرعي",
-        branchAddress: "بغداد, المنصور, شارع مطعم الساعة",
+        branchAddress: "العنوان متاح عند الطلب",
       },
       appointment: {
         title: "احجز موعداً",
@@ -1690,7 +1690,7 @@ export const translations = {
       newsletter: {
         title: "اشترك في نشرتنا الإخبارية",
         description:
-          "ابق على اطلاع بأحدث الأخبار القانونية والرؤى وتحديثات الشركة.",
+          "ابق على اطلاع بأحدث الأخبار مجموعة ديمو القانونيةية والرؤى وتحديثات الشركة.",
         placeholder: "أدخل بريدك الإلكتروني",
         subscribe: "اشترك",
         go: "اذهب",
@@ -1707,11 +1707,11 @@ export const translations = {
       contact: {
         title: "اتصل",
         addressLabel: "العنوان:",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
+        address: "العنوان متاح عند الطلب",
         telLabel: "هاتف:",
-        phone: "07802233000",
+        phone: "",
         emailLabel: "بريد إلكتروني:",
-        email: "info@baraa-alsamraie.com",
+        email: "",
       },
       quickLinks: {
         title: "روابط سريعة",
@@ -1720,7 +1720,7 @@ export const translations = {
         practiceArea: "مجال الممارسة",
         contact: "اتصل بنا",
       },
-      copyright: "حقوق النشر 2026 موضوع القانون. جميع الحقوق محفوظة.",
+      copyright: "حقوق النشر 2026 موضوع مجموعة ديمو القانونية. جميع الحقوق محفوظة.",
       backToTop: "العودة للأعلى",
     },
     // Cookie Banner
@@ -1736,7 +1736,7 @@ export const translations = {
       title: "دردشة مباشرة",
       openChat: "فتح الدردشة",
       closeChat: "إغلاق الدردشة",
-      header: "دردشة الدعم القانوني",
+      header: "دردشة الدعم مجموعة ديمو القانونيةي",
       subtitle: "كيف يمكننا مساعدتك اليوم؟",
       placeholder: "اكتب رسالتك...",
       send: "أرسل",

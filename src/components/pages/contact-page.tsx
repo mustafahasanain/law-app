@@ -55,20 +55,19 @@ export function ContactPage() {
 
   const OFFICE_LOCATIONS = [
     {
-      name: "Baghdad",
-      address: "بغداد, المنصور, شارع مطعم الساعة",
-      phone: "07802233000",
-      email: "la@thelawtheme.com",
+      name: "Office",
+      address: "Address available upon request",
+      phone: "",
+      email: "",
       hours: "Mon-Fri: 9:00 - 16:30",
-      mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
-      lat: "34.0407",
-      lng: "-118.2468",
+      mapQuery: "",
+      lat: "",
+      lng: "",
     },
   ];
 
-  const MAP_URL = "https://maps.app.goo.gl/KktA8GJ9Nn6VcA4r5";
-  const MAP_EMBED_URL =
-    "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en&output=embed";
+  const MAP_URL = "#";
+  const MAP_EMBED_URL = "";
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -319,13 +318,7 @@ export function ContactPage() {
                         <p className="text-xs text-gray-300 uppercase tracking-wider">
                           24/7 Emergency Line
                         </p>
-                        <a
-                          href="tel:07802233000"
-                          dir="ltr"
-                          className="phone-ltr text-gold text-xl font-bold hover:text-gold-light transition-colors"
-                        >
-                          07802233000
-                        </a>
+                        <span className="text-medium-gray">Contact details are not listed.</span>
                       </div>
                     </div>
                   </div>
