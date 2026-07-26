@@ -166,7 +166,7 @@ export function Footer() {
             <Linkedin size={20} />
           </a>
           <a
-            href="https://www.instagram.com/_lawyer_baraa?igsh=MXkyN3NncmRoejJ6Mw%3D%3D&utm_source=qr"
+            href="https://www.instagram.com/_lawyer_baraa?igsh=bTJmZXgzMWswOGhk"
             title="Instagram"
             className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           >

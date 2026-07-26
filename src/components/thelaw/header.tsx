@@ -68,7 +68,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-2">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
+                <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={14} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={14} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
@@ -181,7 +181,7 @@ export function Header() {
           {/* Contact info */}
           <div className="px-5 py-3 border-b border-border-gray dark:border-gray-700 bg-light-gray/50 dark:bg-charcoal/30">
             <div className="flex items-center gap-3 py-1.5">
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
+                <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
