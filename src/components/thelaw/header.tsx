@@ -71,16 +71,16 @@ export function Header() {
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={14} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={14} /></a>
-              <a href="mailto:info@yoursite.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
+              <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
             </div>
             <span className="text-gray-400">|</span>
             <a href="tel:07802233000" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Phone size={12} />
               <span dir="ltr" className="phone-ltr">07802233000</span>
             </a>
-            <a href="mailto:info@yoursite.com" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
+            <a href="mailto:info@baraa-alsamraie.com" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Mail size={12} />
-              info@yoursite.com
+              info@baraa-alsamraie.com
             </a>
           </div>
           <button
@@ -184,13 +184,13 @@ export function Header() {
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={15} /></a>
               <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={15} /></a>
-              <a href="mailto:info@yoursite.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
+              <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
             </div>
             <a href="tel:07802233000" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
               <Phone size={14} className="text-gold" /> <span dir="ltr" className="phone-ltr">07802233000</span>
             </a>
-            <a href="mailto:info@yoursite.com" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
-              <Mail size={14} className="text-gold" /> info@yoursite.com
+            <a href="mailto:info@baraa-alsamraie.com" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
+              <Mail size={14} className="text-gold" /> info@baraa-alsamraie.com
             </a>
           </div>
 
