@@ -748,7 +748,7 @@ export const translations = {
       },
       info: {
         phone: { title: "Phone", number: "07802233000" },
-        email: { title: "Email", address: "info@yoursite.com" },
+        email: { title: "Email", address: "info@baraa-alsamraie.com" },
         address: {
           title: "Address",
           full: "Baghdad, Al-Mansour, Clock Restaurant Street",
@@ -863,7 +863,7 @@ export const translations = {
         practiceArea: "Practice Areas",
         contact: "Contact",
       },
-      copyright: "Copyright 2026 Law Theme. All rights reserved.",
+      copyright: "© 2026 E2NEXT. All rights reserved.",
       backToTop: "Back to Top",
     },
     // Cookie Banner

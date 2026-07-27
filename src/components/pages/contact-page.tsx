@@ -58,7 +58,7 @@ export function ContactPage() {
       name: "Baghdad",
       address: "بغداد, المنصور, شارع مطعم الساعة",
       phone: "07802233000",
-      email: "la@thelawtheme.com",
+      email: "info@baraa-alsamraie.com",
       hours: "Mon-Fri: 9:00 - 16:30",
       mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
       lat: "34.0407",
@@ -66,9 +66,9 @@ export function ContactPage() {
     },
   ];
 
-  const MAP_URL = "https://maps.app.goo.gl/KktA8GJ9Nn6VcA4r5";
+  const MAP_URL = "https://maps.app.goo.gl/RQeASwKQCc7GjLXR9";
   const MAP_EMBED_URL =
-    "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en&output=embed";
+    "https://www.google.com/maps?q=33.31889435385042,44.33300254490547&z=17&hl=en&output=embed";
 
   const handleInputChange = (
     e: React.ChangeEvent<

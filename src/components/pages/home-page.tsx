@@ -989,7 +989,7 @@ export function HomePage() {
       icon: MapPin,
       label: t.contactPage.info.address.title,
       value: t.contactPage.info.address.full.replace("\n", ", "),
-      href: "https://www.google.com/maps?q=33.31884002685547,44.33299255371094&z=17&hl=en",
+      href: "https://maps.app.goo.gl/MUkfnMUiTLEBo3W96",
       subtitle: t.contactPage.addressCard.title,
     },
   ];
