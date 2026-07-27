@@ -1020,7 +1020,7 @@ export const translations = {
         },
         {
           title: "عرض السعر",
-          subtitle: "سنقاتل قضيتك في المحكمة",
+          subtitle: "احصل على عرض يناسب قضيتك",
           btnText: "شاهد النتائج",
         },
       ],

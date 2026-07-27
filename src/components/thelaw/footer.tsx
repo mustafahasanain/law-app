@@ -8,8 +8,6 @@ import {
   Mail,
   MapPin,
   Facebook,
-  Twitter,
-  Linkedin,
   Instagram,
   Clock,
   ArrowUp,
@@ -150,20 +148,6 @@ export function Footer() {
             className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <Facebook size={20} />
-          </a>
-          <a
-            href="#"
-            title="Twitter"
-            className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <Twitter size={20} />
-          </a>
-          <a
-            href="#"
-            title="LinkedIn"
-            className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <Linkedin size={20} />
           </a>
           <a
             href="https://www.instagram.com/_lawyer_baraa?igsh=bTJmZXgzMWswOGhk"

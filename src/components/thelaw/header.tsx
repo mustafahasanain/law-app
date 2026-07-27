@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, type PageName } from './router';
 import { useLanguage } from '@/lib/i18n/language-context';
-import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { LanguageSwitcher } from './language-switcher';
 
@@ -69,8 +69,6 @@ export function Header() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={14} /></a>
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={14} /></a>
               <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
             </div>
             <span className="text-gray-400">|</span>
@@ -182,8 +180,6 @@ export function Header() {
           <div className="px-5 py-3 border-b border-border-gray dark:border-gray-700 bg-light-gray/50 dark:bg-charcoal/30">
             <div className="flex items-center gap-3 py-1.5">
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Twitter size={15} /></a>
-              <a href="#" className="text-gold hover:text-gold-light transition-colors"><Linkedin size={15} /></a>
               <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
             </div>
             <a href="tel:07802233000" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">

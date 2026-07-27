@@ -560,7 +560,7 @@ export function AboutPage() {
               <div className="relative max-w-md mx-auto lg:mx-0">
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                 <img
-                  src="/images/lawyer-hero.png"
+                  src="/images/lawyer-hero-new.png"
                   alt={aboutMe.imageAlt}
                   loading="lazy"
                   className="relative z-10 w-full max-h-[520px] object-cover object-top shadow-xl"
@@ -625,7 +625,7 @@ export function AboutPage() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
-                    src="/images/lawyer-hero.png"
+                    src="/images/lawyer-hero-new.png"
                     alt="D.Baraa A. Khaleel"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
